@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitrix24 - Control de Tiempos y Nómina</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/css/dashboard.css?v=3.5">
+</head>
+<body>
+
+    <!-- NAVBAR SUPERIOR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-bitrix px-4 py-3 shadow-sm">
+        <div class="container-fluid p-0">
+            <div class="d-flex align-items-center">
+                <div class="brand-icon me-3">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                </div>
+                <div>
+                    <h5 class="mb-0 fw-bold text-white">Bitrix24 Time Tracker & Nómina</h5>
+                    <small class="text-white-50">Seguimiento de tiempos de tareas con selección individual o múltiple de colaboradores</small>
+                </div>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+                <span class="badge bg-success-subtle text-success border border-success-subtle px-3 py-2 rounded-pill">
+                    <i class="fa-solid fa-circle text-success me-1 fa-2xs"></i> Conectado a Bitrix24
+                </span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid px-4 py-3">
+
+        <!-- PANEL DE FILTROS SUPERIOR -->
+        <div class="card shadow-sm border-0 mb-4 filter-card">
+            <div class="card-body p-4">
+                <div class="row g-3 align-items-end">
+                    
+                    <!-- Presets rápidos -->
+                    <div class="col-12">
+                        <div class="d-flex flex-wrap gap-2 align-items-center mb-1">
+                            <span class="text-muted small fw-semibold me-2"><i class="fa-solid fa-calendar-days me-1"></i> Período rápido:</span>
+                            <button type="button" class="btn btn-sm btn-outline-secondary preset-btn" data-preset="today">Hoy</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary preset-btn" data-preset="week">Esta semana</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary preset-btn" data-preset="lastweek">Semana anterior</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary preset-btn active" data-preset="month">Este mes</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary preset-btn" data-preset="lastmonth">Mes anterior</button>
+                        </div>
+                    </div>
+
+                    <!-- Fecha Desde -->
+                    <div class="col-md-3">
+                        <label class="form-label small fw-semibold text-secondary mb-1">
+                            <i class="fa-regular fa-calendar me-1"></i> Fecha Desde
+                        </label>
+                        <input type="date" id="dateFrom" class="form-control form-control-md shadow-none">
+                    </div>
+
+                    <!-- Fecha Hasta -->
+                    <div class="col-md-3">
+                        <label class="form-label small fw-semibold text-secondary mb-1">
+                            <i class="fa-regular fa-calendar-check me-1"></i> Fecha Hasta
+                        </label>
+                        <input type="date" id="dateTo" class="form-control form-control-md shadow-none">
+                    </div>
+
+                    <!-- SELECTOR MÚLTIPLE DE COLABORADORES (IDEAL PARA NÓMINA) -->
+                    <div class="col-md-3">
+                        <label class="form-label small fw-semibold text-secondary mb-1">
+                            <i class="fa-solid fa-users-viewfinder me-1 text-primary"></i> Colaborador(es) para Nómina
+                        </label>
+                        <div class="dropdown" id="userMultiDropdown">
+                            <button class="btn btn-white bg-white border form-select text-start d-flex justify-content-between align-items-center shadow-none border-primary-subtle" type="button" id="userDropdownBtn" data-bs-toggle="dropdown" data-bs-auto-close="outside">
+                                <span id="userDropdownBtnText" class="text-truncate">
+                                    <i class="fa-solid fa-users me-1 text-primary"></i> Todos los Trabajadores
+                                </span>
+                            </button>
+                            <div class="dropdown-menu p-3 shadow-lg border-0" style="min-width: 340px; z-index: 1050;">
+                                <!-- Buscador rápido dentro del desplegable -->
+                                <div class="input-group input-group-sm mb-2">
+                                    <span class="input-group-text bg-light border-end-0"><i class="fa-solid fa-magnifying-glass text-muted"></i></span>
+                                    <input type="text" id="userSearchInput" class="form-control bg-light border-start-0 shadow-none" placeholder="Buscar colaborador...">
+                                </div>
+                                <!-- Acciones rápidas de Nómina -->
+                                <div class="d-flex justify-content-between align-items-center mb-2 pb-2 border-bottom">
+                                    <button type="button" id="btnSelectAll" class="btn btn-link btn-sm p-0 text-decoration-none fw-semibold">
+                                        <i class="fa-solid fa-check-double me-1"></i>Seleccionar Todos
+                                    </button>
+                                    <button type="button" id="btnClearAll" class="btn btn-link btn-sm p-0 text-decoration-none text-danger fw-semibold">
+                                        <i class="fa-solid fa-xmark me-1"></i>Deseleccionar
+                                    </button>
+                                </div>
+                                <!-- Contenedor de checkboxes -->
+                                <div id="userCheckboxContainer" style="max-height: 240px; overflow-y: auto;">
+                                    <div class="text-center py-3 text-muted small">Cargando colaboradores...</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Botones de Acción -->
+                    <div class="col-md-3 d-flex gap-2">
+                        <button type="button" id="btnConsultar" class="btn btn-primary btn-md px-3 fw-semibold flex-grow-1 shadow-sm">
+                            <span id="btnSpinner" class="spinner-border spinner-border-sm me-2 d-none" role="status"></span>
+                            <i id="btnIcon" class="fa-solid fa-cloud-arrow-down me-2"></i>
+                            <span id="btnText">Consultar Tiempos</span>
+                        </button>
+                        <button type="button" id="btnExportar" class="btn btn-outline-success btn-md px-3 fw-semibold shadow-sm" disabled title="Exportar a Excel para Nómina">
+                            <i class="fa-solid fa-file-excel me-1"></i> Exportar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TARJETAS DE KPIS PRINCIPALES -->
+        <div class="row g-3 mb-4" id="kpiContainer">
+            <div class="col-xl-3 col-md-6">
+                <div class="card stat-card shadow-sm border-0 border-start border-4 border-primary">
+                    <div class="card-body p-3">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <p class="text-muted small fw-semibold text-uppercase mb-1">Total Horas Registradas</p>
+                                <h3 class="fw-bold mb-0 text-dark" id="kpiTotalHoras">--</h3>
+                                <small class="text-primary fw-medium" id="kpiHorasDecimal">-- hrs decimales</small>
+                            </div>
+                            <div class="stat-icon bg-primary-subtle text-primary">
+                                <i class="fa-solid fa-hourglass-half"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-md-6">
+                <div class="card stat-card shadow-sm border-0 border-start border-4 border-success">
+                    <div class="card-body p-3">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <p class="text-muted small fw-semibold text-uppercase mb-1">Colaboradores con Horas</p>
+                                <h3 class="fw-bold mb-0 text-dark" id="kpiTrabajadores">--</h3>
+                                <small class="text-success fw-medium">Con registros en el período</small>
+                            </div>
+                            <div class="stat-icon bg-success-subtle text-success">
+                                <i class="fa-solid fa-user-group"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-md-6">
+                <div class="card stat-card shadow-sm border-0 border-start border-4 border-warning">
+                    <div class="card-body p-3">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <p class="text-muted small fw-semibold text-uppercase mb-1">Tareas con Tiempo</p>
+                                <h3 class="fw-bold mb-0 text-dark" id="kpiTareas">--</h3>
+                                <small class="text-warning-emphasis fw-medium">Tareas trabajadas</small>
+                            </div>
+                            <div class="stat-icon bg-warning-subtle text-warning-emphasis">
+                                <i class="fa-solid fa-list-check"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-md-6">
+                <div class="card stat-card shadow-sm border-0 border-start border-4 border-info">
+                    <div class="card-body p-3">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <p class="text-muted small fw-semibold text-uppercase mb-1">Total Registros de Tiempo</p>
+                                <h3 class="fw-bold mb-0 text-dark" id="kpiRegistros">--</h3>
+                                <small class="text-info-emphasis fw-medium">Eventos de tiempo</small>
+                            </div>
+                            <div class="stat-icon bg-info-subtle text-info">
+                                <i class="fa-solid fa-stopwatch"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTENIDO PRINCIPAL: TABLAS PRIMERO, GRÁFICAS AL FINAL -->
+        <div class="row g-4">
+            <div class="col-12">
+
+                <!-- 1. TABLA CON PESTAÑAS: RESUMEN POR PERSONA/TAREA Y DETALLE CRONOLÓGICO -->
+                <div class="card shadow-sm border-0 mb-4">
+                    <div class="card-header bg-white border-bottom py-3 px-4">
+                        <div class="row g-2 align-items-center">
+                            <div class="col-md-7">
+                                <!-- PESTAÑAS DE VISTA -->
+                                <ul class="nav nav-pills" id="viewTabs" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active px-3 py-2 fw-semibold btn-sm" id="tab-summary-btn" data-bs-toggle="pill" data-bs-target="#tab-summary" type="button" role="tab">
+                                            <i class="fa-solid fa-users-gear me-1"></i> Tiempo por Persona y Tarea
+                                        </button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link px-3 py-2 fw-semibold btn-sm" id="tab-detail-btn" data-bs-toggle="pill" data-bs-target="#tab-detail" type="button" role="tab">
+                                            <i class="fa-solid fa-list-ul me-1"></i> Detalle de Registros (Línea por Línea)
+                                        </button>
+                                    </li>
+                                </ul>
+                                <small class="text-muted d-block mt-2" id="filterStatusText">Mostrando todos los registros</small>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="input-group input-group-sm">
+                                    <span class="input-group-text bg-light border-end-0"><i class="fa-solid fa-filter text-muted"></i></span>
+                                    <input type="text" id="searchTable" class="form-control bg-light border-start-0 shadow-none" placeholder="Filtrar por tarea, comentario o colaborador...">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-body p-0">
+                        <div class="tab-content" id="viewTabsContent">
+
+                            <!-- VISTA 1: TIEMPOS POR PERSONA Y TAREA -->
+                            <div class="tab-pane fade show active" id="tab-summary" role="tabpanel">
+                                <div class="table-responsive" style="max-height: 560px; overflow-y: auto;">
+                                    <table class="table table-hover align-middle mb-0" id="tableSummary">
+                                        <thead class="table-light sticky-top">
+                                            <tr>
+                                                <th class="ps-4">Colaborador</th>
+                                                <th>Tarea</th>
+                                                <th>Proyecto / Grupo</th>
+                                                <th class="text-center">Total Tiempo</th>
+                                                <th class="text-center">Cant. Registros</th>
+                                                <th class="text-center">Bitrix24</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="tableSummaryBody">
+                                            <tr>
+                                                <td colspan="6" class="text-center py-5 text-muted">
+                                                    <i class="fa-solid fa-calendar-check fa-3x mb-3 text-secondary opacity-50"></i>
+                                                    <p class="mb-1 fw-semibold">Selecciona las fechas y haz clic en "Consultar Tiempos"</p>
+                                                    <small class="text-muted">Se mostrará el tiempo acumulado que cada persona registró en cada tarea</small>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!-- VISTA 2: DETALLE LÍNEA POR LÍNEA -->
+                            <div class="tab-pane fade" id="tab-detail" role="tabpanel">
+                                <div class="table-responsive" style="max-height: 560px; overflow-y: auto;">
+                                    <table class="table table-hover align-middle mb-0" id="tableRecords">
+                                        <thead class="table-light sticky-top">
+                                            <tr>
+                                                <th class="ps-4">Fecha / Hora</th>
+                                                <th>Colaborador que Registró</th>
+                                                <th>Tarea</th>
+                                                <th>Proyecto / Grupo</th>
+                                                <th class="text-center">Tiempo</th>
+                                                <th>Comentario / Actividad</th>
+                                                <th class="text-center">Bitrix24</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="tableDetailBody">
+                                            <tr>
+                                                <td colspan="7" class="text-center py-5 text-muted">
+                                                    <i class="fa-solid fa-clock fa-3x mb-3 text-secondary opacity-50"></i>
+                                                    <p class="mb-1 fw-semibold">Selecciona las fechas y haz clic en "Consultar Tiempos"</p>
+                                                    <small class="text-muted">Se listarán todos los registros cronológicos con sus comentarios</small>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="card-footer bg-white border-top py-2 px-4 d-flex justify-content-between align-items-center">
+                        <small class="text-muted" id="tableFooterCount">0 registros encontrados</small>
+                        <small class="text-muted">Bitrix24 REST API (<code>task.elapseditem.getlist</code>)</small>
+                    </div>
+                </div>
+
+                <!-- 2. SECCIÓN DE GRÁFICAS (AL FINAL DE LA PÁGINA) -->
+                <div class="row g-3 mb-4" id="chartsRow" style="display: none;">
+                    <div class="col-lg-7">
+                        <div class="card shadow-sm border-0 h-100">
+                            <div class="card-header bg-white border-bottom py-3">
+                                <h6 class="fw-bold mb-0 text-dark">
+                                    <i class="fa-solid fa-chart-column text-primary me-2"></i>Horas Registradas por Colaborador
+                                </h6>
+                            </div>
+                            <div class="card-body">
+                                <div style="height: 260px;">
+                                    <canvas id="chartUsersBar"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="card shadow-sm border-0 h-100">
+                            <div class="card-header bg-white border-bottom py-3">
+                                <h6 class="fw-bold mb-0 text-dark">
+                                    <i class="fa-solid fa-chart-pie text-success me-2"></i>Distribución por Proyecto / Grupo
+                                </h6>
+                            </div>
+                            <div class="card-body">
+                                <div style="height: 260px;">
+                                    <canvas id="chartProjectsDoughnut"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Dashboard JS Logic -->
+    <script>
+        const BITRIX_DOMAIN = "{{ bitrix_domain }}";
+    </script>
+    <script src="/static/js/dashboard.js?v=3.5"></script>
+</body>
+</html>
