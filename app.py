@@ -711,8 +711,14 @@ def get_times():
                 "COMMENT_TEXT": comment
             })
 
-        # Resumen por tarea (ordenado por minutos)
-        task_user_list = sorted(task_user_map.values(), key=lambda x: x["total_minutes"], reverse=True)
+        # Resumen por colaborador y tarea (ordenado por Colaborador A-Z y luego mayor tiempo)
+        task_user_list = sorted(
+            task_user_map.values(),
+            key=lambda x: (
+                str(x.get("user_name", "")).strip().lower(),
+                -x["total_minutes"]
+            )
+        )
         for tu in task_user_list:
             tm = tu["total_minutes"]
             tu["hours_formatted"] = f"{tm // 60:02d}h {tm % 60:02d}m"

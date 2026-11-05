@@ -139,7 +139,16 @@ def generar_excel_tiempos(records, resumen_usuarios, date_from, date_to, task_us
         total_reg_tu = 0
         total_sec_tu = 0
 
-        for idx, tu in enumerate(task_user_summary, 2):
+        # Ordenar por Colaborador (A-Z) y luego por mayor tiempo trabajado
+        sorted_task_user = sorted(
+            task_user_summary,
+            key=lambda x: (
+                str(x.get("user_name", "")).strip().lower(),
+                -int(x.get("total_seconds", 0))
+            )
+        )
+
+        for idx, tu in enumerate(sorted_task_user, 2):
             sec = tu.get("total_seconds", 0)
             total_sec_tu += sec
             reg_cnt = tu.get("records_count", 1)
