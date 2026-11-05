@@ -83,6 +83,17 @@ function setupEventListeners() {
     document.getElementById("btnConsultar").addEventListener("click", fetchTimeRecords);
     document.getElementById("btnExportar").addEventListener("click", exportToExcel);
 
+    // Cambio de Criterio de Fecha (Nómina Real vs PureTaskReport)
+    document.querySelectorAll('input[name="dateCriterion"]').forEach(radio => {
+        radio.addEventListener("change", () => {
+            const dateFrom = document.getElementById("dateFrom").value;
+            const dateTo = document.getElementById("dateTo").value;
+            if (dateFrom && dateTo && appState.records.length > 0) {
+                fetchTimeRecords();
+            }
+        });
+    });
+
     // BUSCADOR EN VIVO DE COLABORADORES (CON NORMALIZACIÓN DE ACENTOS)
     const userSearchInput = document.getElementById("userSearchInput");
     
@@ -290,12 +301,15 @@ async function fetchTimeRecords() {
     text.textContent = "Consultando nómina...";
 
     try {
+        const criterion = document.querySelector('input[name="dateCriterion"]:checked')?.value || "work_date";
+
         const response = await fetch("/api/times", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
                 date_from: dateFrom,
                 date_to: dateTo,
+                criterion: criterion,
                 user_ids: appState.selectedUserIds.length > 0 ? appState.selectedUserIds : null
             })
         });

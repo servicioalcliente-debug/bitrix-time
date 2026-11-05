@@ -116,12 +116,18 @@ def generar_excel_tiempos(records, resumen_usuarios, date_from, date_to, task_us
         headers_tu = [
             "Colaborador",
             "Cargo",
+            "ID Proyecto",
+            "Proyecto / Grupo",
+            "ID Tarea Madre",
+            "Tarea Madre",
             "ID Tarea",
             "Título de la Tarea",
-            "Proyecto / Grupo",
+            "Creador de la Tarea",
+            "Tiempo Estimado (Hrs)",
+            "Tiempo Acumulado Tarea (Hrs)",
             "Cantidad Registros",
-            "Tiempo (HH:MM)",
-            "Horas Decimales"
+            "Tiempo Trabajado (HH:MM)",
+            "Horas Trabajadas (Decimal)"
         ]
 
         for col_idx, header in enumerate(headers_tu, 1):
@@ -130,35 +136,80 @@ def generar_excel_tiempos(records, resumen_usuarios, date_from, date_to, task_us
             cell.font = header_font
             cell.alignment = center_align
 
+        total_reg_tu = 0
+        total_sec_tu = 0
+
         for idx, tu in enumerate(task_user_summary, 2):
             sec = tu.get("total_seconds", 0)
+            total_sec_tu += sec
+            reg_cnt = tu.get("records_count", 1)
+            total_reg_tu += reg_cnt
+
             h = sec // 3600
             m = (sec % 3600) // 60
             dec_h = round(sec / 3600, 2)
 
+            proj_id = str(tu.get("project_id") or tu.get("group_id") or "0")
+            pid = str(tu.get("parent_id") or "")
+            if pid and pid not in ["0", "None", "null"]:
+                parent_id_val = int(pid) if pid.isdigit() else pid
+                parent_title_val = tu.get("parent_title") or f"Tarea #{pid}"
+            else:
+                parent_id_val = ""
+                parent_title_val = "Tarea Principal"
+
+            creator = tu.get("creator_name") or "Desconocido"
+            est_h = float(tu.get("time_estimate_hours") or 0.0)
+            spent_h = float(tu.get("time_spent_hours") or 0.0)
+
             ws_task_user.cell(row=idx, column=1, value=tu.get("user_name", "")).alignment = left_align
             ws_task_user.cell(row=idx, column=2, value=tu.get("user_position", "")).alignment = left_align
-            ws_task_user.cell(row=idx, column=3, value=int(tu.get("task_id", 0))).alignment = center_align
-            ws_task_user.cell(row=idx, column=4, value=tu.get("task_title", "")).alignment = left_align
-            ws_task_user.cell(row=idx, column=5, value=tu.get("group_name", "")).alignment = left_align
-            ws_task_user.cell(row=idx, column=6, value=tu.get("records_count", 1)).alignment = center_align
-            ws_task_user.cell(row=idx, column=7, value=f"{h:02d}h {m:02d}m").alignment = center_align
-            ws_task_user.cell(row=idx, column=8, value=dec_h).alignment = right_align
+            ws_task_user.cell(row=idx, column=3, value=int(proj_id) if proj_id.isdigit() else proj_id).alignment = center_align
+            ws_task_user.cell(row=idx, column=4, value=tu.get("group_name", "")).alignment = left_align
+            ws_task_user.cell(row=idx, column=5, value=parent_id_val).alignment = center_align
+            ws_task_user.cell(row=idx, column=6, value=parent_title_val).alignment = left_align
+            ws_task_user.cell(row=idx, column=7, value=int(tu.get("task_id", 0))).alignment = center_align
+            ws_task_user.cell(row=idx, column=8, value=tu.get("task_title", "")).alignment = left_align
+            ws_task_user.cell(row=idx, column=9, value=creator).alignment = left_align
+            ws_task_user.cell(row=idx, column=10, value=est_h).alignment = right_align
+            ws_task_user.cell(row=idx, column=11, value=spent_h).alignment = right_align
+            ws_task_user.cell(row=idx, column=12, value=reg_cnt).alignment = center_align
+            ws_task_user.cell(row=idx, column=13, value=f"{h:02d}h {m:02d}m").alignment = center_align
+            ws_task_user.cell(row=idx, column=14, value=dec_h).alignment = right_align
 
-            for c in range(1, 9):
+            for c in range(1, 15):
                 cell = ws_task_user.cell(row=idx, column=c)
                 cell.font = data_font
                 cell.border = thin_border
                 if idx % 2 == 0:
                     cell.fill = PatternFill(start_color="FAFAFA", end_color="FAFAFA", fill_type="solid")
 
+        # Fila de Totales
+        row_tot = len(task_user_summary) + 2
+        ws_task_user.cell(row=row_tot, column=1, value="TOTAL GENERAL").font = total_font
+        ws_task_user.cell(row=row_tot, column=1).alignment = left_align
+        ws_task_user.cell(row=row_tot, column=12, value=total_reg_tu).font = total_font
+        ws_task_user.cell(row=row_tot, column=12).alignment = center_align
+        
+        tot_h_tu = total_sec_tu // 3600
+        tot_m_tu = (total_sec_tu % 3600) // 60
+        ws_task_user.cell(row=row_tot, column=13, value=f"{tot_h_tu:02d}h {tot_m_tu:02d}m").font = total_font
+        ws_task_user.cell(row=row_tot, column=13).alignment = center_align
+        ws_task_user.cell(row=row_tot, column=14, value=round(total_sec_tu / 3600, 2)).font = total_font
+        ws_task_user.cell(row=row_tot, column=14).alignment = right_align
+
+        for c in range(1, 15):
+            cell = ws_task_user.cell(row=row_tot, column=c)
+            cell.fill = sub_fill
+            cell.border = thin_border
+
         for col in ws_task_user.columns:
             col_letter = get_column_letter(col[0].column)
-            if col_letter == 'D':
-                ws_task_user.column_dimensions[col_letter].width = 40
+            if col_letter in ['F', 'H']:
+                ws_task_user.column_dimensions[col_letter].width = 38
             else:
                 max_len = max(len(str(cell.value or '')) for cell in col)
-                ws_task_user.column_dimensions[col_letter].width = max(max_len + 3, 14)
+                ws_task_user.column_dimensions[col_letter].width = max(max_len + 3, 13)
 
     # ───────────────────────────────────────────────
     # HOJA 3: DETALLE COMPLETO DE REGISTROS DE TIEMPO

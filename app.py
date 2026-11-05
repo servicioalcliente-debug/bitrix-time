@@ -103,19 +103,22 @@ def parse_date_to_iso(date_str):
 
 COLOMBIA_TZ = timezone(timedelta(hours=-5))
 
-def check_record_date_match(record, date_from, date_to):
+def check_record_date_match(record, date_from, date_to, criterion="work_date"):
     """
-    Determina con exactitud si un registro de tiempo corresponde al período [date_from, date_to],
-    alineado 100% con Power BI TaskReport y los informes oficiales de Bitrix24.
-    Utiliza CREATED_DATE (la fecha efectiva del trabajo asignada al registro de tiempo)
-    y ajusta por zona horaria de Bitrix (+03:00 Moscú a UTC-5 Colombia) si fue registrado
-    en el límite del mes.
+    Determina con exactitud si un registro de tiempo corresponde al período [date_from, date_to].
+    - criterion == 'work_date': Utiliza CREATED_DATE (fecha efectiva de la labor indicada por el trabajador).
+    - criterion == 'submit_date': Utiliza DATE_START (fecha de guardado/envío al servidor Bitrix, idéntico a PureTaskReport).
+    Ajusta por zona horaria de Bitrix (+03:00 Moscú a UTC-5 Colombia) si fue registrado en el límite del mes.
     """
-    cd_raw = record.get("CREATED_DATE")
-    if not cd_raw or len(str(cd_raw)) < 10:
+    if criterion == "submit_date":
+        raw = record.get("DATE_START") or record.get("CREATED_DATE")
+    else:
+        raw = record.get("CREATED_DATE") or record.get("DATE_START")
+
+    if not raw or len(str(raw)) < 10:
         return False, None
         
-    s_val = str(cd_raw).strip()
+    s_val = str(raw).strip()
     
     # 1. Fecha directa (YYYY-MM-DD)
     direct_date = s_val[:10]
@@ -123,7 +126,6 @@ def check_record_date_match(record, date_from, date_to):
         return True, direct_date
         
     # 2. Ajuste por huso horario (UTC+3 Moscú a Colombia UTC-5)
-    # Si se registró al final del día en Colombia, en Moscú ya es el día siguiente
     try:
         dt = datetime.fromisoformat(s_val)
         col_date = dt.astimezone(COLOMBIA_TZ).strftime("%Y-%m-%d")
@@ -333,11 +335,13 @@ def get_times():
         
         selected_users = [str(u).strip() for u in selected_users if str(u).strip()]
 
+        criterion = body.get("criterion", "work_date")  # 'work_date' o 'submit_date'
+
         if not date_from or not date_to:
             return jsonify({"success": False, "error": "Debe especificar 'date_from' y 'date_to'"}), 400
 
         print(f"\n=======================================================")
-        print(f"⚡ [CONSULTA OPTIMIZADA] Rango: {date_from} al {date_to}")
+        print(f"⚡ [CONSULTA OPTIMIZADA] Rango: {date_from} al {date_to} | Modo: {criterion}")
         print(f"👥 Colaboradores ({len(selected_users)}): {selected_users or 'TODOS'}")
         print(f"=======================================================")
 
@@ -347,10 +351,12 @@ def get_times():
         # -------------------------------------------------------------
         # 1. INTENTO DIRECTO GLOBAL (task.elapseditem.getlist con paginación por <ID)
         # -------------------------------------------------------------
-        # Rango balanceado con tolerancia de huso horario (UTC+3 Moscú vs UTC-5 Colombia: 8 horas)
-        # Idéntico a la extracción de Power BI TaskReport y reportes oficiales de Bitrix24
-        dt_start_buffer = (datetime.strptime(date_from, "%Y-%m-%d") - timedelta(days=1)).strftime("%Y-%m-%d 00:00:00")
-        dt_end_target = (datetime.strptime(date_to, "%Y-%m-%d") + timedelta(days=1)).strftime("%Y-%m-%d 23:59:59")
+        # En Bitrix REST API, el filtro siempre debe basarse en CREATED_DATE
+        # Si el criterio es 'submit_date' (PureTaskReport), usamos un buffer más amplio (15 días)
+        # para capturar registros del mes subidos a destiempo, y en memoria filtramos por DATE_START.
+        buffer_days = 15 if criterion == "submit_date" else 1
+        dt_start_buffer = (datetime.strptime(date_from, "%Y-%m-%d") - timedelta(days=buffer_days)).strftime("%Y-%m-%d 00:00:00")
+        dt_end_target = (datetime.strptime(date_to, "%Y-%m-%d") + timedelta(days=buffer_days)).strftime("%Y-%m-%d 23:59:59")
 
         base_filter = {
             ">=CREATED_DATE": dt_start_buffer,
@@ -481,18 +487,73 @@ def get_times():
             chunk = needed_task_ids[i:i + 50]
             t_data = call_bitrix("tasks.task.list", {
                 "filter": {"ID": chunk},
-                "select": ["ID", "TITLE", "GROUP_ID"]
+                "select": ["ID", "TITLE", "GROUP_ID", "PARENT_ID", "CREATED_BY", "CREATOR", "TIME_ESTIMATE", "TIME_SPENT_IN_LOGS"]
             })
             t_res = t_data.get("result", {})
             tasks_list = t_res.get("tasks", []) if isinstance(t_res, dict) else (t_res if isinstance(t_res, list) else [])
             for t in tasks_list:
                 tid = str(t.get("id") or t.get("ID") or "")
                 if tid:
+                    pid = str(t.get("parentId") or t.get("PARENT_ID") or "")
+                    if pid in ["0", "None", "null"]:
+                        pid = ""
+                    gid = str(t.get("groupId") or t.get("GROUP_ID") or "0")
+
+                    cr = t.get("creator") or t.get("CREATOR") or {}
+                    c_name = ""
+                    if isinstance(cr, dict):
+                        c_name = cr.get("name") or cr.get("NAME") or ""
+                    if not c_name:
+                        cid = str(t.get("createdBy") or t.get("CREATED_BY") or "")
+                        if cid and cid in CACHE_USERS:
+                            c_name = CACHE_USERS[cid].get("name", "")
+                    if not c_name:
+                        c_name = "Desconocido"
+
+                    est_sec = int(t.get("timeEstimate") or t.get("TIME_ESTIMATE") or 0)
+                    spent_sec = int(t.get("timeSpentInLogs") or t.get("TIME_SPENT_IN_LOGS") or 0)
+
                     CACHE_TASKS[tid] = {
                         "id": tid,
                         "title": t.get("title") or t.get("TITLE") or f"Tarea #{tid}",
-                        "group_id": str(t.get("groupId") or t.get("GROUP_ID") or "0")
+                        "group_id": gid,
+                        "parent_id": pid,
+                        "parent_title": "",
+                        "creator_name": c_name,
+                        "time_estimate": est_sec,
+                        "time_spent_in_logs": spent_sec
                     }
+
+        # Resolver nombres de tareas madre / padre en bloque
+        needed_parents = [t["parent_id"] for t in CACHE_TASKS.values() if t.get("parent_id") and t.get("parent_id") not in CACHE_TASKS]
+        needed_parents = list(set(needed_parents))
+        for i in range(0, len(needed_parents), 50):
+            chunk = needed_parents[i:i + 50]
+            p_data = call_bitrix("tasks.task.list", {
+                "filter": {"ID": chunk},
+                "select": ["ID", "TITLE"]
+            })
+            p_res = p_data.get("result", {})
+            p_list = p_res.get("tasks", []) if isinstance(p_res, dict) else (p_res if isinstance(p_res, list) else [])
+            for pt in p_list:
+                ptid = str(pt.get("id") or pt.get("ID") or "")
+                if ptid:
+                    CACHE_TASKS[ptid] = {
+                        "id": ptid,
+                        "title": pt.get("title") or pt.get("TITLE") or f"Tarea #{ptid}",
+                        "group_id": "0",
+                        "parent_id": "",
+                        "parent_title": "",
+                        "creator_name": "",
+                        "time_estimate": 0,
+                        "time_spent_in_logs": 0
+                    }
+
+        # Asignar el título de la tarea madre
+        for tid, t in CACHE_TASKS.items():
+            pid = t.get("parent_id")
+            if pid and pid in CACHE_TASKS:
+                t["parent_title"] = CACHE_TASKS[pid].get("title", "")
 
         # Resolver Grupos / Proyectos en UNA SOLA llamada si faltan
         needed_group_ids = [t["group_id"] for t in CACHE_TASKS.values() if t.get("group_id") and t.get("group_id") != "0" and t.get("group_id") not in CACHE_GROUPS]
@@ -534,8 +595,8 @@ def get_times():
             if selected_users and u_id not in selected_users:
                 continue
 
-            # FILTRO DE FECHA EFECTIVA (Alineado con Power BI TaskReport y reportes de Bitrix24)
-            matched, eff_date = check_record_date_match(r, date_from, date_to)
+            # FILTRO DE FECHA SEGÚN CRITERIO (Nómina Real vs PureTaskReport)
+            matched, eff_date = check_record_date_match(r, date_from, date_to, criterion)
             if not matched:
                 continue
 
@@ -585,13 +646,37 @@ def get_times():
             # Acumulado por Persona en CADA Tarea
             tu_key = f"{u_id}_{t_id}"
             if tu_key not in task_user_map:
+                pid = t_info.get("parent_id", "")
+                p_title = t_info.get("parent_title", "")
+                if pid and pid not in ["0", "None", "null"]:
+                    parent_fmt = f"{p_title} ({pid})" if p_title else f"Tarea #{pid}"
+                else:
+                    parent_fmt = "Tarea Principal"
+
+                gid = str(t_info.get("group_id") or "0")
+                if gid in ["None", "null"]:
+                    gid = "0"
+
+                est_sec = t_info.get("time_estimate", 0)
+                spent_sec = t_info.get("time_spent_in_logs", 0)
+
                 task_user_map[tu_key] = {
                     "user_id": u_id,
                     "user_name": u_info.get("name"),
                     "user_position": u_info.get("position"),
                     "task_id": t_id,
                     "task_title": t_info.get("title"),
+                    "project_id": gid,
+                    "group_id": gid,
                     "group_name": group_name,
+                    "parent_id": pid,
+                    "parent_title": p_title,
+                    "parent_formatted": parent_fmt,
+                    "creator_name": t_info.get("creator_name", "Desconocido"),
+                    "time_estimate_sec": est_sec,
+                    "time_estimate_hours": round(est_sec / 3600, 2),
+                    "time_spent_sec": spent_sec,
+                    "time_spent_hours": round(spent_sec / 3600, 2),
                     "total_minutes": 0,
                     "total_seconds": 0,
                     "records_count": 0
