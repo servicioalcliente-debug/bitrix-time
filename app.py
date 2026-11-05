@@ -429,7 +429,7 @@ def get_times():
                 for _ in range(4):  # Máximo 200 tareas modificadas recientemente por colaborador
                     t_res = call_bitrix("tasks.task.list", {
                         "filter": task_filter,
-                        "select": ["ID", "TITLE", "GROUP_ID", "CHANGED_DATE"],
+                        "select": ["ID", "TITLE", "GROUP_ID", "GROUP", "CHANGED_DATE"],
                         "order": {"CHANGED_DATE": "DESC"},
                         "start": start_tasks
                     })
@@ -444,12 +444,12 @@ def get_times():
                         tid = str(t.get("id") or t.get("ID") or "")
                         if tid:
                             task_ids_set.add(tid)
-                            if tid not in CACHE_TASKS:
-                                CACHE_TASKS[tid] = {
-                                    "id": tid,
-                                    "title": t.get("title") or t.get("TITLE") or f"Tarea #{tid}",
-                                    "group_id": str(t.get("groupId") or t.get("GROUP_ID") or "0")
-                                }
+                            gid = str(t.get("groupId") or t.get("GROUP_ID") or "0")
+                            grp = t.get("group") or t.get("GROUP") or {}
+                            if isinstance(grp, dict):
+                                g_name = grp.get("name") or grp.get("NAME") or ""
+                                if g_name and gid not in ["0", "None", "null"]:
+                                    CACHE_GROUPS[gid] = g_name
 
                     if "next" in t_res:
                         start_tasks = t_res["next"]
@@ -480,14 +480,19 @@ def get_times():
         # -------------------------------------------------------------
         # 3. RESOLVER TÍTULOS DE TAREAS Y GRUPOS EN BLOQUE (ULTRA RÁPIDO)
         # -------------------------------------------------------------
-        needed_task_ids = [str(r["TASK_ID"]) for r in raw_records if isinstance(r, dict) and r.get("TASK_ID") and str(r.get("TASK_ID")) not in CACHE_TASKS]
+        needed_task_ids = [
+            str(r["TASK_ID"]) for r in raw_records
+            if isinstance(r, dict) and r.get("TASK_ID") and (
+                str(r.get("TASK_ID")) not in CACHE_TASKS or "creator_name" not in CACHE_TASKS[str(r.get("TASK_ID"))]
+            )
+        ]
         needed_task_ids = list(set(needed_task_ids))
 
         for i in range(0, len(needed_task_ids), 50):
             chunk = needed_task_ids[i:i + 50]
             t_data = call_bitrix("tasks.task.list", {
                 "filter": {"ID": chunk},
-                "select": ["ID", "TITLE", "GROUP_ID", "PARENT_ID", "CREATED_BY", "CREATOR", "TIME_ESTIMATE", "TIME_SPENT_IN_LOGS"]
+                "select": ["ID", "TITLE", "GROUP_ID", "GROUP", "PARENT_ID", "CREATED_BY", "CREATOR", "TIME_ESTIMATE", "TIME_SPENT_IN_LOGS"]
             })
             t_res = t_data.get("result", {})
             tasks_list = t_res.get("tasks", []) if isinstance(t_res, dict) else (t_res if isinstance(t_res, list) else [])
@@ -498,6 +503,15 @@ def get_times():
                     if pid in ["0", "None", "null"]:
                         pid = ""
                     gid = str(t.get("groupId") or t.get("GROUP_ID") or "0")
+                    if gid in ["None", "null"]:
+                        gid = "0"
+
+                    # Extraer el Grupo / Proyecto directamente del objeto de la tarea
+                    grp = t.get("group") or t.get("GROUP") or {}
+                    if isinstance(grp, dict):
+                        g_name = grp.get("name") or grp.get("NAME") or ""
+                        if g_name and gid != "0":
+                            CACHE_GROUPS[gid] = g_name
 
                     cr = t.get("creator") or t.get("CREATOR") or {}
                     c_name = ""
@@ -531,17 +545,26 @@ def get_times():
             chunk = needed_parents[i:i + 50]
             p_data = call_bitrix("tasks.task.list", {
                 "filter": {"ID": chunk},
-                "select": ["ID", "TITLE"]
+                "select": ["ID", "TITLE", "GROUP_ID", "GROUP"]
             })
             p_res = p_data.get("result", {})
             p_list = p_res.get("tasks", []) if isinstance(p_res, dict) else (p_res if isinstance(p_res, list) else [])
             for pt in p_list:
                 ptid = str(pt.get("id") or pt.get("ID") or "")
                 if ptid:
+                    p_gid = str(pt.get("groupId") or pt.get("GROUP_ID") or "0")
+                    if p_gid in ["None", "null"]:
+                        p_gid = "0"
+                    p_grp = pt.get("group") or pt.get("GROUP") or {}
+                    if isinstance(p_grp, dict):
+                        p_gname = p_grp.get("name") or p_grp.get("NAME") or ""
+                        if p_gname and p_gid != "0":
+                            CACHE_GROUPS[p_gid] = p_gname
+
                     CACHE_TASKS[ptid] = {
                         "id": ptid,
                         "title": pt.get("title") or pt.get("TITLE") or f"Tarea #{ptid}",
-                        "group_id": "0",
+                        "group_id": p_gid,
                         "parent_id": "",
                         "parent_title": "",
                         "creator_name": "",
@@ -555,18 +578,34 @@ def get_times():
             if pid and pid in CACHE_TASKS:
                 t["parent_title"] = CACHE_TASKS[pid].get("title", "")
 
-        # Resolver Grupos / Proyectos en UNA SOLA llamada si faltan
-        needed_group_ids = [t["group_id"] for t in CACHE_TASKS.values() if t.get("group_id") and t.get("group_id") != "0" and t.get("group_id") not in CACHE_GROUPS]
+        # Resolver Grupos / Proyectos faltantes
+        needed_group_ids = [
+            t["group_id"] for t in CACHE_TASKS.values()
+            if t.get("group_id") and t.get("group_id") not in ["0", "None", "null"] and t.get("group_id") not in CACHE_GROUPS
+        ]
         needed_group_ids = list(set(needed_group_ids))
 
-        if needed_group_ids:
-            g_data = call_bitrix("sonet_group.get", {"FILTER": {"ID": needed_group_ids}})
-            g_list = g_data.get("result", [])
-            if isinstance(g_list, list):
-                for g in g_list:
-                    gid = str(g.get("ID", ""))
-                    if gid:
-                        CACHE_GROUPS[gid] = g.get("NAME", f"Proyecto {gid}")
+        for gid in needed_group_ids:
+            # 1. Intentar resolver vía tasks.task.list
+            gt_data = call_bitrix("tasks.task.list", {
+                "filter": {"GROUP_ID": gid},
+                "select": ["GROUP"],
+                "order": {"ID": "DESC"}
+            })
+            g_tasks = gt_data.get("result", {}).get("tasks", []) if isinstance(gt_data.get("result"), dict) else []
+            if g_tasks:
+                grp_obj = g_tasks[0].get("group") or g_tasks[0].get("GROUP") or {}
+                if isinstance(grp_obj, dict) and grp_obj.get("name"):
+                    CACHE_GROUPS[gid] = grp_obj.get("name")
+                    continue
+
+            # 2. Intentar resolver vía sonet_group.get
+            sg_data = call_bitrix("sonet_group.get", {"FILTER": {"ID": gid}})
+            sg_list = sg_data.get("result", [])
+            if isinstance(sg_list, list) and sg_list:
+                CACHE_GROUPS[gid] = sg_list[0].get("NAME", f"Proyecto {gid}")
+            else:
+                CACHE_GROUPS[gid] = f"Proyecto #{gid}"
 
         # -------------------------------------------------------------
         # 4. FILTRADO DINÁMICO, DEDUPLICACIÓN Y CÁLCULOS
@@ -625,7 +664,24 @@ def get_times():
             })
 
             t_info = CACHE_TASKS.get(t_id, {"title": f"Tarea #{t_id}", "group_id": "0"})
-            group_name = CACHE_GROUPS.get(t_info.get("group_id"), "General")
+            gid_val = str(t_info.get("group_id") or "0")
+            if gid_val in ["None", "null"]:
+                gid_val = "0"
+
+            # Si la tarea no tiene grupo directo pero tiene tarea madre con grupo, heredar el grupo
+            if gid_val == "0":
+                pid_check = t_info.get("parent_id")
+                if pid_check and pid_check in CACHE_TASKS:
+                    parent_gid = str(CACHE_TASKS[pid_check].get("group_id") or "0")
+                    if parent_gid not in ["0", "None", "null"]:
+                        gid_val = parent_gid
+                        t_info["group_id"] = gid_val
+
+            if gid_val != "0":
+                group_name = CACHE_GROUPS.get(gid_val, f"Proyecto #{gid_val}")
+            else:
+                group_name = "General"
+
             comment = r.get("COMMENT_TEXT") or r.get("TEXT") or ""
 
             # Acumulado por Persona
