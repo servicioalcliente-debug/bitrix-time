@@ -27,6 +27,30 @@ CACHE_USERS = {}
 CACHE_GROUPS = {}
 CACHE_TASKS = {}
 USERS_CACHE_FILE = os.path.join(os.path.dirname(__file__), "users_cache.json")
+GROUPS_CACHE_FILE = os.path.join(os.path.dirname(__file__), "groups_cache.json")
+
+def load_cached_groups():
+    """Carga los proyectos y grupos de trabajo guardados en disco para respuesta instantanea (0ms)."""
+    global CACHE_GROUPS
+    if os.path.exists(GROUPS_CACHE_FILE):
+        try:
+            with open(GROUPS_CACHE_FILE, "r", encoding="utf-8") as f:
+                data = json.load(f)
+                if isinstance(data, dict) and data:
+                    CACHE_GROUPS.update(data)
+                    print(f"[CACHE] Cargados {len(CACHE_GROUPS)} grupos/proyectos desde archivo local.")
+        except Exception as e:
+            print(f"[CACHE ERROR] Al leer {GROUPS_CACHE_FILE}: {e}")
+
+def save_cached_groups():
+    """Persiste los proyectos y grupos descubiertos en disco para que no se pierdan al reiniciar."""
+    global CACHE_GROUPS
+    if CACHE_GROUPS:
+        try:
+            with open(GROUPS_CACHE_FILE, "w", encoding="utf-8") as f:
+                json.dump(CACHE_GROUPS, f, ensure_ascii=False, indent=2)
+        except Exception as e:
+            print(f"[CACHE ERROR] Al guardar {GROUPS_CACHE_FILE}: {e}")
 
 def load_cached_users():
     """Carga los colaboradores guardados en disco para respuesta instantánea (0ms)."""
@@ -53,6 +77,7 @@ def save_cached_users():
 
 # Carga inicial inmediata al arrancar el servidor
 load_cached_users()
+load_cached_groups()
 
 def call_bitrix(method, params=None):
     """
@@ -363,14 +388,16 @@ def get_times():
             "<=CREATED_DATE": dt_end_target
         }
 
-        # Si se seleccionaron de 1 a 3 colaboradores específicos, consultar por cada uno para máxima velocidad.
-        # Si son más o es "Todos", consultar globalmente para evitar que Bitrix falle al recibir listas de USER_ID.
-        user_queries = selected_users if (selected_users and len(selected_users) <= 3) else [None]
-
-        for uid in user_queries:
+        # Si se seleccionaron colaboradores específicos, consultar directamente por ellos con USER_ID
+        # Bitrix24 acepta lista de USER_ID, evitando descargar miles de registros de otras personas
+        if selected_users:
             curr_filter = dict(base_filter)
-            if uid:
-                curr_filter["USER_ID"] = str(uid)
+            curr_filter["USER_ID"] = selected_users if len(selected_users) > 1 else selected_users[0]
+            user_filters = [curr_filter]
+        else:
+            user_filters = [dict(base_filter)]
+
+        for curr_filter in user_filters:
 
             # Paginación ultra rápida por <ID (soluciona el bug de Bitrix donde 'next' se estanca)
             for _ in range(50):  # Hasta 2,500 registros por consulta
@@ -585,8 +612,9 @@ def get_times():
         ]
         needed_group_ids = list(set(needed_group_ids))
 
-        for gid in needed_group_ids:
-            # 1. Intentar resolver vía tasks.task.list
+        new_groups_found = False
+        # Para evitar timeouts, limitamos la resolución externa a un máximo de 5 grupos
+        for gid in needed_group_ids[:5]:
             gt_data = call_bitrix("tasks.task.list", {
                 "filter": {"GROUP_ID": gid},
                 "select": ["GROUP"],
@@ -597,15 +625,19 @@ def get_times():
                 grp_obj = g_tasks[0].get("group") or g_tasks[0].get("GROUP") or {}
                 if isinstance(grp_obj, dict) and grp_obj.get("name"):
                     CACHE_GROUPS[gid] = grp_obj.get("name")
+                    new_groups_found = True
                     continue
 
-            # 2. Intentar resolver vía sonet_group.get
             sg_data = call_bitrix("sonet_group.get", {"FILTER": {"ID": gid}})
             sg_list = sg_data.get("result", [])
             if isinstance(sg_list, list) and sg_list:
                 CACHE_GROUPS[gid] = sg_list[0].get("NAME", f"Proyecto {gid}")
+                new_groups_found = True
             else:
                 CACHE_GROUPS[gid] = f"Proyecto #{gid}"
+
+        if new_groups_found:
+            save_cached_groups()
 
         # -------------------------------------------------------------
         # 4. FILTRADO DINÁMICO, DEDUPLICACIÓN Y CÁLCULOS
