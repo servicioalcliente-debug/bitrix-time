@@ -3,6 +3,7 @@ import sys
 import time
 import json
 import traceback
+from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone, timedelta
 import requests
 import urllib3
@@ -505,7 +506,7 @@ def get_times():
                         raw_records.extend(res_items)
 
         # -------------------------------------------------------------
-        # 3. RESOLVER TÍTULOS DE TAREAS Y GRUPOS EN BLOQUE (ULTRA RÁPIDO)
+        # 3. RESOLVER TÍTULOS DE TAREAS Y GRUPOS EN PARALELO (ULTRA RÁPIDO)
         # -------------------------------------------------------------
         needed_task_ids = [
             str(r["TASK_ID"]) for r in raw_records
@@ -515,89 +516,135 @@ def get_times():
         ]
         needed_task_ids = list(set(needed_task_ids))
 
-        for i in range(0, len(needed_task_ids), 50):
-            chunk = needed_task_ids[i:i + 50]
+        def _fetch_tasks_batch(chunk):
             t_data = call_bitrix("tasks.task.list", {
                 "filter": {"ID": chunk},
                 "select": ["ID", "TITLE", "GROUP_ID", "GROUP", "PARENT_ID", "CREATED_BY", "CREATOR", "TIME_ESTIMATE", "TIME_SPENT_IN_LOGS"]
             })
             t_res = t_data.get("result", {})
-            tasks_list = t_res.get("tasks", []) if isinstance(t_res, dict) else (t_res if isinstance(t_res, list) else [])
-            for t in tasks_list:
-                tid = str(t.get("id") or t.get("ID") or "")
-                if tid:
-                    pid = str(t.get("parentId") or t.get("PARENT_ID") or "")
-                    if pid in ["0", "None", "null"]:
-                        pid = ""
-                    gid = str(t.get("groupId") or t.get("GROUP_ID") or "0")
-                    if gid in ["None", "null"]:
-                        gid = "0"
+            return t_res.get("tasks", []) if isinstance(t_res, dict) else (t_res if isinstance(t_res, list) else [])
 
-                    # Extraer el Grupo / Proyecto directamente del objeto de la tarea
-                    grp = t.get("group") or t.get("GROUP") or {}
-                    if isinstance(grp, dict):
-                        g_name = grp.get("name") or grp.get("NAME") or ""
-                        if g_name and gid != "0":
-                            CACHE_GROUPS[gid] = g_name
+        task_chunks = [needed_task_ids[i:i + 50] for i in range(0, len(needed_task_ids), 50)]
+        if task_chunks:
+            with ThreadPoolExecutor(max_workers=min(8, len(task_chunks))) as executor:
+                task_batches = list(executor.map(_fetch_tasks_batch, task_chunks))
 
-                    cr = t.get("creator") or t.get("CREATOR") or {}
-                    c_name = ""
-                    if isinstance(cr, dict):
-                        c_name = cr.get("name") or cr.get("NAME") or ""
-                    if not c_name:
-                        cid = str(t.get("createdBy") or t.get("CREATED_BY") or "")
-                        if cid and cid in CACHE_USERS:
-                            c_name = CACHE_USERS[cid].get("name", "")
-                    if not c_name:
-                        c_name = "Desconocido"
+            returned_task_ids = set()
+            for tasks_list in task_batches:
+                for t in tasks_list:
+                    tid = str(t.get("id") or t.get("ID") or "")
+                    if tid:
+                        returned_task_ids.add(tid)
+                        pid = str(t.get("parentId") or t.get("PARENT_ID") or "")
+                        if pid in ["0", "None", "null"]:
+                            pid = ""
+                        gid = str(t.get("groupId") or t.get("GROUP_ID") or "0")
+                        if gid in ["None", "null"]:
+                            gid = "0"
 
-                    est_sec = int(t.get("timeEstimate") or t.get("TIME_ESTIMATE") or 0)
-                    spent_sec = int(t.get("timeSpentInLogs") or t.get("TIME_SPENT_IN_LOGS") or 0)
+                        grp = t.get("group") or t.get("GROUP") or {}
+                        if isinstance(grp, dict):
+                            g_name = grp.get("name") or grp.get("NAME") or ""
+                            if g_name and gid != "0":
+                                CACHE_GROUPS[gid] = g_name
 
-                    CACHE_TASKS[tid] = {
-                        "id": tid,
-                        "title": t.get("title") or t.get("TITLE") or f"Tarea #{tid}",
-                        "group_id": gid,
-                        "parent_id": pid,
-                        "parent_title": "",
-                        "creator_name": c_name,
-                        "time_estimate": est_sec,
-                        "time_spent_in_logs": spent_sec
-                    }
+                        cr = t.get("creator") or t.get("CREATOR") or {}
+                        c_name = ""
+                        if isinstance(cr, dict):
+                            c_name = cr.get("name") or cr.get("NAME") or ""
+                        if not c_name:
+                            cid = str(t.get("createdBy") or t.get("CREATED_BY") or "")
+                            if cid and cid in CACHE_USERS:
+                                c_name = CACHE_USERS[cid].get("name", "")
+                        if not c_name:
+                            c_name = "Desconocido"
 
-        # Resolver nombres de tareas madre / padre en bloque
+                        est_sec = int(t.get("timeEstimate") or t.get("TIME_ESTIMATE") or 0)
+                        spent_sec = int(t.get("timeSpentInLogs") or t.get("TIME_SPENT_IN_LOGS") or 0)
+
+                        CACHE_TASKS[tid] = {
+                            "id": tid,
+                            "title": t.get("title") or t.get("TITLE") or f"Tarea #{tid}",
+                            "group_id": gid,
+                            "parent_id": pid,
+                            "parent_title": "",
+                            "creator_name": c_name,
+                            "time_estimate": est_sec,
+                            "time_spent_in_logs": spent_sec
+                        }
+
+            # Identificar tareas eliminadas en Bitrix para evitar reconsultarlas
+            for chunk in task_chunks:
+                for tid in chunk:
+                    if tid not in returned_task_ids and tid not in CACHE_TASKS:
+                        CACHE_TASKS[tid] = {
+                            "id": tid,
+                            "title": f"Tarea #{tid} (Eliminada)",
+                            "group_id": "0",
+                            "parent_id": "",
+                            "parent_title": "",
+                            "creator_name": "Desconocido",
+                            "time_estimate": 0,
+                            "time_spent_in_logs": 0
+                        }
+
+        # Resolver nombres de tareas madre / padre en paralelo
         needed_parents = [t["parent_id"] for t in CACHE_TASKS.values() if t.get("parent_id") and t.get("parent_id") not in CACHE_TASKS]
         needed_parents = list(set(needed_parents))
-        for i in range(0, len(needed_parents), 50):
-            chunk = needed_parents[i:i + 50]
+
+        def _fetch_parents_batch(chunk):
             p_data = call_bitrix("tasks.task.list", {
                 "filter": {"ID": chunk},
                 "select": ["ID", "TITLE", "GROUP_ID", "GROUP"]
             })
             p_res = p_data.get("result", {})
-            p_list = p_res.get("tasks", []) if isinstance(p_res, dict) else (p_res if isinstance(p_res, list) else [])
-            for pt in p_list:
-                ptid = str(pt.get("id") or pt.get("ID") or "")
-                if ptid:
-                    p_gid = str(pt.get("groupId") or pt.get("GROUP_ID") or "0")
-                    if p_gid in ["None", "null"]:
-                        p_gid = "0"
-                    p_grp = pt.get("group") or pt.get("GROUP") or {}
-                    if isinstance(p_grp, dict):
-                        p_gname = p_grp.get("name") or p_grp.get("NAME") or ""
-                        if p_gname and p_gid != "0":
-                            CACHE_GROUPS[p_gid] = p_gname
+            return p_res.get("tasks", []) if isinstance(p_res, dict) else (p_res if isinstance(p_res, list) else [])
 
-                    CACHE_TASKS[ptid] = {
-                        "id": ptid,
-                        "title": pt.get("title") or pt.get("TITLE") or f"Tarea #{ptid}",
-                        "group_id": p_gid,
-                        "parent_id": "",
-                        "parent_title": "",
-                        "creator_name": "",
-                        "time_estimate": 0,
-                        "time_spent_in_logs": 0
-                    }
+        parent_chunks = [needed_parents[i:i + 50] for i in range(0, len(needed_parents), 50)]
+        if parent_chunks:
+            with ThreadPoolExecutor(max_workers=min(6, len(parent_chunks))) as executor:
+                parent_batches = list(executor.map(_fetch_parents_batch, parent_chunks))
+
+            returned_parent_ids = set()
+            for p_list in parent_batches:
+                for pt in p_list:
+                    ptid = str(pt.get("id") or pt.get("ID") or "")
+                    if ptid:
+                        returned_parent_ids.add(ptid)
+                        p_gid = str(pt.get("groupId") or pt.get("GROUP_ID") or "0")
+                        if p_gid in ["None", "null"]:
+                            p_gid = "0"
+                        p_grp = pt.get("group") or pt.get("GROUP") or {}
+                        if isinstance(p_grp, dict):
+                            p_gname = p_grp.get("name") or p_grp.get("NAME") or ""
+                            if p_gname and p_gid != "0":
+                                CACHE_GROUPS[p_gid] = p_gname
+
+                        CACHE_TASKS[ptid] = {
+                            "id": ptid,
+                            "title": pt.get("title") or pt.get("TITLE") or f"Tarea #{ptid}",
+                            "group_id": p_gid,
+                            "parent_id": "",
+                            "parent_title": "",
+                            "creator_name": "",
+                            "time_estimate": 0,
+                            "time_spent_in_logs": 0
+                        }
+
+            # Tareas madre eliminadas
+            for chunk in parent_chunks:
+                for ptid in chunk:
+                    if ptid not in returned_parent_ids and ptid not in CACHE_TASKS:
+                        CACHE_TASKS[ptid] = {
+                            "id": ptid,
+                            "title": f"Tarea #{ptid} (Eliminada)",
+                            "group_id": "0",
+                            "parent_id": "",
+                            "parent_title": "",
+                            "creator_name": "",
+                            "time_estimate": 0,
+                            "time_spent_in_logs": 0
+                        }
 
         # Asignar el título de la tarea madre
         for tid, t in CACHE_TASKS.items():
