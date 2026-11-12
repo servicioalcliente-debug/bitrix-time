@@ -140,24 +140,21 @@ function setupEventListeners() {
     document.getElementById("btnSelectAll").addEventListener("click", () => {
         appState.selectedUserIds = [];
         document.querySelectorAll(".user-cb").forEach(cb => {
-            // Solo marcar los que estén visibles según el filtro
             const item = cb.closest(".user-checkbox-item");
-            if (!item.classList.contains("d-none")) {
-                cb.checked = true;
+            if (!item || !item.classList.contains("d-none")) {
                 if (!appState.selectedUserIds.includes(cb.value)) {
                     appState.selectedUserIds.push(cb.value);
                 }
             }
         });
+        renderUserCheckboxes(appState.users);
         updateDropdownLabel();
         filterAllTables();
     });
 
     document.getElementById("btnClearAll").addEventListener("click", () => {
         appState.selectedUserIds = [];
-        document.querySelectorAll(".user-cb").forEach(cb => {
-            cb.checked = false;
-        });
+        renderUserCheckboxes(appState.users);
         updateDropdownLabel();
         filterAllTables();
     });
@@ -215,6 +212,7 @@ async function fetchUsers() {
 // Renderizar checkboxes dentro del desplegable
 function renderUserCheckboxes(usersList) {
     const container = document.getElementById("userCheckboxContainer");
+    if (!container) return;
     if (!usersList || usersList.length === 0) {
         container.innerHTML = `<div class="text-center py-3 text-muted small">No se encontraron colaboradores.</div>`;
         return;
@@ -222,16 +220,23 @@ function renderUserCheckboxes(usersList) {
 
     let html = '';
     usersList.forEach(u => {
-        const isChecked = appState.selectedUserIds.includes(u.id) ? 'checked' : '';
-        const cargo = u.position ? `<small class="text-muted d-block text-truncate" style="font-size: 0.75rem;">${u.position}</small>` : '';
+        const isChecked = appState.selectedUserIds.includes(u.id);
+        const checkedAttr = isChecked ? 'checked' : '';
+        const activeClass = isChecked ? 'bg-primary-subtle border-start border-3 border-primary' : '';
+        const cargo = u.position ? `<small class="text-muted d-block text-truncate" style="font-size: 0.72rem;">${u.position}</small>` : '';
+        const checkIcon = isChecked ? '<i class="fa-solid fa-circle-check text-primary ms-auto ps-1" style="font-size: 0.9rem;"></i>' : '';
 
         html += `
-            <div class="user-checkbox-item form-check py-1 px-2 rounded hover-bg" data-user-id="${u.id}" data-user-name="${u.name}" data-user-pos="${u.position || ''}">
-                <input class="form-check-input user-cb mt-1 me-2" type="checkbox" value="${u.id}" id="cb_user_${u.id}" ${isChecked} onchange="onUserCheckboxChange(this)">
-                <label class="form-check-label flex-grow-1 text-truncate cursor-pointer" for="cb_user_${u.id}">
-                    <span class="fw-semibold text-dark" style="font-size: 0.85rem;">${u.name}</span>
+            <div class="user-checkbox-item d-flex align-items-center py-1 px-2 rounded mb-1 hover-bg ${activeClass}" 
+                 data-user-id="${u.id}" data-user-name="${u.name}" data-user-pos="${u.position || ''}" 
+                 style="cursor: pointer; transition: background-color 0.15s ease;"
+                 onclick="toggleUserSelection('${u.id}')">
+                <input class="form-check-input user-cb mt-0 me-2" type="checkbox" value="${u.id}" id="cb_user_${u.id}" ${checkedAttr} onclick="event.stopPropagation(); onUserCheckboxChange(this)">
+                <label class="flex-grow-1 text-truncate mb-0 cursor-pointer" for="cb_user_${u.id}" onclick="event.stopPropagation(); toggleUserSelection('${u.id}')">
+                    <span class="fw-semibold text-dark d-block text-truncate" style="font-size: 0.83rem;">${u.name}</span>
                     ${cargo}
                 </label>
+                ${checkIcon}
             </div>
         `;
     });
@@ -240,7 +245,23 @@ function renderUserCheckboxes(usersList) {
     updateDropdownLabel();
 }
 
-// Evento al marcar / desmarcar un checkbox
+// Alternar selección de un usuario al hacer clic en su fila
+window.toggleUserSelection = function(userId) {
+    const cb = document.getElementById(`cb_user_${userId}`);
+    if (appState.selectedUserIds.includes(userId)) {
+        appState.selectedUserIds = appState.selectedUserIds.filter(id => id !== userId);
+        if (cb) cb.checked = false;
+    } else {
+        appState.selectedUserIds.push(userId);
+        if (cb) cb.checked = true;
+    }
+    // Re-renderizar visualmente las filas para actualizar resaltados
+    renderUserCheckboxes(appState.users);
+    updateDropdownLabel();
+    filterAllTables();
+};
+
+// Evento al marcar / desmarcar un checkbox directamente
 window.onUserCheckboxChange = function(checkbox) {
     const userId = checkbox.value;
     if (checkbox.checked) {
@@ -250,32 +271,126 @@ window.onUserCheckboxChange = function(checkbox) {
     } else {
         appState.selectedUserIds = appState.selectedUserIds.filter(id => id !== userId);
     }
+    renderUserCheckboxes(appState.users);
     updateDropdownLabel();
     filterAllTables();
 };
 
+// Eliminar un colaborador individual desde el cuadrito / badge
+window.removeSelectedUser = function(userId) {
+    appState.selectedUserIds = appState.selectedUserIds.filter(id => id !== userId);
+    const cb = document.getElementById(`cb_user_${userId}`);
+    if (cb) cb.checked = false;
+    renderUserCheckboxes(appState.users);
+    updateDropdownLabel();
+    filterAllTables();
+};
+
+// Limpiar todos los seleccionados
+window.clearSelectedUsers = function() {
+    appState.selectedUserIds = [];
+    document.querySelectorAll(".user-cb").forEach(cb => { cb.checked = false; });
+    renderUserCheckboxes(appState.users);
+    updateDropdownLabel();
+    filterAllTables();
+};
+
+// Renderizar pastillas visuales de colaboradores seleccionados
+function renderSelectedUsersBadges() {
+    const card = document.getElementById("selectedUsersCard");
+    const pillsContainer = document.getElementById("selectedUsersPills");
+    const badgeCount = document.getElementById("badgeCount");
+    const dropdownPreview = document.getElementById("dropdownSelectedPreview");
+    const dropdownNames = document.getElementById("dropdownSelectedNames");
+    const dropdownCount = document.getElementById("dropdownSelectedCount");
+
+    const count = appState.selectedUserIds.length;
+    const total = appState.users.length;
+
+    // Si no hay ninguno o están todos seleccionados, ocultar el cuadrito
+    if (count === 0 || (total > 0 && count === total)) {
+        if (card) card.style.display = "none";
+        if (dropdownPreview) dropdownPreview.style.display = "none";
+        return;
+    }
+
+    // Obtener objetos de usuarios seleccionados
+    const selectedUsers = appState.selectedUserIds.map(id => {
+        const u = appState.users.find(user => user.id === id);
+        return u || { id: id, name: `Colaborador #${id}` };
+    });
+
+    // Mostrar el cuadrito visible
+    if (card) card.style.display = "block";
+    if (badgeCount) badgeCount.textContent = count;
+
+    if (pillsContainer) {
+        let pillsHtml = '';
+        selectedUsers.forEach(u => {
+            pillsHtml += `
+                <span class="badge bg-white text-dark border border-primary-subtle shadow-xs d-inline-flex align-items-center py-1 px-2" style="font-size: 0.82rem; font-weight: 500;">
+                    <i class="fa-solid fa-circle-user text-primary me-1"></i>
+                    <span class="text-truncate" style="max-width: 220px;" title="${u.name}">${u.name}</span>
+                    <button type="button" class="btn-close ms-2" style="font-size: 0.55rem;" aria-label="Quitar" onclick="removeSelectedUser('${u.id}')" title="Quitar ${u.name}"></button>
+                </span>
+            `;
+        });
+        pillsContainer.innerHTML = pillsHtml;
+    }
+
+    // Actualizar vista previa en el desplegable
+    if (dropdownPreview) {
+        dropdownPreview.style.display = "block";
+        if (dropdownCount) dropdownCount.textContent = count;
+        if (dropdownNames) {
+            dropdownNames.textContent = selectedUsers.map(u => u.name).join(", ");
+            dropdownNames.title = selectedUsers.map(u => u.name).join(", ");
+        }
+    }
+}
+
 // Actualizar etiqueta del botón desplegable
 function updateDropdownLabel() {
     const btnText = document.getElementById("userDropdownBtnText");
+    const userDropdownBtn = document.getElementById("userDropdownBtn");
     const count = appState.selectedUserIds.length;
     const total = appState.users.length;
 
     if (count === 0 || (total > 0 && count === total)) {
         btnText.innerHTML = `<i class="fa-solid fa-users me-1 text-primary"></i> Todos los Trabajadores`;
+        if (userDropdownBtn) userDropdownBtn.title = "Todos los trabajadores de la empresa";
     } else if (count === 1) {
         const u = appState.users.find(user => user.id === appState.selectedUserIds[0]);
         const name = u ? u.name : `Colaborador #${appState.selectedUserIds[0]}`;
         btnText.innerHTML = `<i class="fa-solid fa-user-check me-1 text-success"></i> ${name}`;
+        if (userDropdownBtn) userDropdownBtn.title = `Seleccionado: ${name}`;
+    } else if (count === 2) {
+        const u1 = appState.users.find(user => user.id === appState.selectedUserIds[0]);
+        const u2 = appState.users.find(user => user.id === appState.selectedUserIds[1]);
+        const n1 = u1 ? u1.name.split(" ")[0] : `#${appState.selectedUserIds[0]}`;
+        const n2 = u2 ? u2.name.split(" ")[0] : `#${appState.selectedUserIds[1]}`;
+        btnText.innerHTML = `<i class="fa-solid fa-user-check me-1 text-success"></i> ${n1} y ${n2} (2)`;
+        if (userDropdownBtn) userDropdownBtn.title = `Seleccionados: ${u1?.name || n1}, ${u2?.name || n2}`;
     } else {
         btnText.innerHTML = `<i class="fa-solid fa-users-viewfinder me-1 text-success"></i> <strong>${count}</strong> colaboradores seleccionados`;
+        const names = appState.selectedUserIds.map(id => {
+            const u = appState.users.find(user => user.id === id);
+            return u ? u.name : `#${id}`;
+        }).join(", ");
+        if (userDropdownBtn) userDropdownBtn.title = `Seleccionados (${count}): ${names}`;
     }
 
     const statusText = document.getElementById("filterStatusText");
-    if (count > 0 && count < total) {
-        statusText.innerHTML = `Mostrando resultados para: <strong class="text-primary">${count} colaborador(es) de nómina</strong> (<a href="#" onclick="document.getElementById('btnClearAll').click(); return false;">Ver todos</a>)`;
-    } else {
-        statusText.textContent = "Mostrando registros de todos los colaboradores";
+    if (statusText) {
+        if (count > 0 && count < total) {
+            statusText.innerHTML = `Mostrando resultados para: <strong class="text-primary">${count} colaborador(es) de nómina</strong> (<a href="#" onclick="clearSelectedUsers(); return false;">Ver todos</a>)`;
+        } else {
+            statusText.textContent = "Mostrando registros de todos los colaboradores";
+        }
     }
+
+    // Sincronizar cuadrito visual
+    renderSelectedUsersBadges();
 }
 
 // Consultar y descargar TODOS los tiempos

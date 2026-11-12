@@ -114,6 +114,11 @@
                                         <i class="fa-solid fa-xmark me-1"></i>Deseleccionar
                                     </button>
                                 </div>
+                                <!-- Vista previa rápida dentro del desplegable -->
+                                <div id="dropdownSelectedPreview" class="small mb-2 p-1 px-2 bg-light rounded text-muted" style="display: none;">
+                                    <span class="fw-semibold text-primary"><i class="fa-solid fa-user-check me-1"></i>Seleccionados (<span id="dropdownSelectedCount">0</span>):</span>
+                                    <div id="dropdownSelectedNames" class="small text-dark mt-1 text-truncate" style="max-width: 300px;"></div>
+                                </div>
                                 <!-- Contenedor de checkboxes -->
                                 <div id="userCheckboxContainer" style="max-height: 240px; overflow-y: auto;">
                                     <div class="text-center py-3 text-muted small">Cargando colaboradores...</div>
@@ -132,6 +137,22 @@
                         <button type="button" id="btnExportar" class="btn btn-outline-success btn-md px-3 fw-semibold shadow-sm" disabled title="Exportar a Excel para Nómina">
                             <i class="fa-solid fa-file-excel me-1"></i> Exportar
                         </button>
+                    </div>
+
+                    <!-- CUADRO VISUAL DE TRABAJADORES SELECCIONADOS (TAGS / BADGES INTERACTIVOS) -->
+                    <div class="col-12" id="selectedUsersCard" style="display: none;">
+                        <div class="p-2 px-3 rounded-3 bg-light border border-primary-subtle d-flex flex-wrap align-items-center gap-2">
+                            <span class="badge bg-primary text-white py-1 px-2 d-inline-flex align-items-center">
+                                <i class="fa-solid fa-user-check me-1"></i>
+                                <span id="badgeCount">0</span> Seleccionados:
+                            </span>
+                            <div id="selectedUsersPills" class="d-flex flex-wrap align-items-center gap-1 flex-grow-1">
+                                <!-- Pastillas de cada colaborador -->
+                            </div>
+                            <button type="button" class="btn btn-link btn-sm text-danger p-0 ms-auto text-decoration-none small fw-semibold" onclick="clearSelectedUsers()" title="Deseleccionar todos">
+                                <i class="fa-solid fa-trash-can me-1"></i>Limpiar selección
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
