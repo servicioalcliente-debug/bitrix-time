@@ -161,6 +161,40 @@ function setupEventListeners() {
 
     // Búsqueda en vivo en las tablas
     document.getElementById("searchTable").addEventListener("input", filterAllTables);
+
+    // FILTRO DIRECTO POR ID DE TAREA (NUEVO)
+    const taskIdFilterInput = document.getElementById("taskIdFilter");
+    const btnClearTaskId = document.getElementById("btnClearTaskId");
+
+    if (taskIdFilterInput) {
+        taskIdFilterInput.addEventListener("input", (e) => {
+            const val = e.target.value.trim();
+            if (btnClearTaskId) {
+                btnClearTaskId.style.display = val ? "inline-block" : "none";
+            }
+            // Si ya hay datos cargados, filtrar inmediatamente en las tablas
+            if (appState.records && appState.records.length > 0) {
+                filterAllTables();
+            }
+        });
+
+        taskIdFilterInput.addEventListener("keydown", (e) => {
+            if (e.key === "Enter") {
+                e.preventDefault();
+                fetchTimeRecords();
+            }
+        });
+    }
+
+    if (btnClearTaskId) {
+        btnClearTaskId.addEventListener("click", () => {
+            if (taskIdFilterInput) {
+                taskIdFilterInput.value = "";
+                btnClearTaskId.style.display = "none";
+                filterAllTables();
+            }
+        });
+    }
 }
 
 // Cargar lista inicial de trabajadores
@@ -417,6 +451,7 @@ async function fetchTimeRecords() {
 
     try {
         const criterion = document.querySelector('input[name="dateCriterion"]:checked')?.value || "work_date";
+        const taskIdVal = document.getElementById("taskIdFilter")?.value?.trim() || "";
 
         const response = await fetch("/api/times", {
             method: "POST",
@@ -425,7 +460,8 @@ async function fetchTimeRecords() {
                 date_from: dateFrom,
                 date_to: dateTo,
                 criterion: criterion,
-                user_ids: appState.selectedUserIds.length > 0 ? appState.selectedUserIds : null
+                user_ids: appState.selectedUserIds.length > 0 ? appState.selectedUserIds : null,
+                task_id: taskIdVal || null
             })
         });
 
@@ -484,7 +520,13 @@ function filterAllTables() {
 
 // 1. Tabla de Resumen por Persona y Tarea
 function filterSummaryTable() {
-    const q = removeAccents(document.getElementById("searchTable").value);
+    const rawSearch = document.getElementById("searchTable") ? document.getElementById("searchTable").value : "";
+    const q = removeAccents(rawSearch);
+    const cleanQ = q.replace(/^#/, "").trim();
+
+    const taskIdInput = document.getElementById("taskIdFilter") ? document.getElementById("taskIdFilter").value.trim() : "";
+    const cleanTaskIdInput = taskIdInput.replace(/^#/, "").trim().toLowerCase();
+
     const tbody = document.getElementById("tableSummaryBody");
     const footerCount = document.getElementById("tableFooterCount");
 
@@ -496,12 +538,26 @@ function filterSummaryTable() {
         filtered = filtered.filter(item => selSet.has(String(item.user_id).trim()));
     }
 
+    // Filtro específico por ID de tarea indicado en el panel superior
+    if (cleanTaskIdInput) {
+        filtered = filtered.filter(item => {
+            const tid = String(item.task_id || "").toLowerCase();
+            const pid = String(item.parent_id || "").toLowerCase();
+            return tid.includes(cleanTaskIdInput) || pid.includes(cleanTaskIdInput);
+        });
+    }
+
+    // Búsqueda general en la tabla (incluye ID de tarea, ID tarea madre, título, persona, grupo)
     if (q) {
-        filtered = filtered.filter(item =>
-            removeAccents(item.task_title || "").includes(q) ||
-            removeAccents(item.user_name || "").includes(q) ||
-            removeAccents(item.group_name || "").includes(q)
-        );
+        filtered = filtered.filter(item => {
+            const tid = String(item.task_id || "").toLowerCase();
+            const pid = String(item.parent_id || "").toLowerCase();
+            return tid.includes(cleanQ) ||
+                   pid.includes(cleanQ) ||
+                   removeAccents(item.task_title || "").includes(q) ||
+                   removeAccents(item.user_name || "").includes(q) ||
+                   removeAccents(item.group_name || "").includes(q);
+        });
     }
 
     footerCount.textContent = `${filtered.length} tarea(s) trabajadas`;
@@ -557,7 +613,13 @@ function filterSummaryTable() {
 
 // 2. Tabla de Detalle Línea por Línea
 function filterDetailTable() {
-    const q = removeAccents(document.getElementById("searchTable").value);
+    const rawSearch = document.getElementById("searchTable") ? document.getElementById("searchTable").value : "";
+    const q = removeAccents(rawSearch);
+    const cleanQ = q.replace(/^#/, "").trim();
+
+    const taskIdInput = document.getElementById("taskIdFilter") ? document.getElementById("taskIdFilter").value.trim() : "";
+    const cleanTaskIdInput = taskIdInput.replace(/^#/, "").trim().toLowerCase();
+
     const tbody = document.getElementById("tableDetailBody");
 
     let filtered = appState.records || [];
@@ -568,13 +630,24 @@ function filterDetailTable() {
         filtered = filtered.filter(r => selSet.has(String(r.USER_ID).trim()));
     }
 
+    // Filtro específico por ID de tarea indicado en el panel superior
+    if (cleanTaskIdInput) {
+        filtered = filtered.filter(r => {
+            const tid = String(r.TASK_ID || "").toLowerCase();
+            return tid.includes(cleanTaskIdInput);
+        });
+    }
+
+    // Búsqueda general en la tabla (incluye ID de tarea, título, colaborador, comentario, grupo)
     if (q) {
-        filtered = filtered.filter(r => 
-            removeAccents(r.TASK_TITLE || "").includes(q) ||
-            removeAccents(r.USER_NAME || "").includes(q) ||
-            removeAccents(r.COMMENT_TEXT || "").includes(q) ||
-            removeAccents(r.GROUP_NAME || "").includes(q)
-        );
+        filtered = filtered.filter(r => {
+            const tid = String(r.TASK_ID || "").toLowerCase();
+            return tid.includes(cleanQ) ||
+                   removeAccents(r.TASK_TITLE || "").includes(q) ||
+                   removeAccents(r.USER_NAME || "").includes(q) ||
+                   removeAccents(r.COMMENT_TEXT || "").includes(q) ||
+                   removeAccents(r.GROUP_NAME || "").includes(q);
+        });
     }
 
     if (filtered.length === 0) {
@@ -752,6 +825,15 @@ async function exportToExcel() {
         recordsToExport = recordsToExport.filter(r => appState.selectedUserIds.includes(r.USER_ID));
         taskSummaryToExport = taskSummaryToExport.filter(tu => appState.selectedUserIds.includes(tu.user_id));
         usersSummaryToExport = usersSummaryToExport.filter(u => appState.selectedUserIds.includes(u.user_id));
+    }
+
+    const taskIdVal = document.getElementById("taskIdFilter")?.value?.replace(/^#/, "").trim().toLowerCase();
+    if (taskIdVal) {
+        recordsToExport = recordsToExport.filter(r => String(r.TASK_ID || "").toLowerCase().includes(taskIdVal));
+        taskSummaryToExport = taskSummaryToExport.filter(tu => 
+            String(tu.task_id || "").toLowerCase().includes(taskIdVal) || 
+            String(tu.parent_id || "").toLowerCase().includes(taskIdVal)
+        );
     }
 
     try {

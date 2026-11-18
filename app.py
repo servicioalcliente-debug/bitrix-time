@@ -29,6 +29,30 @@ CACHE_GROUPS = {}
 CACHE_TASKS = {}
 USERS_CACHE_FILE = os.path.join(os.path.dirname(__file__), "users_cache.json")
 GROUPS_CACHE_FILE = os.path.join(os.path.dirname(__file__), "groups_cache.json")
+TASKS_CACHE_FILE = os.path.join(os.path.dirname(__file__), "tasks_cache.json")
+
+def load_cached_tasks():
+    """Carga metadatos de tareas guardadas en disco para acelerar consultas subsecuentes."""
+    global CACHE_TASKS
+    if os.path.exists(TASKS_CACHE_FILE):
+        try:
+            with open(TASKS_CACHE_FILE, "r", encoding="utf-8") as f:
+                data = json.load(f)
+                if isinstance(data, dict) and data:
+                    CACHE_TASKS.update(data)
+                    print(f"[CACHE] Cargadas {len(CACHE_TASKS)} tareas desde archivo local.")
+        except Exception as e:
+            print(f"[CACHE ERROR] Al leer {TASKS_CACHE_FILE}: {e}")
+
+def save_cached_tasks():
+    """Persiste las tareas descubiertas en disco."""
+    global CACHE_TASKS
+    if CACHE_TASKS:
+        try:
+            with open(TASKS_CACHE_FILE, "w", encoding="utf-8") as f:
+                json.dump(CACHE_TASKS, f, ensure_ascii=False, indent=2)
+        except Exception as e:
+            print(f"[CACHE ERROR] Al guardar {TASKS_CACHE_FILE}: {e}")
 
 def load_cached_groups():
     """Carga los proyectos y grupos de trabajo guardados en disco para respuesta instantanea (0ms)."""
@@ -79,6 +103,7 @@ def save_cached_users():
 # Carga inicial inmediata al arrancar el servidor
 load_cached_users()
 load_cached_groups()
+load_cached_tasks()
 
 def call_bitrix(method, params=None):
     """
@@ -363,12 +388,25 @@ def get_times():
 
         criterion = body.get("criterion", "work_date")  # 'work_date' o 'submit_date'
 
+        # Filtro opcional por ID de Tarea específica
+        task_id_param = body.get("task_id") or body.get("taskId")
+        filtered_task_ids = []
+        if task_id_param:
+            if isinstance(task_id_param, (list, tuple)):
+                filtered_task_ids = [str(t).strip().replace("#", "") for t in task_id_param if str(t).strip()]
+            elif isinstance(task_id_param, str):
+                filtered_task_ids = [t.strip().replace("#", "") for t in task_id_param.split(",") if t.strip()]
+            elif isinstance(task_id_param, int):
+                filtered_task_ids = [str(task_id_param)]
+
         if not date_from or not date_to:
             return jsonify({"success": False, "error": "Debe especificar 'date_from' y 'date_to'"}), 400
 
         print(f"\n=======================================================")
         print(f"⚡ [CONSULTA OPTIMIZADA] Rango: {date_from} al {date_to} | Modo: {criterion}")
         print(f"👥 Colaboradores ({len(selected_users)}): {selected_users or 'TODOS'}")
+        if filtered_task_ids:
+            print(f"🎯 [FILTRO TAREA] ID(s): {filtered_task_ids}")
         print(f"=======================================================")
 
         raw_records = []
@@ -388,6 +426,9 @@ def get_times():
             ">=CREATED_DATE": dt_start_buffer,
             "<=CREATED_DATE": dt_end_target
         }
+
+        if filtered_task_ids:
+            base_filter["TASK_ID"] = filtered_task_ids if len(filtered_task_ids) > 1 else filtered_task_ids[0]
 
         # Si se seleccionaron colaboradores específicos, consultar directamente por ellos con USER_ID
         # Bitrix24 acepta lista de USER_ID, evitando descargar miles de registros de otras personas
@@ -652,7 +693,11 @@ def get_times():
             if pid and pid in CACHE_TASKS:
                 t["parent_title"] = CACHE_TASKS[pid].get("title", "")
 
-        # Resolver Grupos / Proyectos faltantes
+        # Persistir tareas descubiertas en caché local
+        if task_chunks or parent_chunks:
+            save_cached_tasks()
+
+        # Resolver Grupos / Proyectos faltantes en paralelo (ultra rápido, sin demoras)
         needed_group_ids = [
             t["group_id"] for t in CACHE_TASKS.values()
             if t.get("group_id") and t.get("group_id") not in ["0", "None", "null"] and t.get("group_id") not in CACHE_GROUPS
@@ -660,31 +705,26 @@ def get_times():
         needed_group_ids = list(set(needed_group_ids))
 
         new_groups_found = False
-        # Para evitar timeouts, limitamos la resolución externa a un máximo de 5 grupos
-        for gid in needed_group_ids[:5]:
-            gt_data = call_bitrix("tasks.task.list", {
-                "filter": {"GROUP_ID": gid},
-                "select": ["GROUP"],
-                "order": {"ID": "DESC"}
-            })
-            g_tasks = gt_data.get("result", {}).get("tasks", []) if isinstance(gt_data.get("result"), dict) else []
-            if g_tasks:
-                grp_obj = g_tasks[0].get("group") or g_tasks[0].get("GROUP") or {}
-                if isinstance(grp_obj, dict) and grp_obj.get("name"):
-                    CACHE_GROUPS[gid] = grp_obj.get("name")
-                    new_groups_found = True
-                    continue
+        if needed_group_ids:
+            def _fetch_group_fast(gid):
+                try:
+                    sg_data = call_bitrix("sonet_group.get", {"FILTER": {"ID": gid}})
+                    sg_list = sg_data.get("result", [])
+                    if isinstance(sg_list, list) and sg_list:
+                        return gid, sg_list[0].get("NAME", f"Proyecto #{gid}")
+                except Exception:
+                    pass
+                return gid, f"Proyecto #{gid}"
 
-            sg_data = call_bitrix("sonet_group.get", {"FILTER": {"ID": gid}})
-            sg_list = sg_data.get("result", [])
-            if isinstance(sg_list, list) and sg_list:
-                CACHE_GROUPS[gid] = sg_list[0].get("NAME", f"Proyecto {gid}")
+            with ThreadPoolExecutor(max_workers=min(5, len(needed_group_ids))) as executor:
+                resolved_groups = list(executor.map(_fetch_group_fast, needed_group_ids[:10]))
+
+            for gid, gname in resolved_groups:
+                CACHE_GROUPS[gid] = gname
                 new_groups_found = True
-            else:
-                CACHE_GROUPS[gid] = f"Proyecto #{gid}"
 
-        if new_groups_found:
-            save_cached_groups()
+            if new_groups_found:
+                save_cached_groups()
 
         # -------------------------------------------------------------
         # 4. FILTRADO DINÁMICO, DEDUPLICACIÓN Y CÁLCULOS
@@ -711,6 +751,10 @@ def get_times():
 
             # FILTRO DE USUARIOS SELECCIONADOS (Nómina)
             if selected_users and u_id not in selected_users:
+                continue
+
+            # FILTRO DE TAREA ESPECÍFICA (Si se especificó en la consulta)
+            if filtered_task_ids and t_id not in filtered_task_ids:
                 continue
 
             # FILTRO DE FECHA SEGÚN CRITERIO (Nómina Real vs PureTaskReport)

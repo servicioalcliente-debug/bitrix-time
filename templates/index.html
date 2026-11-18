@@ -73,7 +73,7 @@
                     </div>
 
                     <!-- Fecha Desde -->
-                    <div class="col-md-3">
+                    <div class="col-md-2">
                         <label class="form-label small fw-semibold text-secondary mb-1">
                             <i class="fa-regular fa-calendar me-1"></i> Fecha Desde
                         </label>
@@ -81,7 +81,7 @@
                     </div>
 
                     <!-- Fecha Hasta -->
-                    <div class="col-md-3">
+                    <div class="col-md-2">
                         <label class="form-label small fw-semibold text-secondary mb-1">
                             <i class="fa-regular fa-calendar-check me-1"></i> Fecha Hasta
                         </label>
@@ -124,6 +124,19 @@
                                     <div class="text-center py-3 text-muted small">Cargando colaboradores...</div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+
+                    <!-- FILTRO POR ID DE TAREA (NUEVO) -->
+                    <div class="col-md-2">
+                        <label class="form-label small fw-semibold text-secondary mb-1">
+                            <i class="fa-solid fa-hashtag me-1 text-primary"></i> ID Tarea <small class="text-muted">(Opcional)</small>
+                        </label>
+                        <div class="input-group input-group-md">
+                            <input type="text" id="taskIdFilter" class="form-control form-control-md shadow-none" placeholder="Ej: 108323">
+                            <button class="btn btn-outline-secondary btn-sm" type="button" id="btnClearTaskId" title="Limpiar ID" style="display: none;">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
                         </div>
                     </div>
 
@@ -256,7 +269,7 @@
                             <div class="col-md-5">
                                 <div class="input-group input-group-sm">
                                     <span class="input-group-text bg-light border-end-0"><i class="fa-solid fa-filter text-muted"></i></span>
-                                    <input type="text" id="searchTable" class="form-control bg-light border-start-0 shadow-none" placeholder="Filtrar por tarea, comentario o colaborador...">
+                                    <input type="text" id="searchTable" class="form-control bg-light border-start-0 shadow-none" placeholder="Filtrar por ID de tarea (#12345), título, colaborador o comentario...">
                                 </div>
                             </div>
                         </div>

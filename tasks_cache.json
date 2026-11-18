@@ -1,0 +1,5692 @@
+{
+  "31721": {
+    "id": "31721",
+    "title": "COLCARGO: Elaboracion de acciones correctivas y de mejora",
+    "group_id": "67",
+    "parent_id": "31659",
+    "parent_title": "COLCARGO: BASC V6 - Plan de trabajo 2023",
+    "creator_name": "Jenny Gomez Sepulveda",
+    "time_estimate": 0,
+    "time_spent_in_logs": 39600
+  },
+  "73203": {
+    "id": "73203",
+    "title": "SENALTUR - Seguimiento No conformes",
+    "group_id": "213",
+    "parent_id": "63499",
+    "parent_title": "SENALTUR - VERIFICAR COORDINACIÓN Y PRESTACIÓN DEL SERVICIO 2025",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 28800,
+    "time_spent_in_logs": 22200
+  },
+  "90161": {
+    "id": "90161",
+    "title": "Dispein - Informe Trimestral CCL (Tercer trimestre)",
+    "group_id": "217",
+    "parent_id": "90153",
+    "parent_title": "DISPEIN - RENDICION DE CUENTAS COMITÉ DE CONVIVENCIA LABORAL 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 3600,
+    "time_spent_in_logs": 1800
+  },
+  "93669": {
+    "id": "93669",
+    "title": "Senaltur - Reunión Copasst Octubre 2026",
+    "group_id": "213",
+    "parent_id": "92577",
+    "parent_title": "SENALTUR - REUNIONES COPASST 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 3600,
+    "time_spent_in_logs": 3600
+  },
+  "95059": {
+    "id": "95059",
+    "title": "Atención Servicio al cliente - Directora Comercial - Octubre 2026",
+    "group_id": "33",
+    "parent_id": "91809",
+    "parent_title": "G COMERCIAL: HACER - ATENCION AL CLIENTE DIRECTOR COMERCIAL AÑO 2026",
+    "creator_name": "Jenny Gomez Sepulveda",
+    "time_estimate": 0,
+    "time_spent_in_logs": 99000
+  },
+  "96171": {
+    "id": "96171",
+    "title": "Unilago - Reunión Vigía SST (Septiembre)",
+    "group_id": "85",
+    "parent_id": "96153",
+    "parent_title": "UNILAGO - REUNIONES VIGÍA SST 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 3600,
+    "time_spent_in_logs": 3600
+  },
+  "96329": {
+    "id": "96329",
+    "title": "Unilago - Revisión de planillas de seguridad social (Primer trimestre)",
+    "group_id": "85",
+    "parent_id": "96327",
+    "parent_title": "UNILAGO - SEGUIMIENTO PAGOS DE SEGURIDAD SOCIAL 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 1800,
+    "time_spent_in_logs": 1800
+  },
+  "97181": {
+    "id": "97181",
+    "title": "FICO - Evaluación Proveedores y Contratistas",
+    "group_id": "147",
+    "parent_id": "88221",
+    "parent_title": "FICO - EVALUACIÓN DE PROVEEDORES 2026",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 43800
+  },
+  "97839": {
+    "id": "97839",
+    "title": "Senaltur - Sonometría de Ruido interior",
+    "group_id": "213",
+    "parent_id": "92597",
+    "parent_title": "SENALTUR - PROGRAMA RIESGO AUDITIVO 2026",
+    "creator_name": "Yovanna Ochoa Laverde",
+    "time_estimate": 0,
+    "time_spent_in_logs": 7200
+  },
+  "106061": {
+    "id": "106061",
+    "title": "Business - Realizar informe de inspección (Agosto 2026)",
+    "group_id": "69",
+    "parent_id": "106055",
+    "parent_title": "BUSINESS - INSPECCIONES SEGUNDO SEMESTRE 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 3600,
+    "time_spent_in_logs": 2400
+  },
+  "106385": {
+    "id": "106385",
+    "title": "Fico: Capacitacion Motivacional",
+    "group_id": "147",
+    "parent_id": "106377",
+    "parent_title": "FICO - CAPACITACIÓN MOTIVACIONAL",
+    "creator_name": "Jenny Gomez Sepulveda",
+    "time_estimate": 0,
+    "time_spent_in_logs": 4800
+  },
+  "106557": {
+    "id": "106557",
+    "title": "Capillas - Crear Dashboard Gestión Mejora",
+    "group_id": "25",
+    "parent_id": "92005",
+    "parent_title": "CAPILLAS - PLANEAR GESTIÓN MEJORA (Enero 2026 - Dic 2026)",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 44400
+  },
+  "106581": {
+    "id": "106581",
+    "title": "G Comercial: Planear - Matriz de Requisitos Legales",
+    "group_id": "33",
+    "parent_id": "97481",
+    "parent_title": "G Comercial: Servicio MRL",
+    "creator_name": "Jenny Gomez Sepulveda",
+    "time_estimate": 0,
+    "time_spent_in_logs": 36600
+  },
+  "106685": {
+    "id": "106685",
+    "title": "FICO - Seguimiento Acciones",
+    "group_id": "147",
+    "parent_id": "92987",
+    "parent_title": "FICO- ACTUAR GESTIÓN INTEGRAL 2026",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 13200
+  },
+  "106947": {
+    "id": "106947",
+    "title": "Capillas - Inducción personal nuevo (Octubre 2026)",
+    "group_id": "25",
+    "parent_id": "96635",
+    "parent_title": "CAPILLAS - DICTAR INDUCCIÓN/REINDUCCIÓN 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 18000
+  },
+  "107427": {
+    "id": "107427",
+    "title": "Contabilizar y Causar Facturas de Compra (Asistente Administrativo y/o Contable)",
+    "group_id": "89",
+    "parent_id": "90739",
+    "parent_title": "HACER GFINANCIERA - CONTABILIZAR Y/O CAUSAR GASTOS (año 2026)",
+    "creator_name": "Mónica Gómez Bohorquez",
+    "time_estimate": 72000,
+    "time_spent_in_logs": 11700
+  },
+  "107449": {
+    "id": "107449",
+    "title": "Elaboración y Actualización Calendario BITRIX (Tareas y Eventos Otilia Garcia)",
+    "group_id": "89",
+    "parent_id": "90875",
+    "parent_title": "PLANEAR GFINANCIERA - CONTABILIDAD Y TESORERIA",
+    "creator_name": "Mónica Gómez Bohorquez",
+    "time_estimate": 72000,
+    "time_spent_in_logs": 63900
+  },
+  "107919": {
+    "id": "107919",
+    "title": "Atcal - Planificación actividades Emily Bermúdez (Octubre 2026)",
+    "group_id": "43",
+    "parent_id": "107917",
+    "parent_title": "ATCAL - PLANIFICACIÓN ACTIVIDADES PERSONAL OPERACIONES (Octubre 2026)",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 36000
+  },
+  "108527": {
+    "id": "108527",
+    "title": "Edición grabación short SST para primíparos (06/10/2026)",
+    "group_id": "55",
+    "parent_id": "108521",
+    "parent_title": "SST PARA PRIMIPAROS - (06/10/2026)",
+    "creator_name": "Gloria Gómez Bohorquez",
+    "time_estimate": 3600,
+    "time_spent_in_logs": 3600
+  },
+  "108727": {
+    "id": "108727",
+    "title": "Contabilizar y Causar Facturas de Compra (Asistente Administrativo y/o Contable)",
+    "group_id": "89",
+    "parent_id": "90739",
+    "parent_title": "HACER GFINANCIERA - CONTABILIZAR Y/O CAUSAR GASTOS (año 2026)",
+    "creator_name": "Mónica Gómez Bohorquez",
+    "time_estimate": 72000,
+    "time_spent_in_logs": 24300
+  },
+  "108733": {
+    "id": "108733",
+    "title": "Realizar Pagos en General Tesorería",
+    "group_id": "89",
+    "parent_id": "90815",
+    "parent_title": "HACER GFINANCIERA - TESORERIA PAGO A PROVEEDORES (año 2026)",
+    "creator_name": "Mónica Gómez Bohorquez",
+    "time_estimate": 57600,
+    "time_spent_in_logs": 65400
+  },
+  "108743": {
+    "id": "108743",
+    "title": "Conciliación Cuentas de Mercancías",
+    "group_id": "89",
+    "parent_id": "90851",
+    "parent_title": "VERIFICAR GFINANCIERA - CONCILIACIÓN CONTABLE (año 2026)",
+    "creator_name": "Mónica Gómez Bohorquez",
+    "time_estimate": 10800,
+    "time_spent_in_logs": 2700
+  },
+  "108745": {
+    "id": "108745",
+    "title": "Informe Consulta de Saldos",
+    "group_id": "89",
+    "parent_id": "90855",
+    "parent_title": "VERIFICAR GFINANCIERA - INFORMES CONTABLES Y TESORERIA (año 2026)",
+    "creator_name": "Mónica Gómez Bohorquez",
+    "time_estimate": 72000,
+    "time_spent_in_logs": 55200
+  },
+  "108749": {
+    "id": "108749",
+    "title": "Gestión Correo Electrónico Financiera y Administrativo (Otilia García)",
+    "group_id": "89",
+    "parent_id": "90875",
+    "parent_title": "PLANEAR GFINANCIERA - CONTABILIDAD Y TESORERIA",
+    "creator_name": "Mónica Gómez Bohorquez",
+    "time_estimate": 28800,
+    "time_spent_in_logs": 8100
+  },
+  "108785": {
+    "id": "108785",
+    "title": "Realizar Cobro Cartera",
+    "group_id": "89",
+    "parent_id": "90837",
+    "parent_title": "HACER GFINANCIERA - TESORERIA RECAUDO DE CARTERA (año 2026)",
+    "creator_name": "Mónica Gómez Bohorquez",
+    "time_estimate": 43200,
+    "time_spent_in_logs": 43500
+  },
+  "108893": {
+    "id": "108893",
+    "title": "FICO - Inspección Sede Isla del Sol",
+    "group_id": "147",
+    "parent_id": "108891",
+    "parent_title": "FICO - INSPECCIONES",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 21600
+  },
+  "109091": {
+    "id": "109091",
+    "title": "DIVERSEY- Creación de usuarios en plataforma LS (Octubre/2026)",
+    "group_id": "53",
+    "parent_id": "93283",
+    "parent_title": "DIVERSEY: PROGRAMACIÓN AUDITORIAS 2026",
+    "creator_name": "Mónica Gómez Bohorquez",
+    "time_estimate": 18000,
+    "time_spent_in_logs": 18000
+  },
+  "109177": {
+    "id": "109177",
+    "title": "Senaltur - Reunión CCL Septiembre 2026",
+    "group_id": "213",
+    "parent_id": "92581",
+    "parent_title": "SENALTUR - REUNIONES CCL 2026",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 3600
+  },
+  "109281": {
+    "id": "109281",
+    "title": "G mercadeo grabación short semana  de la seguridad vial",
+    "group_id": "55",
+    "parent_id": "109279",
+    "parent_title": "G mercadeo short Semana de la seguridad vial",
+    "creator_name": "Gloria Gómez Bohorquez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 1200
+  },
+  "109287": {
+    "id": "109287",
+    "title": "G mercadeo grabar Short  como identificar oferentes Curso 50 y 20 horas",
+    "group_id": "55",
+    "parent_id": "109285",
+    "parent_title": "G mercadeo Short como identificar oferentes Curso 50 y 20 horas",
+    "creator_name": "Gloria Gómez Bohorquez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 1800
+  },
+  "109293": {
+    "id": "109293",
+    "title": "G mercadeo  grabación short Cómo puede la Ia ayudarte en los sistemas de gestión",
+    "group_id": "55",
+    "parent_id": "109291",
+    "parent_title": "G mercadeo short Cómo puede la Ia ayudarte en los sistemas de gestión",
+    "creator_name": "Gloria Gómez Bohorquez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 1800
+  },
+  "109331": {
+    "id": "109331",
+    "title": "Unilago - Capacitación Uso y manejo de extintores",
+    "group_id": "85",
+    "parent_id": "97433",
+    "parent_title": "UNILAGO - PLAN DE FORMACIÓN 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 12600
+  },
+  "109471": {
+    "id": "109471",
+    "title": "Comercial: Vertiv - Personal HSE - Zona Franca 2 días",
+    "group_id": "33",
+    "parent_id": "90655",
+    "parent_title": "G COMERCIAL : HACER - PRESENTACIÓN PROPUESTAS (año 2026)",
+    "creator_name": "Jenny Gomez Sepulveda",
+    "time_estimate": 0,
+    "time_spent_in_logs": 7200
+  },
+  "109477": {
+    "id": "109477",
+    "title": "COLTUREX - Reunión ente Certificador",
+    "group_id": "63",
+    "parent_id": "109475",
+    "parent_title": "COLTUREX - AUDITORÍA EXTERNA",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 1800
+  },
+  "109747": {
+    "id": "109747",
+    "title": "FICO - Acompañamiento Gerencia Caso Jhon Jurado",
+    "group_id": "147",
+    "parent_id": "94509",
+    "parent_title": "FICO - ASESORIA GESTIÓN HUMANA 2026",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 4800
+  },
+  "109773": {
+    "id": "109773",
+    "title": "Diligenciar encuesta Diversey - Evaluación de Proveedores",
+    "group_id": "89",
+    "parent_id": "108767",
+    "parent_title": "Tareas Generales y/o Administrativas (Otilia García)",
+    "creator_name": "Otilia Garcia Ariza",
+    "time_estimate": 0,
+    "time_spent_in_logs": 2700
+  },
+  "109815": {
+    "id": "109815",
+    "title": "FICO - Curso Mente Estratégica: Potencia tu Pensamiento Crítico y Analítico",
+    "group_id": "147",
+    "parent_id": "86257",
+    "parent_title": "FICO - CURSOS VIRTUALES 2026",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 1200
+  },
+  "109993": {
+    "id": "109993",
+    "title": "COLTUREX - Acompañamiento reunión con ARL COLMENA",
+    "group_id": "63",
+    "parent_id": "92539",
+    "parent_title": "COLTUREX - HACER GESTIÓN HUMANA 2026",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 1800
+  },
+  "110065": {
+    "id": "110065",
+    "title": "G mercadeo Reunión plan de trabajo Redes sociales  19/10/2026",
+    "group_id": "55",
+    "parent_id": "93545",
+    "parent_title": "PLANEACIÓN MANEJO DE REDES",
+    "creator_name": "Gloria Gómez Bohorquez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 13260
+  },
+  "110081": {
+    "id": "110081",
+    "title": "Cargues varios",
+    "group_id": "235",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "Ana María Cipagauta Acosta",
+    "time_estimate": 0,
+    "time_spent_in_logs": 8100
+  },
+  "110083": {
+    "id": "110083",
+    "title": "Inmolmec - Perfil sociodemografico 2026",
+    "group_id": "247",
+    "parent_id": "108587",
+    "parent_title": "INMOLMEC - HACER GESTIÓN HUMANA 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 3600
+  },
+  "110153": {
+    "id": "110153",
+    "title": "Notificar al Cliente Macrosearch, el cambio de Cuenta bancaria a Caja social para pagos",
+    "group_id": "89",
+    "parent_id": "90877",
+    "parent_title": "HACER GFINANCIERA - TAREAS ADMINISTRATIVAS Y ARCHIVO (año 2026)",
+    "creator_name": "Otilia Garcia Ariza",
+    "time_estimate": 0,
+    "time_spent_in_logs": 600
+  },
+  "110161": {
+    "id": "110161",
+    "title": "Batería psicosocial STANZIA META",
+    "group_id": "99",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "Ana María Cipagauta Acosta",
+    "time_estimate": 18000,
+    "time_spent_in_logs": 16200
+  },
+  "110207": {
+    "id": "110207",
+    "title": "Lince Comercial - Ejecución y evaluación Simulacro Barranquilla (Sede Barranquilla)",
+    "group_id": "351",
+    "parent_id": "110197",
+    "parent_title": "LINCE - EJECUCIÓN Y EVALUACIÓN DE SIMULACROS 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 1800
+  },
+  "110221": {
+    "id": "110221",
+    "title": "Lince - Reuniones con los diferentes lideres de proceso Matriz IPER",
+    "group_id": "351",
+    "parent_id": "110217",
+    "parent_title": "LINCE - MATRIZ IPER 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 19800
+  },
+  "110225": {
+    "id": "110225",
+    "title": "Lince Comercial - Diagnostico para realizar simulacro",
+    "group_id": "351",
+    "parent_id": "110197",
+    "parent_title": "LINCE - EJECUCIÓN Y EVALUACIÓN DE SIMULACROS 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 1800
+  },
+  "110323": {
+    "id": "110323",
+    "title": "Capillas - Visita sede Maria Magdalena",
+    "group_id": "25",
+    "parent_id": "102865",
+    "parent_title": "CAPILLAS - VISITAS SEDES NORTE",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 8100
+  },
+  "110357": {
+    "id": "110357",
+    "title": "Capillas - Formato inspección a sedes",
+    "group_id": "25",
+    "parent_id": "92155",
+    "parent_title": "CAPILLAS - AJUSTES DOCUMENTALES (G Mejora)",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 12600
+  },
+  "110521": {
+    "id": "110521",
+    "title": "Desplazamiento 20261006",
+    "group_id": "245",
+    "parent_id": "109141",
+    "parent_title": "Aurora: Reunión con Gerencia",
+    "creator_name": "Jenny Gomez Sepulveda",
+    "time_estimate": 0,
+    "time_spent_in_logs": 7200
+  },
+  "111159": {
+    "id": "111159",
+    "title": "Fico - Medición Indicadores Septiembre 2026",
+    "group_id": "147",
+    "parent_id": "88299",
+    "parent_title": "FICO - PASO 20. INDICADORES Y REPORTES DE AUTOGESTIÓN PESV 2026",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 1800
+  },
+  "89871": {
+    "id": "89871",
+    "title": "Desprendibles Nómina (mes septiembre/2026)",
+    "group_id": "81",
+    "parent_id": "89853",
+    "parent_title": "NÓMINA - DESPRENDIBLES DE NÓMINA (año 2026)",
+    "creator_name": "Mónica Gómez Bohorquez",
+    "time_estimate": 7200,
+    "time_spent_in_logs": 2700
+  },
+  "90273": {
+    "id": "90273",
+    "title": "Dispein - Reunión Octubre CCL 2026",
+    "group_id": "217",
+    "parent_id": "95315",
+    "parent_title": "DISPEIN - REUNIONES DEL CCL 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 3600,
+    "time_spent_in_logs": 3600
+  },
+  "90461": {
+    "id": "90461",
+    "title": "Dispein - Pausas Activas Septiembre y octubre 2026",
+    "group_id": "217",
+    "parent_id": "90427",
+    "parent_title": "DISPEIN - PAUSAS ACTIVAS 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 900,
+    "time_spent_in_logs": 900
+  },
+  "94997": {
+    "id": "94997",
+    "title": "Planificación de trabajo Directora Comercial - Octubre 2026",
+    "group_id": "33",
+    "parent_id": "94975",
+    "parent_title": "G COMERCIAL: PLANEAR - PLANIFICACION DE TRABAJO - DIRECTOR COMERCIAL  2026",
+    "creator_name": "Jenny Gomez Sepulveda",
+    "time_estimate": 0,
+    "time_spent_in_logs": 93600
+  },
+  "95797": {
+    "id": "95797",
+    "title": "Senaltur - Medición de Indicadores 2026",
+    "group_id": "213",
+    "parent_id": "103249",
+    "parent_title": "SENALTUR - INDICADORES 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 14400
+  },
+  "96263": {
+    "id": "96263",
+    "title": "Unilago - Informe trimestral (Junio 2026)",
+    "group_id": "85",
+    "parent_id": "96259",
+    "parent_title": "UNILAGO - RENDICIÓN DE CUENTAS COMITÉ DE CONVIVENCIA LABORAL 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 1800
+  },
+  "97355": {
+    "id": "97355",
+    "title": "META: WhatsApp Business",
+    "group_id": "77",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "Luis Alejandro Rueda Pardo",
+    "time_estimate": 0,
+    "time_spent_in_logs": 17880
+  },
+  "97749": {
+    "id": "97749",
+    "title": "Unilago - Capacitación Primeros auxilios básicos",
+    "group_id": "85",
+    "parent_id": "97433",
+    "parent_title": "UNILAGO - PLAN DE FORMACIÓN 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 7200
+  },
+  "97853": {
+    "id": "97853",
+    "title": "Senaltur - Establecer google site",
+    "group_id": "213",
+    "parent_id": "97847",
+    "parent_title": "SENALTUR - GC OPORTUNIDAD - SGI INTELIGENTE",
+    "creator_name": "Yovanna Ochoa Laverde",
+    "time_estimate": 0,
+    "time_spent_in_logs": 7200
+  },
+  "99135": {
+    "id": "99135",
+    "title": "FICO - Seguimiento cursos programados",
+    "group_id": "147",
+    "parent_id": "86257",
+    "parent_title": "FICO - CURSOS VIRTUALES 2026",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 28800,
+    "time_spent_in_logs": 22500
+  },
+  "100739": {
+    "id": "100739",
+    "title": "Colturex - Reunión Comité de convivencia laboral Octubre 2026",
+    "group_id": "63",
+    "parent_id": "100723",
+    "parent_title": "COLTUREX - REUNIONES MENSUALES COMITÉ DE CONVIVENCIA LABORAL 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 14400
+  },
+  "101465": {
+    "id": "101465",
+    "title": "FICO - AM Reevaluación Proveedores",
+    "group_id": "147",
+    "parent_id": "93027",
+    "parent_title": "FICO- ACTUAR GESTIÓN DE COMPRAS 2026",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 7200
+  },
+  "103415": {
+    "id": "103415",
+    "title": "Amerivet - (SST) 4.2.6 Inspecciones con el COPASST",
+    "group_id": "273",
+    "parent_id": "103409",
+    "parent_title": "AMERIVET - (SST) INSPECCIONES LOCATIVAS PRIMER SEMESTRE 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 14400,
+    "time_spent_in_logs": 10800
+  },
+  "104077": {
+    "id": "104077",
+    "title": "Unilago - Crear dashboard con los indicadores de todos los procesos.",
+    "group_id": "85",
+    "parent_id": "96105",
+    "parent_title": "UNILAGO - PLANEAR GESTIÓN ESTRATÉGICA 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 45000
+  },
+  "106227": {
+    "id": "106227",
+    "title": "Lince - Entrega de informe corte Septiembre 2026",
+    "group_id": "43",
+    "parent_id": "106209",
+    "parent_title": "LINCE COMERCIAL - INFORMES DE GESTIÓN MENSUAL 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 7200,
+    "time_spent_in_logs": 4500
+  },
+  "106683": {
+    "id": "106683",
+    "title": "FICO - Emergencias",
+    "group_id": "147",
+    "parent_id": "106561",
+    "parent_title": "FICO - CAPACITACIONES PRESENCIALES",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 10800
+  },
+  "107433": {
+    "id": "107433",
+    "title": "Realizar Pagos en General Tesorería",
+    "group_id": "89",
+    "parent_id": "90815",
+    "parent_title": "HACER GFINANCIERA - TESORERIA PAGO A PROVEEDORES (año 2026)",
+    "creator_name": "Mónica Gómez Bohorquez",
+    "time_estimate": 57600,
+    "time_spent_in_logs": 109500
+  },
+  "107447": {
+    "id": "107447",
+    "title": "Gestión Correo Electrónico Financiera y Administrativo (Otilia García)",
+    "group_id": "89",
+    "parent_id": "90875",
+    "parent_title": "PLANEAR GFINANCIERA - CONTABILIDAD Y TESORERIA",
+    "creator_name": "Mónica Gómez Bohorquez",
+    "time_estimate": 28800,
+    "time_spent_in_logs": 6900
+  },
+  "107451": {
+    "id": "107451",
+    "title": "Archivo Virtual Financiera y Administrativo",
+    "group_id": "89",
+    "parent_id": "90877",
+    "parent_title": "HACER GFINANCIERA - TAREAS ADMINISTRATIVAS Y ARCHIVO (año 2026)",
+    "creator_name": "Mónica Gómez Bohorquez",
+    "time_estimate": 21600,
+    "time_spent_in_logs": 24000
+  },
+  "107861": {
+    "id": "107861",
+    "title": "SENALTUR - Actualización del Plan de Emergencias y sus anexos",
+    "group_id": "213",
+    "parent_id": "92659",
+    "parent_title": "SENALTUR - PLAN DE EMERGENCIAS 2026",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 18000
+  },
+  "108543": {
+    "id": "108543",
+    "title": "Edición grabación short SST para primíparos (20/10/2026)",
+    "group_id": "55",
+    "parent_id": "108537",
+    "parent_title": "SST PARA PRIMIPAROS - (20/10/2026)",
+    "creator_name": "Gloria Gómez Bohorquez",
+    "time_estimate": 3600,
+    "time_spent_in_logs": 3600
+  },
+  "108737": {
+    "id": "108737",
+    "title": "Causar Recibos de Cobro",
+    "group_id": "89",
+    "parent_id": "90837",
+    "parent_title": "HACER GFINANCIERA - TESORERIA RECAUDO DE CARTERA (año 2026)",
+    "creator_name": "Mónica Gómez Bohorquez",
+    "time_estimate": 3600,
+    "time_spent_in_logs": 5400
+  },
+  "108751": {
+    "id": "108751",
+    "title": "Elaboración y Actualización Calendario BITRIX (Tareas y Eventos Otilia Garcia)",
+    "group_id": "89",
+    "parent_id": "90875",
+    "parent_title": "PLANEAR GFINANCIERA - CONTABILIDAD Y TESORERIA",
+    "creator_name": "Mónica Gómez Bohorquez",
+    "time_estimate": 72000,
+    "time_spent_in_logs": 55500
+  },
+  "108883": {
+    "id": "108883",
+    "title": "Verificar Tiempos Documentados en BITRIX (Septiembre 01-30 del 2026)",
+    "group_id": "81",
+    "parent_id": "89967",
+    "parent_title": "VERIFICAR TIEMPOS DOCUMENTADOS BITRIX (PERIODO SEPTIEMBRE 01-30 DEL 2026)",
+    "creator_name": "Mónica Gómez Bohorquez",
+    "time_estimate": 3600,
+    "time_spent_in_logs": 3600
+  },
+  "108989": {
+    "id": "108989",
+    "title": "COLCARGO - 32AC2026",
+    "group_id": "67",
+    "parent_id": "108895",
+    "parent_title": "COLCARGO - NO CONFORMIDADES BASC",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 6600
+  },
+  "108995": {
+    "id": "108995",
+    "title": "COLCARGO - 35AC2026",
+    "group_id": "67",
+    "parent_id": "108895",
+    "parent_title": "COLCARGO - NO CONFORMIDADES BASC",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 6600
+  },
+  "109039": {
+    "id": "109039",
+    "title": "SENALTUR - Investigación Siniestro 20260918 MV403",
+    "group_id": "213",
+    "parent_id": "99303",
+    "parent_title": "SENALTUR - Paso 13 INVESTIGACIÓN SINIESTROS",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 7800
+  },
+  "109069": {
+    "id": "109069",
+    "title": "Entrega relaciones de comisiones de Luisa Montenegro - Curso Manipulación de Alimentos",
+    "group_id": "61",
+    "parent_id": "95555",
+    "parent_title": "VERIFICAR ALIANZAS - COMISIONES ALIADOS(año 2026)",
+    "creator_name": "Mónica Gómez Bohorquez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 600
+  },
+  "109161": {
+    "id": "109161",
+    "title": "Colturex - Reunión general plan de trabajo",
+    "group_id": "63",
+    "parent_id": "93477",
+    "parent_title": "COLTUREX - PLAN DE TRABAJO 2026",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 20400
+  },
+  "109269": {
+    "id": "109269",
+    "title": "Problema ingreso escritorio remoto",
+    "group_id": "77",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "Ana María Cipagauta Acosta",
+    "time_estimate": 0,
+    "time_spent_in_logs": 900
+  },
+  "109405": {
+    "id": "109405",
+    "title": "Capillas - Reunión de revisión de actividades Jenny, Paola y Laura",
+    "group_id": "25",
+    "parent_id": "109403",
+    "parent_title": "CAPILLAS - PLANIFICACIÓN OTORGAMIENTO ISO 14001 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 10800
+  },
+  "109423": {
+    "id": "109423",
+    "title": "COLTUREX - Actualización Manual",
+    "group_id": "63",
+    "parent_id": "81023",
+    "parent_title": "COLTUREX - GESTIÓN DEL CAMBIO RESOLUCIÓN 2328 DE 2025 (SARLAF)",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 3600
+  },
+  "109431": {
+    "id": "109431",
+    "title": "Cita Médica Aprobada : Ana Cipagauta – 08/10/2026",
+    "group_id": "81",
+    "parent_id": "109429",
+    "parent_title": "CITAS MEDICAS - OCTUBRE/2026",
+    "creator_name": "Mónica Gómez Bohorquez",
+    "time_estimate": 9000,
+    "time_spent_in_logs": 9000
+  },
+  "109435": {
+    "id": "109435",
+    "title": "G conocimiento Reunión para definir priorización",
+    "group_id": "51",
+    "parent_id": "109433",
+    "parent_title": "G CONOCIMIENTO PLANEAR - ACTUALIZACIÓN CURSOS DE FORMACIÓN",
+    "creator_name": "Gloria Gómez Bohorquez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 18000
+  },
+  "109473": {
+    "id": "109473",
+    "title": "Comercial: IM Ingenieria - Curso Manejo Defensivo",
+    "group_id": "33",
+    "parent_id": "90655",
+    "parent_title": "G COMERCIAL : HACER - PRESENTACIÓN PROPUESTAS (año 2026)",
+    "creator_name": "Jenny Gomez Sepulveda",
+    "time_estimate": 0,
+    "time_spent_in_logs": 3600
+  },
+  "109573": {
+    "id": "109573",
+    "title": "Batería psicosocial Air-e",
+    "group_id": "99",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "Ana María Cipagauta Acosta",
+    "time_estimate": 0,
+    "time_spent_in_logs": 4800
+  },
+  "109711": {
+    "id": "109711",
+    "title": "Capillas - Diagnostico 14001",
+    "group_id": "25",
+    "parent_id": "109403",
+    "parent_title": "CAPILLAS - PLANIFICACIÓN OTORGAMIENTO ISO 14001 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 23400
+  },
+  "109735": {
+    "id": "109735",
+    "title": "Comercial: Capillas de la fe asesoría 14001",
+    "group_id": "33",
+    "parent_id": "90655",
+    "parent_title": "G COMERCIAL : HACER - PRESENTACIÓN PROPUESTAS (año 2026)",
+    "creator_name": "Jenny Gomez Sepulveda",
+    "time_estimate": 0,
+    "time_spent_in_logs": 14400
+  },
+  "109753": {
+    "id": "109753",
+    "title": "SENALTUR - Acompañamiento Simulacro de Evacuación",
+    "group_id": "213",
+    "parent_id": "92607",
+    "parent_title": "SENALTUR - VERIFICAR GESTIÓN HSEQ 2026",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 14400
+  },
+  "109757": {
+    "id": "109757",
+    "title": "Fico - Simulacro de Evacuación",
+    "group_id": "147",
+    "parent_id": "110807",
+    "parent_title": "FICO - EJECUCIÓN Y EVALUACIÓN DE SIMULACROS 2026",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 9000
+  },
+  "109851": {
+    "id": "109851",
+    "title": "SENALTUR - Investigación Siniestro 20260609 MV 143",
+    "group_id": "213",
+    "parent_id": "99303",
+    "parent_title": "SENALTUR - Paso 13 INVESTIGACIÓN SINIESTROS",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 6600
+  },
+  "110109": {
+    "id": "110109",
+    "title": "Capillas - Halloween",
+    "group_id": "25",
+    "parent_id": "104519",
+    "parent_title": "CAPILLAS- ACTIVIDADES DE BIENESTAR",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 4500
+  },
+  "110219": {
+    "id": "110219",
+    "title": "Desplazamiento: 20261026",
+    "group_id": "147",
+    "parent_id": "110215",
+    "parent_title": "FICO - COMITÉ DE CALIDAD",
+    "creator_name": "Jenny Gomez Sepulveda",
+    "time_estimate": 0,
+    "time_spent_in_logs": 5400
+  },
+  "110309": {
+    "id": "110309",
+    "title": "Capillas - Recorrido Proceso Laboratorio Humanos",
+    "group_id": "25",
+    "parent_id": "107635",
+    "parent_title": "CAPILLAS - REVISIÓN DEL PROCESO GESTIÓN OPERATIVA 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 3600
+  },
+  "110327": {
+    "id": "110327",
+    "title": "Comercial: Vertiv - Personal HSE - Nov 9 al 14 - Claro Venecia",
+    "group_id": "33",
+    "parent_id": "90655",
+    "parent_title": "G COMERCIAL : HACER - PRESENTACIÓN PROPUESTAS (año 2026)",
+    "creator_name": "Jenny Gomez Sepulveda",
+    "time_estimate": 0,
+    "time_spent_in_logs": 10800
+  },
+  "110355": {
+    "id": "110355",
+    "title": "Capillas - Recorrido Proceso Laboratorio Mascotas",
+    "group_id": "25",
+    "parent_id": "107635",
+    "parent_title": "CAPILLAS - REVISIÓN DEL PROCESO GESTIÓN OPERATIVA 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 5400
+  },
+  "110513": {
+    "id": "110513",
+    "title": "COLCARGO - 28AM2026",
+    "group_id": "67",
+    "parent_id": "110509",
+    "parent_title": "COLCARGO - OPORTUNIDADES DE MEJORA",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 1800
+  },
+  "110777": {
+    "id": "110777",
+    "title": "Trading - Ejecución simulacro",
+    "group_id": "257",
+    "parent_id": "110773",
+    "parent_title": "TRADING - EJECUCIÓN Y EVALUACIÓN DE SIMULACROS 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 3000
+  },
+  "110789": {
+    "id": "110789",
+    "title": "Amerivet - Inscripción y reporte del simulacro",
+    "group_id": "273",
+    "parent_id": "110313",
+    "parent_title": "AMERIVET - PLANIFICACIÓN, EJECUCIÓN Y EVALUACIÓN SIMULACRO 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 12600
+  },
+  "110905": {
+    "id": "110905",
+    "title": "Jomayosa - Inscripción y reporte para generar certificado simulacro 2026",
+    "group_id": "79",
+    "parent_id": "110903",
+    "parent_title": "JOMAYOSA - EJECUCIÓN Y EVALUACIÓN DE SIMULACROS 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 4200
+  },
+  "92149": {
+    "id": "92149",
+    "title": "Capillas - Desplazamiento entre sedes Octubre 2026",
+    "group_id": "25",
+    "parent_id": "92129",
+    "parent_title": "CAPILLAS - DESPLAZAMIENTO ENTRE SEDES 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 35700
+  },
+  "93411": {
+    "id": "93411",
+    "title": "Colcargo - Registro de ausentismo Septiembre 2026",
+    "group_id": "67",
+    "parent_id": "93153",
+    "parent_title": "COLCARGO - Actualización registro de ausentismo 2026",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 1800,
+    "time_spent_in_logs": 1200
+  },
+  "93907": {
+    "id": "93907",
+    "title": "Capillas - Entrega de informe corte Septiembre 2026",
+    "group_id": "25",
+    "parent_id": "93889",
+    "parent_title": "CAPILLAS - INFORMES DE GESTIÓN MENSUAL 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 10800,
+    "time_spent_in_logs": 5400
+  },
+  "93933": {
+    "id": "93933",
+    "title": "Colcargo - Entrega de informe corte Septiembre 2026",
+    "group_id": "43",
+    "parent_id": "93915",
+    "parent_title": "COLCARGO - INFORMES DE GESTIÓN MENSUAL 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 7200,
+    "time_spent_in_logs": 7200
+  },
+  "101731": {
+    "id": "101731",
+    "title": "Colturex -  Temas talleres mensuales",
+    "group_id": "63",
+    "parent_id": "101723",
+    "parent_title": "Colturex - Compromisos reunión Mayo (CCL)",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 1200
+  },
+  "103883": {
+    "id": "103883",
+    "title": "Yesica Cuervo: Empresa PESV - Listas iniciales",
+    "group_id": "99",
+    "parent_id": "103881",
+    "parent_title": "YESICA CUERVO - EMPRESA PESV",
+    "creator_name": "Jenny Gomez Sepulveda",
+    "time_estimate": 0,
+    "time_spent_in_logs": 2400
+  },
+  "104493": {
+    "id": "104493",
+    "title": "Capillas - Revisión Proceso Gestión Tecnología",
+    "group_id": "25",
+    "parent_id": "92117",
+    "parent_title": "CAPILLAS - PLANEAR GESTIÓN TECNOLOGÍA Y SOPORTE (Enero 2026 - Dic 2026)",
+    "creator_name": "Paola Sanchez Alvarez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 14400
+  },
+  "104763": {
+    "id": "104763",
+    "title": "Capillas - Planificación actividades Octubre 2026",
+    "group_id": "25",
+    "parent_id": "104755",
+    "parent_title": "CAPILLAS - PLANIFICACIÓN DE ACTIVIDADES 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 94500
+  },
+  "107039": {
+    "id": "107039",
+    "title": "G mercadeo Grabación video DASHBORD",
+    "group_id": "55",
+    "parent_id": "106795",
+    "parent_title": "G MERCADEO VIDEO DASHBOARD",
+    "creator_name": "Gloria Gómez Bohorquez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 6300
+  },
+  "107443": {
+    "id": "107443",
+    "title": "Informe Consulta de Saldos",
+    "group_id": "89",
+    "parent_id": "90855",
+    "parent_title": "VERIFICAR GFINANCIERA - INFORMES CONTABLES Y TESORERIA (año 2026)",
+    "creator_name": "Mónica Gómez Bohorquez",
+    "time_estimate": 72000,
+    "time_spent_in_logs": 64200
+  },
+  "107445": {
+    "id": "107445",
+    "title": "Informes de obligaciones para gestión pago Nómina",
+    "group_id": "89",
+    "parent_id": "90855",
+    "parent_title": "VERIFICAR GFINANCIERA - INFORMES CONTABLES Y TESORERIA (año 2026)",
+    "creator_name": "Otilia Garcia Ariza",
+    "time_estimate": 5400,
+    "time_spent_in_logs": 4800
+  },
+  "107703": {
+    "id": "107703",
+    "title": "Inmolmec - Aplicación de Batería de Riesgo Psicosocial - Socialización de resultados / Modalidad presencial",
+    "group_id": "247",
+    "parent_id": "107695",
+    "parent_title": "Inmolmec - Aplicación de batería de riesgo psicosocial / Modalidad Presencial",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 3600
+  },
+  "107713": {
+    "id": "107713",
+    "title": "Planeación Táctica - Organizar Proyecto Unilago",
+    "group_id": "255",
+    "parent_id": "107709",
+    "parent_title": "PLANEACIÓN TÁCTICA - ORGANIZAR TAREAS DE BITRIX PROYECTOS 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 21600
+  },
+  "107877": {
+    "id": "107877",
+    "title": "Inmolmec - Generar Bizagi proceso Producción",
+    "group_id": "247",
+    "parent_id": "108609",
+    "parent_title": "INMOLMEC - PLANEAR GESTIÓN OPERACIONES 2026",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 19800
+  },
+  "108169": {
+    "id": "108169",
+    "title": "Lince - Propuesta inspecciones",
+    "group_id": "351",
+    "parent_id": "103487",
+    "parent_title": "LINCE - PLANEAR GESTIÓN INFRAESTRUCTURA 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 20700
+  },
+  "108447": {
+    "id": "108447",
+    "title": "Inmolmec - Capacitación Prevención de lesiones osteomusculares",
+    "group_id": "247",
+    "parent_id": "108589",
+    "parent_title": "INMOLMEC - PLAN DE FORMACIÓN 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 4500
+  },
+  "108495": {
+    "id": "108495",
+    "title": "App Encuesta documental",
+    "group_id": "77",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "Ana María Cipagauta Acosta",
+    "time_estimate": 0,
+    "time_spent_in_logs": 82800
+  },
+  "108525": {
+    "id": "108525",
+    "title": "Apoyo grabación Crear guiones y grabar short SST para primíparos (06/10/2026)",
+    "group_id": "55",
+    "parent_id": "108521",
+    "parent_title": "SST PARA PRIMIPAROS - (06/10/2026)",
+    "creator_name": "Gloria Gómez Bohorquez",
+    "time_estimate": 3600,
+    "time_spent_in_logs": 2700
+  },
+  "108553": {
+    "id": "108553",
+    "title": "APP - Gestión de simulacro V1",
+    "group_id": "379",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 25200
+  },
+  "108671": {
+    "id": "108671",
+    "title": "Formación Antigravity: Dominando la IA en la Fábrica de Conocimiento",
+    "group_id": "81",
+    "parent_id": "108661",
+    "parent_title": "CURSO ANTIGRAVITY: DOMINANDO LA IA EN LA FABRICA DE CONOCIMIENTO",
+    "creator_name": "Mónica Gómez Bohorquez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 9000
+  },
+  "108723": {
+    "id": "108723",
+    "title": "Elaborar Facturas de Venta, Notas Crédito, Devoluciones",
+    "group_id": "89",
+    "parent_id": "90711",
+    "parent_title": "HACER GFINANCIERA - CONTABILIZAR Y/O CAUSAR INGRESOS (año 2026)",
+    "creator_name": "Mónica Gómez Bohorquez",
+    "time_estimate": 57600,
+    "time_spent_in_logs": 45900
+  },
+  "108725": {
+    "id": "108725",
+    "title": "Causar Recibos de Pago",
+    "group_id": "89",
+    "parent_id": "90739",
+    "parent_title": "HACER GFINANCIERA - CONTABILIZAR Y/O CAUSAR GASTOS (año 2026)",
+    "creator_name": "Mónica Gómez Bohorquez",
+    "time_estimate": 28800,
+    "time_spent_in_logs": 8100
+  },
+  "108993": {
+    "id": "108993",
+    "title": "COLCARGO - 34AC2026",
+    "group_id": "67",
+    "parent_id": "108895",
+    "parent_title": "COLCARGO - NO CONFORMIDADES BASC",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 6600
+  },
+  "109061": {
+    "id": "109061",
+    "title": "G MERCADEO SHORT QUIEN QUIERE SER IMPLEMENTADOR MES OCTUBRE",
+    "group_id": "55",
+    "parent_id": "103559",
+    "parent_title": "G MERCADEO HACER VIDEO QUIEN QUIERE SER IMPLEMENTADOR",
+    "creator_name": "Gloria Gómez Bohorquez",
+    "time_estimate": 21600,
+    "time_spent_in_logs": 18000
+  },
+  "109151": {
+    "id": "109151",
+    "title": "Incapacidad Laura Parra (Sept 29 y 30 de 2026)",
+    "group_id": "81",
+    "parent_id": "107855",
+    "parent_title": "INCAPACIDADES SEPTIEMBRE/2026",
+    "creator_name": "Mónica Gómez Bohorquez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 46800
+  },
+  "109243": {
+    "id": "109243",
+    "title": "Reunión Alineación Atcal- Diversey",
+    "group_id": "53",
+    "parent_id": "94079",
+    "parent_title": "DIVERSEY: REUNIONES SEGUIMIENTO",
+    "creator_name": "Lorena Gomez Bohorquez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 14400
+  },
+  "109301": {
+    "id": "109301",
+    "title": "Planeación Táctica: Reunión Definir manejo de Cursos Virtuales (Conocimiento)",
+    "group_id": "255",
+    "parent_id": "101275",
+    "parent_title": "PLANEACIÓN TÁCTICA - REUNIONES DE PLANEACION AÑO 2026",
+    "creator_name": "Mónica Gómez Bohorquez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 14400
+  },
+  "109399": {
+    "id": "109399",
+    "title": "Investigar costos: Realizar una investigación de mercado y analizar factores de costo del portal de clientes.",
+    "group_id": "89",
+    "parent_id": "89734",
+    "parent_title": "PLANEAR GFINANCIERA - PROYECCIONES Y PRESUPUESTOS (AÑO 2026)",
+    "creator_name": "Mónica Gómez Bohorquez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 25200
+  },
+  "109401": {
+    "id": "109401",
+    "title": "CGI: Seguimiento firma CONTRATO (Vigencia 2026-2027)",
+    "group_id": "33",
+    "parent_id": "90675",
+    "parent_title": "SEGUIMIENTO FIRMA CONTRATOS (año 2026)",
+    "creator_name": "Mónica Gómez Bohorquez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 2100
+  },
+  "109427": {
+    "id": "109427",
+    "title": "G Comercial: Actualización información servidor (Backup) - Año 2026",
+    "group_id": "33",
+    "parent_id": "95005",
+    "parent_title": "G COMERCIAL: HACER - ACTUALIZACIÓN INFORMACIÓN SERVIDOR (BACKUP) 2026",
+    "creator_name": "Jenny Gomez Sepulveda",
+    "time_estimate": 0,
+    "time_spent_in_logs": 1200
+  },
+  "109569": {
+    "id": "109569",
+    "title": "Atcal - Crear tareas y piezas gráficas simulacro 2026",
+    "group_id": "243",
+    "parent_id": "109553",
+    "parent_title": "ATCAL - PARTICIPACIÓN SIMULACRO 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 2700
+  },
+  "109707": {
+    "id": "109707",
+    "title": "Diversey: Inscripción Anabel Caicedo Auditora Alimentos",
+    "group_id": "53",
+    "parent_id": "109705",
+    "parent_title": "DIVERSEY: INSCRIPCIÓN A CURSOS AUDITORES 2026",
+    "creator_name": "Lorena Gomez Bohorquez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 600
+  },
+  "109709": {
+    "id": "109709",
+    "title": "G Comercial: Actualización información servidor (Backup) - Año 2026",
+    "group_id": "33",
+    "parent_id": "95005",
+    "parent_title": "G COMERCIAL: HACER - ACTUALIZACIÓN INFORMACIÓN SERVIDOR (BACKUP) 2026",
+    "creator_name": "Jenny Gomez Sepulveda",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "109721": {
+    "id": "109721",
+    "title": "Dispein - Desplazamiento Octubre",
+    "group_id": "43",
+    "parent_id": "93173",
+    "parent_title": "DISPEIN - DESPLAZAMIENTOS (Año 2026)",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 7200
+  },
+  "109743": {
+    "id": "109743",
+    "title": "Entrevista Técnica: Laura Sofia Grijalba",
+    "group_id": "81",
+    "parent_id": "109391",
+    "parent_title": "ENTREVISTAS",
+    "creator_name": "Mónica Gómez Bohorquez",
+    "time_estimate": 3600,
+    "time_spent_in_logs": 5400
+  },
+  "109785": {
+    "id": "109785",
+    "title": "Unilago- Inscripciónes varias cursos de formacion moodle",
+    "group_id": "85",
+    "parent_id": "97433",
+    "parent_title": "UNILAGO - PLAN DE FORMACIÓN 2026",
+    "creator_name": "Gloria Gómez Bohorquez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 3600
+  },
+  "109789": {
+    "id": "109789",
+    "title": "Visita Comercial: Johana Castellanos",
+    "group_id": "33",
+    "parent_id": "95033",
+    "parent_title": "G COMERCIAL: HACER - VISITA COMERCIAL AÑO 2026",
+    "creator_name": "Jenny Gomez Sepulveda",
+    "time_estimate": 0,
+    "time_spent_in_logs": 5400
+  },
+  "109857": {
+    "id": "109857",
+    "title": "Comercial: Diversey",
+    "group_id": "33",
+    "parent_id": "90655",
+    "parent_title": "G COMERCIAL : HACER - PRESENTACIÓN PROPUESTAS (año 2026)",
+    "creator_name": "Jenny Gomez Sepulveda",
+    "time_estimate": 0,
+    "time_spent_in_logs": 3600
+  },
+  "109983": {
+    "id": "109983",
+    "title": "Capillas- Revisión Proceso G Estratégica",
+    "group_id": "25",
+    "parent_id": "106937",
+    "parent_title": "CAPILLAS - REUNIONES GERENCIA ADMINISTRATIVA-G ESTRATÉGICA",
+    "creator_name": "Paola Sanchez Alvarez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 12600
+  },
+  "110061": {
+    "id": "110061",
+    "title": "Vacaciones Laura Parra (30/10/2026)",
+    "group_id": "81",
+    "parent_id": "110059",
+    "parent_title": "VACACIONES APROBADAS (OCTUBRE/2026)",
+    "creator_name": "Mónica Gómez Bohorquez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 28800
+  },
+  "110067": {
+    "id": "110067",
+    "title": "G Mercadeo Grabación short Sentencia SL 852 de 2026",
+    "group_id": "55",
+    "parent_id": "109829",
+    "parent_title": "G mercadeo Short SL 852 de 2026",
+    "creator_name": "Gloria Gómez Bohorquez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 1800
+  },
+  "110089": {
+    "id": "110089",
+    "title": "Ínmolmec - Reunión CCL Octubre",
+    "group_id": "247",
+    "parent_id": "110087",
+    "parent_title": "INMOLMEC - COMITÉ DE CONVIVENCIAL LABORAL 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 3600
+  },
+  "110093": {
+    "id": "110093",
+    "title": "Reembolso Hostinger",
+    "group_id": "89",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "Luis Alejandro Rueda Pardo",
+    "time_estimate": 0,
+    "time_spent_in_logs": 600
+  },
+  "110427": {
+    "id": "110427",
+    "title": "C13 - Realizar documentos RECALL",
+    "group_id": "357",
+    "parent_id": "110393",
+    "parent_title": "C13 - PROCEDIMIENTOS RECALL",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 4200
+  },
+  "110479": {
+    "id": "110479",
+    "title": "G Comercial: Actualización información servidor (Backup) - Año 2026",
+    "group_id": "33",
+    "parent_id": "95005",
+    "parent_title": "G COMERCIAL: HACER - ACTUALIZACIÓN INFORMACIÓN SERVIDOR (BACKUP) 2026",
+    "creator_name": "Jenny Gomez Sepulveda",
+    "time_estimate": 0,
+    "time_spent_in_logs": 1200
+  },
+  "110523": {
+    "id": "110523",
+    "title": "Desplazamiento 20261007",
+    "group_id": "67",
+    "parent_id": "31721",
+    "parent_title": "COLCARGO: Elaboracion de acciones correctivas y de mejora",
+    "creator_name": "Jenny Gomez Sepulveda",
+    "time_estimate": 0,
+    "time_spent_in_logs": 3600
+  },
+  "110529": {
+    "id": "110529",
+    "title": "Comercial: Aurora - Campus 360",
+    "group_id": "33",
+    "parent_id": "90655",
+    "parent_title": "G COMERCIAL : HACER - PRESENTACIÓN PROPUESTAS (año 2026)",
+    "creator_name": "Jenny Gomez Sepulveda",
+    "time_estimate": 0,
+    "time_spent_in_logs": 10800
+  },
+  "110601": {
+    "id": "110601",
+    "title": "eliminar información de cursos gratuitos",
+    "group_id": "77",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "Ana María Cipagauta Acosta",
+    "time_estimate": 0,
+    "time_spent_in_logs": 7200
+  },
+  "110695": {
+    "id": "110695",
+    "title": "COLTUREX - Recolección de evidencias para enviar a la Universidad Santo Tomás",
+    "group_id": "63",
+    "parent_id": "108515",
+    "parent_title": "COLTUREX - INVESTIGACIÓN AT JAIME RINCON",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 32400
+  },
+  "110897": {
+    "id": "110897",
+    "title": "Inmolmec - Ejecución Simulacro de Evacuación",
+    "group_id": "247",
+    "parent_id": "110895",
+    "parent_title": "INMOLMEC - EJECUCIÓN Y EVALUACIÓN DE SIMULACROS 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 1800
+  },
+  "89791": {
+    "id": "89791",
+    "title": "Rodamiento (mes octubre del 2026) - Jenny Gómez",
+    "group_id": "81",
+    "parent_id": "89771",
+    "parent_title": "NÓMINA - RODAMIENTO (año 2026)",
+    "creator_name": "Mónica Gómez Bohorquez",
+    "time_estimate": 18000,
+    "time_spent_in_logs": 36000
+  },
+  "90193": {
+    "id": "90193",
+    "title": "Dispein - Indicadores Corte Septiembre 2026",
+    "group_id": "217",
+    "parent_id": "90165",
+    "parent_title": "DISPEIN - MEDICION DE INDICADORES 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 1800,
+    "time_spent_in_logs": 900
+  },
+  "90285": {
+    "id": "90285",
+    "title": "Dispein - Reunión Brigada de emergencia (Octubre 2026)",
+    "group_id": "217",
+    "parent_id": "95327",
+    "parent_title": "DISPEIN - REUNIONES DE BRIGADA DE EMERGENCIA 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 3600,
+    "time_spent_in_logs": 3600
+  },
+  "92089": {
+    "id": "92089",
+    "title": "FLIA MIC (GEMP/GEMLSA/CGI) - Plan trabajo 2026",
+    "group_id": "145",
+    "parent_id": "92861",
+    "parent_title": "FLIA MIC (GEPM/GEMLSA/CGI) - HACER GESTION DIRECCION ESTRATEGICA 2026",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 86400,
+    "time_spent_in_logs": 26400
+  },
+  "94051": {
+    "id": "94051",
+    "title": "Dispein - Solicitar compras del mes de Septiembre 2026",
+    "group_id": "217",
+    "parent_id": "90037",
+    "parent_title": "DISPEIN - ASIGNACIÓN DE RECURSOS AÑO 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 900,
+    "time_spent_in_logs": 900
+  },
+  "94995": {
+    "id": "94995",
+    "title": "Planificación de trabajo Directora Comercial - Septiembre 2026",
+    "group_id": "33",
+    "parent_id": "94975",
+    "parent_title": "G COMERCIAL: PLANEAR - PLANIFICACION DE TRABAJO - DIRECTOR COMERCIAL  2026",
+    "creator_name": "Jenny Gomez Sepulveda",
+    "time_estimate": 0,
+    "time_spent_in_logs": 64800
+  },
+  "96121": {
+    "id": "96121",
+    "title": "Unilago - Reporte de estándares mínimos ante al Ministerio de Trabajo (Año 2025)",
+    "group_id": "85",
+    "parent_id": "96119",
+    "parent_title": "UNILAGO - AUTOEVALUACIÓN RESOLUCIÓN 0312 DE 2019 (Año 2025)",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 3600,
+    "time_spent_in_logs": 7200
+  },
+  "96165": {
+    "id": "96165",
+    "title": "Unilago - Reunión Vigía SST (Junio)",
+    "group_id": "85",
+    "parent_id": "96153",
+    "parent_title": "UNILAGO - REUNIONES VIGÍA SST 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 3600,
+    "time_spent_in_logs": 900
+  },
+  "97473": {
+    "id": "97473",
+    "title": "SENALTUR -  Medición de Indicadores PESV 2026",
+    "group_id": "213",
+    "parent_id": "103249",
+    "parent_title": "SENALTUR - INDICADORES 2026",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 43200,
+    "time_spent_in_logs": 23400
+  },
+  "98627": {
+    "id": "98627",
+    "title": "COLTUREX: Seguimiento a firma OTRO SI  (Contrato 01/01/2026 - 31/12/2026)",
+    "group_id": "33",
+    "parent_id": "90675",
+    "parent_title": "SEGUIMIENTO FIRMA CONTRATOS (año 2026)",
+    "creator_name": "Mónica Gómez Bohorquez",
+    "time_estimate": 3600,
+    "time_spent_in_logs": 3600
+  },
+  "101449": {
+    "id": "101449",
+    "title": "Notificar a clientes el cambio de cuenta bancaria a Caja Social, para pagos de facturas",
+    "group_id": "89",
+    "parent_id": "90877",
+    "parent_title": "HACER GFINANCIERA - TAREAS ADMINISTRATIVAS Y ARCHIVO (año 2026)",
+    "creator_name": "Otilia Garcia Ariza",
+    "time_estimate": 0,
+    "time_spent_in_logs": 32700
+  },
+  "105139": {
+    "id": "105139",
+    "title": "Colturex - Reunión comité PESV Agosto 2026",
+    "group_id": "63",
+    "parent_id": "100617",
+    "parent_title": "COLTUREX - COMITE DE SEGURIDAD VIAL 2026 (PESV)",
+    "creator_name": "Maria Alejandra Orjuela Perdomo",
+    "time_estimate": 3600,
+    "time_spent_in_logs": 14400
+  },
+  "105457": {
+    "id": "105457",
+    "title": "FICO - Enviar comunicados semanales",
+    "group_id": "147",
+    "parent_id": "102967",
+    "parent_title": "FICO - COMUNICADOS 2026",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 27600
+  },
+  "106071": {
+    "id": "106071",
+    "title": "Senaltur - Realizar informe de inspecciones locativas (Agosto) 2026",
+    "group_id": "213",
+    "parent_id": "106067",
+    "parent_title": "SENALTUR - INSPECCIONES SEGUNDO SEMESTRE 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 3600,
+    "time_spent_in_logs": 1800
+  },
+  "106223": {
+    "id": "106223",
+    "title": "Lince - Entrega de informe corte Julio 2026",
+    "group_id": "43",
+    "parent_id": "106209",
+    "parent_title": "LINCE COMERCIAL - INFORMES DE GESTIÓN MENSUAL 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 7200,
+    "time_spent_in_logs": 32400
+  },
+  "106313": {
+    "id": "106313",
+    "title": "COLTUREX - Socialización documentación proceso operaciones",
+    "group_id": "63",
+    "parent_id": "98273",
+    "parent_title": "COLTUREX - HACER GESTIÓN OPERATIVA Y DE SERVICIO 2026",
+    "creator_name": "Maria Alejandra Orjuela Perdomo",
+    "time_estimate": 0,
+    "time_spent_in_logs": 18000
+  },
+  "107463": {
+    "id": "107463",
+    "title": "Informe Obligaciones - Revisar y Actualizar",
+    "group_id": "89",
+    "parent_id": "90855",
+    "parent_title": "VERIFICAR GFINANCIERA - INFORMES CONTABLES Y TESORERIA (año 2026)",
+    "creator_name": "Mónica Gómez Bohorquez",
+    "time_estimate": 28800,
+    "time_spent_in_logs": 24900
+  },
+  "107471": {
+    "id": "107471",
+    "title": "Tareas Generales y/o Administrativas (Otilia García)",
+    "group_id": "89",
+    "parent_id": "90877",
+    "parent_title": "HACER GFINANCIERA - TAREAS ADMINISTRATIVAS Y ARCHIVO (año 2026)",
+    "creator_name": "Mónica Gómez Bohorquez",
+    "time_estimate": 36000,
+    "time_spent_in_logs": 23700
+  },
+  "108173": {
+    "id": "108173",
+    "title": "Capillas - Crear Dashboard de Registro y Control",
+    "group_id": "25",
+    "parent_id": "92029",
+    "parent_title": "CAPILLAS - PLANEAR GESTIÓN DE REGISTRO Y CONTROL (Enero 2026 - Dic 2026)",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 33000
+  },
+  "108567": {
+    "id": "108567",
+    "title": "C13 - Realizar Matriz Legal",
+    "group_id": "357",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 600
+  },
+  "108583": {
+    "id": "108583",
+    "title": "Auditoria Documental ATCAL SAS - FINANCIERA: Otilia Garcia",
+    "group_id": "81",
+    "parent_id": "102787",
+    "parent_title": "VERIFICAR GHUMANA - AUDITORIAS DOCUMENTALES GESTION BITRIX",
+    "creator_name": "Mónica Gómez Bohorquez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 6000
+  },
+  "108649": {
+    "id": "108649",
+    "title": "Comercial: Capillas - Propuesta para APP Mantenimiento y Gestión Operativa IA",
+    "group_id": "33",
+    "parent_id": "90655",
+    "parent_title": "G COMERCIAL : HACER - PRESENTACIÓN PROPUESTAS (año 2026)",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 14400
+  },
+  "108687": {
+    "id": "108687",
+    "title": "Capillas - Revisión proceso de cenizas Girardot",
+    "group_id": "25",
+    "parent_id": "108685",
+    "parent_title": "CAPILLAS - REVISIÓN DESTINO FINAL - CREMACIÓN",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 16200
+  },
+  "108691": {
+    "id": "108691",
+    "title": "Capillas - Revisión y levantamiento del Proceso G Comercial Girardot",
+    "group_id": "25",
+    "parent_id": "108685",
+    "parent_title": "CAPILLAS - REVISIÓN DESTINO FINAL - CREMACIÓN",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 36600
+  },
+  "108703": {
+    "id": "108703",
+    "title": "Batería psicosocial INX",
+    "group_id": "99",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "Ana María Cipagauta Acosta",
+    "time_estimate": 18000,
+    "time_spent_in_logs": 14100
+  },
+  "108735": {
+    "id": "108735",
+    "title": "Registrar y Revisar Eventos Facturas DIAN",
+    "group_id": "89",
+    "parent_id": "90815",
+    "parent_title": "HACER GFINANCIERA - TESORERIA PAGO A PROVEEDORES (año 2026)",
+    "creator_name": "Mónica Gómez Bohorquez",
+    "time_estimate": 7200,
+    "time_spent_in_logs": 2100
+  },
+  "109011": {
+    "id": "109011",
+    "title": "Batería psicosocial Ethuss",
+    "group_id": "99",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "Ana María Cipagauta Acosta",
+    "time_estimate": 0,
+    "time_spent_in_logs": 12900
+  },
+  "109247": {
+    "id": "109247",
+    "title": "Validar en EPS Famisanar estado Ana Maria Cipagauta - por cita para electrocardiograma",
+    "group_id": "89",
+    "parent_id": "108767",
+    "parent_title": "Tareas Generales y/o Administrativas (Otilia García)",
+    "creator_name": "Otilia Garcia Ariza",
+    "time_estimate": 0,
+    "time_spent_in_logs": 300
+  },
+  "109259": {
+    "id": "109259",
+    "title": "4. Colturex - Socialización al copasst del AT Humberto Pedraza",
+    "group_id": "63",
+    "parent_id": "109251",
+    "parent_title": "COLTUREX - AT HUMBERTO PEDRAZA (AUX MANTENIMMIENTO)",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 1800
+  },
+  "109275": {
+    "id": "109275",
+    "title": "Planeación Táctica: Reunión revisión temas Comerciales (Membresías, sitios especializados, Cursos y Otros)",
+    "group_id": "255",
+    "parent_id": "101275",
+    "parent_title": "PLANEACIÓN TÁCTICA - REUNIONES DE PLANEACION AÑO 2026",
+    "creator_name": "Mónica Gómez Bohorquez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 14400
+  },
+  "109307": {
+    "id": "109307",
+    "title": "Dispein - Creación de lo trabajadores en aplicativo / Modalidad Virtual",
+    "group_id": "0",
+    "parent_id": "109303",
+    "parent_title": "DISPEIN - APLICACIÓN DE BATERIA DE RIESGO PSICOSOCIAL - MODALIDAD VIRTUAL",
+    "creator_name": "Jenny Gomez Sepulveda",
+    "time_estimate": 0,
+    "time_spent_in_logs": 2401
+  },
+  "109567": {
+    "id": "109567",
+    "title": "Atcal - Participación simulacro 2026 (Ana María Cipagauta)",
+    "group_id": "243",
+    "parent_id": "109553",
+    "parent_title": "ATCAL - PARTICIPACIÓN SIMULACRO 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 1800
+  },
+  "109575": {
+    "id": "109575",
+    "title": "Retirar Accesos - (Leydi cabezas)",
+    "group_id": "77",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "Ana María Cipagauta Acosta",
+    "time_estimate": 3600,
+    "time_spent_in_logs": 2700
+  },
+  "109715": {
+    "id": "109715",
+    "title": "Gestión Mercadeo - Apoyo Técnico Respuestas redes sociales (Octubre 2026)",
+    "group_id": "55",
+    "parent_id": "102243",
+    "parent_title": "G MERCADEO HACER , APOYO TÉCNICO RESPUESTA USUARIOS TIKTOK, INSTRAGRAM Y FACEBOOK",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 15300
+  },
+  "109717": {
+    "id": "109717",
+    "title": "Planeación Táctica - Reunión temas varios con la Sra. Jenny",
+    "group_id": "255",
+    "parent_id": "94295",
+    "parent_title": "PLANEACIÓN TÁCTICA - PLANEAR 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 7200
+  },
+  "109745": {
+    "id": "109745",
+    "title": "FLIA MIC - CGI - Revisión y emisión de información para proyecto SECRETARÍA DISTRITAL DE INTEGRACIÓN SOCIAL",
+    "group_id": "145",
+    "parent_id": "92871",
+    "parent_title": "FLIA MIC (GEPM/GEMLSA/CGI) - HACER GESTION  GESTION DE INNOVACION Y SGI 2026",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 7200
+  },
+  "109807": {
+    "id": "109807",
+    "title": "FAMILIA MIC - CGI - Desplazamiento Octubre",
+    "group_id": "43",
+    "parent_id": "101455",
+    "parent_title": "FAMILIA MIC - DESPLAZAMIENTOS (Año 2026)",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 3600
+  },
+  "109811": {
+    "id": "109811",
+    "title": "Capillas - Actualizar matriz de riesgos 2026",
+    "group_id": "25",
+    "parent_id": "99635",
+    "parent_title": "CAPILLAS DE LA FE - MATRIZ DE RIESGOS 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 25200
+  },
+  "109821": {
+    "id": "109821",
+    "title": "FICO - Seguimiento programa de velocidad",
+    "group_id": "147",
+    "parent_id": "88287",
+    "parent_title": "Fico - Paso 8. Programas de gestión de riesgos críticos y factores de desempeño",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 1800
+  },
+  "109995": {
+    "id": "109995",
+    "title": "COLTUREX - Revisión de información para indicadores PESV",
+    "group_id": "63",
+    "parent_id": "92537",
+    "parent_title": "COLTUREX - CARGUE SISI PESV 2026",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 18000
+  },
+  "110055": {
+    "id": "110055",
+    "title": "FICO - Desplazamientos Octubre",
+    "group_id": "43",
+    "parent_id": "98995",
+    "parent_title": "FICO - DESPLAZAMIENTOS (Año 2026)",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 16200
+  },
+  "110159": {
+    "id": "110159",
+    "title": "Dispein - App Gestión comercial Ventas",
+    "group_id": "217",
+    "parent_id": "110157",
+    "parent_title": "DISPEIN - GESTIÓN COMERCIAL 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 10800
+  },
+  "110201": {
+    "id": "110201",
+    "title": "Lince Comercial - Ejecución y evaluación Simulacro Bogotá (Sede Punto confiable)",
+    "group_id": "351",
+    "parent_id": "110197",
+    "parent_title": "LINCE - EJECUCIÓN Y EVALUACIÓN DE SIMULACROS 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 3600
+  },
+  "110215": {
+    "id": "110215",
+    "title": "FICO - COMITÉ DE CALIDAD",
+    "group_id": "147",
+    "parent_id": "93055",
+    "parent_title": "FICO - COMITÉS ORGANIZACIONALES 2025",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 36000
+  },
+  "110315": {
+    "id": "110315",
+    "title": "Amerivet - Creación del guión",
+    "group_id": "273",
+    "parent_id": "110313",
+    "parent_title": "AMERIVET - PLANIFICACIÓN, EJECUCIÓN Y EVALUACIÓN SIMULACRO 2026",
+    "creator_name": "Yovanna Ochoa Laverde",
+    "time_estimate": 0,
+    "time_spent_in_logs": 3600
+  },
+  "110345": {
+    "id": "110345",
+    "title": "G Comercial: Actualización información servidor (Backup) - Año 2026",
+    "group_id": "33",
+    "parent_id": "95005",
+    "parent_title": "G COMERCIAL: HACER - ACTUALIZACIÓN INFORMACIÓN SERVIDOR (BACKUP) 2026",
+    "creator_name": "Jenny Gomez Sepulveda",
+    "time_estimate": 0,
+    "time_spent_in_logs": 1200
+  },
+  "110361": {
+    "id": "110361",
+    "title": "C14 - Membresia Diana Catalina Castañeda - Campus 360 + Collabs",
+    "group_id": "33",
+    "parent_id": "110351",
+    "parent_title": "C14 - MEMBRESIA DIANA CATALINA CASTAÑEDA",
+    "creator_name": "Jenny Gomez Sepulveda",
+    "time_estimate": 0,
+    "time_spent_in_logs": 1500
+  },
+  "110507": {
+    "id": "110507",
+    "title": "Creacion app tiempos",
+    "group_id": "77",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "Ana María Cipagauta Acosta",
+    "time_estimate": 0,
+    "time_spent_in_logs": 47700
+  },
+  "110599": {
+    "id": "110599",
+    "title": "Batería psicosocial STANZIA NEIVA",
+    "group_id": "99",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "Ana María Cipagauta Acosta",
+    "time_estimate": 0,
+    "time_spent_in_logs": 16200
+  },
+  "110793": {
+    "id": "110793",
+    "title": "Business - Inscripción y reporte para generar certificado simulacro 2026",
+    "group_id": "69",
+    "parent_id": "110791",
+    "parent_title": "BUSINESS - EJECUCIÓN Y EVALUACIÓN DE SIMULACROS 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 4200
+  },
+  "90147": {
+    "id": "90147",
+    "title": "Dispein - Reunión Vigía SST (Octubre 2026)",
+    "group_id": "217",
+    "parent_id": "95311",
+    "parent_title": "DISPEIN - REUNIONES DEL VIGÍA SST 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 3600,
+    "time_spent_in_logs": 1800
+  },
+  "90217": {
+    "id": "90217",
+    "title": "Dispein - Realizar simulacro Nacional 2026",
+    "group_id": "217",
+    "parent_id": "95323",
+    "parent_title": "DISPEIN - PLAN DE EMERGENCIAS 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 14400,
+    "time_spent_in_logs": 4200
+  },
+  "93129": {
+    "id": "93129",
+    "title": "FICO - SAC Inspecciones",
+    "group_id": "147",
+    "parent_id": "92977",
+    "parent_title": "FICO- ACTUAR GESTIÓN MANTENIMIENTO 2026",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 28800,
+    "time_spent_in_logs": 24600
+  },
+  "94957": {
+    "id": "94957",
+    "title": "Comercial: Gestión de correo - Director Comercial - Septiembre 2026",
+    "group_id": "33",
+    "parent_id": "91829",
+    "parent_title": "G COMERCIAL: HACER - GESTIÓN DE CORREO ELECTRÓNICO - DIRECTOR COMERCIAL AÑO 2026",
+    "creator_name": "Jenny Gomez Sepulveda",
+    "time_estimate": 0,
+    "time_spent_in_logs": 45000
+  },
+  "94959": {
+    "id": "94959",
+    "title": "Comercial: Gestión de correo - Director Comercial - Octubre 2026",
+    "group_id": "33",
+    "parent_id": "91829",
+    "parent_title": "G COMERCIAL: HACER - GESTIÓN DE CORREO ELECTRÓNICO - DIRECTOR COMERCIAL AÑO 2026",
+    "creator_name": "Jenny Gomez Sepulveda",
+    "time_estimate": 0,
+    "time_spent_in_logs": 91800
+  },
+  "95119": {
+    "id": "95119",
+    "title": "Esquema de propuesta comercial año 2026",
+    "group_id": "33",
+    "parent_id": "90651",
+    "parent_title": "G COMERCIAL: PLANEAR - DEFINICIÓN POLÍTICAS COMERCIALES (año 2026)",
+    "creator_name": "Jenny Gomez Sepulveda",
+    "time_estimate": 0,
+    "time_spent_in_logs": 32400
+  },
+  "96331": {
+    "id": "96331",
+    "title": "Unilago - Revisión de planillas de seguridad social (Segundo trimestre)",
+    "group_id": "85",
+    "parent_id": "96327",
+    "parent_title": "UNILAGO - SEGUIMIENTO PAGOS DE SEGURIDAD SOCIAL 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 1800,
+    "time_spent_in_logs": 1800
+  },
+  "98405": {
+    "id": "98405",
+    "title": "CGI - Reuniones Mensuales",
+    "group_id": "145",
+    "parent_id": "98401",
+    "parent_title": "FLIA MIC (CGI) - COPASST",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 17400
+  },
+  "101279": {
+    "id": "101279",
+    "title": "COLCARGO - INDICADORES BASC",
+    "group_id": "67",
+    "parent_id": "92783",
+    "parent_title": "COLCARGO - VERIFICAR GESTIÓN INTEGRAL 2026",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 22800
+  },
+  "101499": {
+    "id": "101499",
+    "title": "Fico - Entrega de informe corte Septiembre 2026",
+    "group_id": "43",
+    "parent_id": "101481",
+    "parent_title": "FICO - INFORMES DE GESTIÓN MENSUAL 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 7200,
+    "time_spent_in_logs": 1800
+  },
+  "101737": {
+    "id": "101737",
+    "title": "Colturex - Socializar reglamento de CCL",
+    "group_id": "63",
+    "parent_id": "101723",
+    "parent_title": "Colturex - Compromisos reunión Mayo (CCL)",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 1200
+  },
+  "102935": {
+    "id": "102935",
+    "title": "G mercadeo : Informe redes sociales Septiembre",
+    "group_id": "55",
+    "parent_id": "99345",
+    "parent_title": "G MERCADEO: VERIFICAR INFORME REDES SOCIALES",
+    "creator_name": "Gloria Gómez Bohorquez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 10800
+  },
+  "103251": {
+    "id": "103251",
+    "title": "SENALTUR - Medición de Indicadores SARLAFT 2026",
+    "group_id": "213",
+    "parent_id": "103249",
+    "parent_title": "SENALTUR - INDICADORES 2026",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 7200
+  },
+  "105453": {
+    "id": "105453",
+    "title": "COLCARGO - Envío de comunicados semanales",
+    "group_id": "67",
+    "parent_id": "94693",
+    "parent_title": "COLCARGO- COMUNICACIONES 2026",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 22800
+  },
+  "106335": {
+    "id": "106335",
+    "title": "Capillas - Crear Dashboard Gestión auditoria de servicios",
+    "group_id": "25",
+    "parent_id": "106969",
+    "parent_title": "CAPILLAS - AJUSTE INDICADORES AUDITORIA DE SERVICIOS",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 46800
+  },
+  "107485": {
+    "id": "107485",
+    "title": "Realizar Cobro Cartera",
+    "group_id": "89",
+    "parent_id": "90837",
+    "parent_title": "HACER GFINANCIERA - TESORERIA RECAUDO DE CARTERA (año 2026)",
+    "creator_name": "Mónica Gómez Bohorquez",
+    "time_estimate": 43200,
+    "time_spent_in_logs": 24600
+  },
+  "107737": {
+    "id": "107737",
+    "title": "Dispein: Planear la bateria psicosocial",
+    "group_id": "217",
+    "parent_id": "95291",
+    "parent_title": "DISPEIN - PLANEAR GESTIÓN INTEGRAL 2026",
+    "creator_name": "Jenny Gomez Sepulveda",
+    "time_estimate": 0,
+    "time_spent_in_logs": 1800
+  },
+  "107759": {
+    "id": "107759",
+    "title": "Documentos Auditorias",
+    "group_id": "77",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "Ana María Cipagauta Acosta",
+    "time_estimate": 0,
+    "time_spent_in_logs": 98040
+  },
+  "108535": {
+    "id": "108535",
+    "title": "Edición grabación short SST para primíparos (13/10/2026)",
+    "group_id": "55",
+    "parent_id": "108529",
+    "parent_title": "SST PARA PRIMIPAROS - (13/10/2026)",
+    "creator_name": "Gloria Gómez Bohorquez",
+    "time_estimate": 3600,
+    "time_spent_in_logs": 3600
+  },
+  "108753": {
+    "id": "108753",
+    "title": "Archivo Virtual Financiera y Administrativo",
+    "group_id": "89",
+    "parent_id": "90877",
+    "parent_title": "HACER GFINANCIERA - TAREAS ADMINISTRATIVAS Y ARCHIVO (año 2026)",
+    "creator_name": "Mónica Gómez Bohorquez",
+    "time_estimate": 21600,
+    "time_spent_in_logs": 84900
+  },
+  "108867": {
+    "id": "108867",
+    "title": "Verificar Tiempos Documentados en BITRIX (Septiembre 01-30 del 2026)",
+    "group_id": "81",
+    "parent_id": "89967",
+    "parent_title": "VERIFICAR TIEMPOS DOCUMENTADOS BITRIX (PERIODO SEPTIEMBRE 01-30 DEL 2026)",
+    "creator_name": "Mónica Gómez Bohorquez",
+    "time_estimate": 3600,
+    "time_spent_in_logs": 1200
+  },
+  "108899": {
+    "id": "108899",
+    "title": "Inmolmec - Realizar presupuesto 2026",
+    "group_id": "247",
+    "parent_id": "101817",
+    "parent_title": "INMOLMEC - HACER GESTIÓN ESTRATÉGICA 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 3600
+  },
+  "109063": {
+    "id": "109063",
+    "title": "VIDEO MEMES TIK TOK  OCTUBRE 2026",
+    "group_id": "55",
+    "parent_id": "104251",
+    "parent_title": "G MERCADEO HACER VIDEO MEMES PARA TIK TOK",
+    "creator_name": "Gloria Gómez Bohorquez",
+    "time_estimate": 3600,
+    "time_spent_in_logs": 3600
+  },
+  "109149": {
+    "id": "109149",
+    "title": "G Comercial: Actualización información servidor (Backup) - Año 2026",
+    "group_id": "33",
+    "parent_id": "95005",
+    "parent_title": "G COMERCIAL: HACER - ACTUALIZACIÓN INFORMACIÓN SERVIDOR (BACKUP) 2026",
+    "creator_name": "Jenny Gomez Sepulveda",
+    "time_estimate": 0,
+    "time_spent_in_logs": 1200
+  },
+  "109241": {
+    "id": "109241",
+    "title": "GHumana - Revisión de calendarios personal Octubre 2026",
+    "group_id": "81",
+    "parent_id": "99617",
+    "parent_title": "VERIFICAR GHUMANA - CONTROL CALENDARIO SEMANAL BITRIX 2026",
+    "creator_name": "Otilia Garcia Ariza",
+    "time_estimate": 0,
+    "time_spent_in_logs": 4200
+  },
+  "109313": {
+    "id": "109313",
+    "title": "Dispein - Aplicación de Batería de Riesgo Psicosocial - Socialización de resultados / Modalidad Virtual",
+    "group_id": "0",
+    "parent_id": "109303",
+    "parent_title": "DISPEIN - APLICACIÓN DE BATERIA DE RIESGO PSICOSOCIAL - MODALIDAD VIRTUAL",
+    "creator_name": "Jenny Gomez Sepulveda",
+    "time_estimate": 0,
+    "time_spent_in_logs": 1200
+  },
+  "109407": {
+    "id": "109407",
+    "title": "Capillas - Gestión con ICONTEC 14001",
+    "group_id": "25",
+    "parent_id": "109403",
+    "parent_title": "CAPILLAS - PLANIFICACIÓN OTORGAMIENTO ISO 14001 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 20700
+  },
+  "109723": {
+    "id": "109723",
+    "title": "Atcal - Desplazamiento Inmolmec (Octubre 2026)",
+    "group_id": "43",
+    "parent_id": "102355",
+    "parent_title": "ATCAL - DESPLAZAMIENTO INMOLMEC (Año 2026)",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 21600
+  },
+  "109741": {
+    "id": "109741",
+    "title": "Automatización Gestión Infraestructura",
+    "group_id": "77",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "Luis Alejandro Rueda Pardo",
+    "time_estimate": 0,
+    "time_spent_in_logs": 4800
+  },
+  "109755": {
+    "id": "109755",
+    "title": "COLCARGO - Simulacro de Evacuación",
+    "group_id": "67",
+    "parent_id": "104795",
+    "parent_title": "COLCARGO - SIMULACROS",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 17400
+  },
+  "109817": {
+    "id": "109817",
+    "title": "FICO - Inscribir personal",
+    "group_id": "147",
+    "parent_id": "109815",
+    "parent_title": "FICO - Curso Mente Estratégica: Potencia tu Pensamiento Crítico y Analítico",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 1200
+  },
+  "109831": {
+    "id": "109831",
+    "title": "G mercadeo grabar Short  como identificar oferentes Curso 50 y 20 horas",
+    "group_id": "55",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "Gloria Gómez Bohorquez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 3000
+  },
+  "109837": {
+    "id": "109837",
+    "title": "G mercadeo grabar Short  circular 0110 de 2026",
+    "group_id": "55",
+    "parent_id": "109835",
+    "parent_title": "G mercadeo Short circular 0110 de 2026",
+    "creator_name": "Gloria Gómez Bohorquez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 2400
+  },
+  "109849": {
+    "id": "109849",
+    "title": "Comercial: Diversey - Auditoria Lavadero carros",
+    "group_id": "33",
+    "parent_id": "90655",
+    "parent_title": "G COMERCIAL : HACER - PRESENTACIÓN PROPUESTAS (año 2026)",
+    "creator_name": "Jenny Gomez Sepulveda",
+    "time_estimate": 0,
+    "time_spent_in_logs": 3600
+  },
+  "109879": {
+    "id": "109879",
+    "title": "Reunión General: Aplicativos Nuevos ATCAL (Asignación Responsabilidades y Cronogramas)",
+    "group_id": "255",
+    "parent_id": "94295",
+    "parent_title": "PLANEACIÓN TÁCTICA - PLANEAR 2026",
+    "creator_name": "Mónica Gómez Bohorquez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 130200
+  },
+  "109883": {
+    "id": "109883",
+    "title": "Alianza Team: Confirmación del canal de envío de notificaciones a inscritos",
+    "group_id": "77",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "Lorena Gomez Bohorquez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 37800
+  },
+  "110151": {
+    "id": "110151",
+    "title": "Notificar al Cliente Aurora Seguros, el cambio de cuenta bancaria a Caja Social para pagos",
+    "group_id": "89",
+    "parent_id": "90877",
+    "parent_title": "HACER GFINANCIERA - TAREAS ADMINISTRATIVAS Y ARCHIVO (año 2026)",
+    "creator_name": "Otilia Garcia Ariza",
+    "time_estimate": 0,
+    "time_spent_in_logs": 1200
+  },
+  "110155": {
+    "id": "110155",
+    "title": "Automatización Tareas Prestación del Servicio",
+    "group_id": "383",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "Luis Alejandro Rueda Pardo",
+    "time_estimate": 0,
+    "time_spent_in_logs": 600
+  },
+  "110199": {
+    "id": "110199",
+    "title": "Lince Comercial - Ejecución y evaluación Simulacro Bogotá (Sede castellana)",
+    "group_id": "351",
+    "parent_id": "110197",
+    "parent_title": "LINCE - EJECUCIÓN Y EVALUACIÓN DE SIMULACROS 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 5400
+  },
+  "110209": {
+    "id": "110209",
+    "title": "Lince Comercial - Ejecución y evaluación Simulacro Medellín (Sede Medellín)",
+    "group_id": "351",
+    "parent_id": "110197",
+    "parent_title": "LINCE - EJECUCIÓN Y EVALUACIÓN DE SIMULACROS 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 1800
+  },
+  "110211": {
+    "id": "110211",
+    "title": "Lince - Inscripción y reporte para generar certificado simulacro 2026",
+    "group_id": "351",
+    "parent_id": "110197",
+    "parent_title": "LINCE - EJECUCIÓN Y EVALUACIÓN DE SIMULACROS 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 24600
+  },
+  "110213": {
+    "id": "110213",
+    "title": "Lince - Reuniones Planeación simulacro 2026",
+    "group_id": "351",
+    "parent_id": "110197",
+    "parent_title": "LINCE - EJECUCIÓN Y EVALUACIÓN DE SIMULACROS 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 8700
+  },
+  "110349": {
+    "id": "110349",
+    "title": "Desplazamiento 20261021",
+    "group_id": "67",
+    "parent_id": "109755",
+    "parent_title": "COLCARGO - Simulacro de Evacuación",
+    "creator_name": "Jenny Gomez Sepulveda",
+    "time_estimate": 0,
+    "time_spent_in_logs": 5400
+  },
+  "110353": {
+    "id": "110353",
+    "title": "Revisión Pure task Report",
+    "group_id": "77",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 1200
+  },
+  "110519": {
+    "id": "110519",
+    "title": "G conocimiento-Reunion definir rutas de aprendizaje",
+    "group_id": "51",
+    "parent_id": "109153",
+    "parent_title": "HACER G CONOCIMIENTO RUTAS DE APRENDIZAJE",
+    "creator_name": "Gloria Gómez Bohorquez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 2400
+  },
+  "110639": {
+    "id": "110639",
+    "title": "Unilago - Ejecución y Evaluación del Simulacro de Emergencia 21/10/2026",
+    "group_id": "85",
+    "parent_id": "96771",
+    "parent_title": "UNILAGO - VERIFICAR GESTIÓN INTEGRAL 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 24300
+  },
+  "110645": {
+    "id": "110645",
+    "title": "G Comercial: Actualización información servidor (Backup) - Año 2026",
+    "group_id": "33",
+    "parent_id": "95005",
+    "parent_title": "G COMERCIAL: HACER - ACTUALIZACIÓN INFORMACIÓN SERVIDOR (BACKUP) 2026",
+    "creator_name": "Jenny Gomez Sepulveda",
+    "time_estimate": 0,
+    "time_spent_in_logs": 1200
+  },
+  "110795": {
+    "id": "110795",
+    "title": "Business - Ejecución simulacro",
+    "group_id": "69",
+    "parent_id": "110791",
+    "parent_title": "BUSINESS - EJECUCIÓN Y EVALUACIÓN DE SIMULACROS 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 1800
+  },
+  "110913": {
+    "id": "110913",
+    "title": "Unilago - Reuniones para realizar los formularios de seguridad por medio de la empresa Seguridad Superior",
+    "group_id": "85",
+    "parent_id": "96105",
+    "parent_title": "UNILAGO - PLANEAR GESTIÓN ESTRATÉGICA 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 1800
+  },
+  "90731": {
+    "id": "90731",
+    "title": "Contabilizar Nómina : Septiembre 01-30 del 2026",
+    "group_id": "89",
+    "parent_id": "90713",
+    "parent_title": "HACER GFINANCIERA - CONTABILIZAR Y/O CAUSAR NOMINAS (año 2026)",
+    "creator_name": "Mónica Gómez Bohorquez",
+    "time_estimate": 14400,
+    "time_spent_in_logs": 9600
+  },
+  "92773": {
+    "id": "92773",
+    "title": "CGI - Actualizar políticas 2026",
+    "group_id": "145",
+    "parent_id": "92945",
+    "parent_title": "FLIA MIC (GEPM/GEMLSA/CGI) - DIRECTRICES ORGANIZACIONALES 2026",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 10800,
+    "time_spent_in_logs": 10800
+  },
+  "93733": {
+    "id": "93733",
+    "title": "SENALTUR - Paso 17. Seguimiento mantenimiento preventivo y correctivo",
+    "group_id": "213",
+    "parent_id": "92633",
+    "parent_title": "SENALTUR - HACER GESTIÓN OPERATIVA 2026",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 43200,
+    "time_spent_in_logs": 12600
+  },
+  "93971": {
+    "id": "93971",
+    "title": "Dispein - Entrega de informe corte Septiembre 2026",
+    "group_id": "43",
+    "parent_id": "93953",
+    "parent_title": "DISPEIN - INFORMES DE GESTIÓN MENSUAL 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 7200,
+    "time_spent_in_logs": 7200
+  },
+  "95057": {
+    "id": "95057",
+    "title": "Atención Servicio al cliente - Directora Comercial - Septiembre 2026",
+    "group_id": "33",
+    "parent_id": "91809",
+    "parent_title": "G COMERCIAL: HACER - ATENCION AL CLIENTE DIRECTOR COMERCIAL AÑO 2026",
+    "creator_name": "Jenny Gomez Sepulveda",
+    "time_estimate": 0,
+    "time_spent_in_logs": 43200
+  },
+  "95913": {
+    "id": "95913",
+    "title": "Comisión Octubre 2026",
+    "group_id": "81",
+    "parent_id": "95893",
+    "parent_title": "NÓMINA - LIQUIDAR COMISIONES ATCAL",
+    "creator_name": "Jenny Gomez Sepulveda",
+    "time_estimate": 0,
+    "time_spent_in_logs": 1800
+  },
+  "96169": {
+    "id": "96169",
+    "title": "Unilago - Reunión Vigía SST (Agosto)",
+    "group_id": "85",
+    "parent_id": "96153",
+    "parent_title": "UNILAGO - REUNIONES VIGÍA SST 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 3600,
+    "time_spent_in_logs": 900
+  },
+  "96195": {
+    "id": "96195",
+    "title": "Unilago - Reunión CCL (Septiembre)",
+    "group_id": "85",
+    "parent_id": "96181",
+    "parent_title": "UNILAGO - REUNIONES COMITÉ DE CONVIVENCIA LABORAL 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 3600,
+    "time_spent_in_logs": 3600
+  },
+  "96261": {
+    "id": "96261",
+    "title": "Unilago - Informe trimestral (Marzo 2026)",
+    "group_id": "85",
+    "parent_id": "96259",
+    "parent_title": "UNILAGO - RENDICIÓN DE CUENTAS COMITÉ DE CONVIVENCIA LABORAL 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 1800
+  },
+  "96379": {
+    "id": "96379",
+    "title": "SENALTUR -  Medición de Indicadores Calidad 2026",
+    "group_id": "213",
+    "parent_id": "103249",
+    "parent_title": "SENALTUR - INDICADORES 2026",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 37800
+  },
+  "98771": {
+    "id": "98771",
+    "title": "Zagalabs - Simulacro de evacuación 2026",
+    "group_id": "93",
+    "parent_id": "92359",
+    "parent_title": "ZAGALABS - VERIFICAR GESTIÓN INTEGRAL 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 10800,
+    "time_spent_in_logs": 10200
+  },
+  "101729": {
+    "id": "101729",
+    "title": "Colturex - Actividad de cumpleaños",
+    "group_id": "63",
+    "parent_id": "101723",
+    "parent_title": "Colturex - Compromisos reunión Mayo (CCL)",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 1200
+  },
+  "102531": {
+    "id": "102531",
+    "title": "Dispein - Creación Dashboard",
+    "group_id": "217",
+    "parent_id": "95275",
+    "parent_title": "DISPEIN - PLANEAR GESTIÓN ESTRATÉGICA 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 50400
+  },
+  "105073": {
+    "id": "105073",
+    "title": "Dispein - Incripción curso Factores de riesgo químico actualizado a SGA",
+    "group_id": "217",
+    "parent_id": "105071",
+    "parent_title": "DISPEIN - CURSO FACTORES DE RIESGO QUIMICO (SGA)",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 1800,
+    "time_spent_in_logs": 1800
+  },
+  "106367": {
+    "id": "106367",
+    "title": "Business - Informe corte Junio CCL 2026",
+    "group_id": "69",
+    "parent_id": "92713",
+    "parent_title": "BUSINESS - RENDICIÓN DE CUENTAS CCL 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 1800,
+    "time_spent_in_logs": 2400
+  },
+  "107431": {
+    "id": "107431",
+    "title": "Elaborar Egresos y Asientos Contables",
+    "group_id": "89",
+    "parent_id": "90815",
+    "parent_title": "HACER GFINANCIERA - TESORERIA PAGO A PROVEEDORES (año 2026)",
+    "creator_name": "Mónica Gómez Bohorquez",
+    "time_estimate": 90000,
+    "time_spent_in_logs": 73500
+  },
+  "107921": {
+    "id": "107921",
+    "title": "Atcal - Planificación actividades Laura Parra (Octubre 2026)",
+    "group_id": "43",
+    "parent_id": "107917",
+    "parent_title": "ATCAL - PLANIFICACIÓN ACTIVIDADES PERSONAL OPERACIONES (Octubre 2026)",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 101400
+  },
+  "107923": {
+    "id": "107923",
+    "title": "Planeación táctica - Planeación simulacro 2026",
+    "group_id": "255",
+    "parent_id": "101275",
+    "parent_title": "PLANEACIÓN TÁCTICA - REUNIONES DE PLANEACION AÑO 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 9900
+  },
+  "108107": {
+    "id": "108107",
+    "title": "Lince - Crear dashboard",
+    "group_id": "351",
+    "parent_id": "103497",
+    "parent_title": "LINCE - PLANEAR GERENCIA 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 23400
+  },
+  "108729": {
+    "id": "108729",
+    "title": "Gastos Bancarios (Asistente Administrativo y/o Contable)",
+    "group_id": "89",
+    "parent_id": "90739",
+    "parent_title": "HACER GFINANCIERA - CONTABILIZAR Y/O CAUSAR GASTOS (año 2026)",
+    "creator_name": "Mónica Gómez Bohorquez",
+    "time_estimate": 7200,
+    "time_spent_in_logs": 2400
+  },
+  "108731": {
+    "id": "108731",
+    "title": "Elaborar Egresos y Asientos Contables",
+    "group_id": "89",
+    "parent_id": "90815",
+    "parent_title": "HACER GFINANCIERA - TESORERIA PAGO A PROVEEDORES (año 2026)",
+    "creator_name": "Mónica Gómez Bohorquez",
+    "time_estimate": 90000,
+    "time_spent_in_logs": 98700
+  },
+  "108741": {
+    "id": "108741",
+    "title": "Conciliación (Asistente Administrativo y/o Contable)",
+    "group_id": "89",
+    "parent_id": "90851",
+    "parent_title": "VERIFICAR GFINANCIERA - CONCILIACIÓN CONTABLE (año 2026)",
+    "creator_name": "Mónica Gómez Bohorquez",
+    "time_estimate": 14400,
+    "time_spent_in_logs": 4800
+  },
+  "108767": {
+    "id": "108767",
+    "title": "Tareas Generales y/o Administrativas (Otilia García)",
+    "group_id": "89",
+    "parent_id": "90877",
+    "parent_title": "HACER GFINANCIERA - TAREAS ADMINISTRATIVAS Y ARCHIVO (año 2026)",
+    "creator_name": "Mónica Gómez Bohorquez",
+    "time_estimate": 36000,
+    "time_spent_in_logs": 23880
+  },
+  "108945": {
+    "id": "108945",
+    "title": "Fico - Entrega de informe corte Septiembre 2026",
+    "group_id": "43",
+    "parent_id": "101481",
+    "parent_title": "FICO - INFORMES DE GESTIÓN MENSUAL 2026",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 5400
+  },
+  "109013": {
+    "id": "109013",
+    "title": "Seguros Aurora: Inscripción a curso manejo defensivo",
+    "group_id": "245",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "Lorena Gomez Bohorquez",
+    "time_estimate": 3600,
+    "time_spent_in_logs": 9900
+  },
+  "109159": {
+    "id": "109159",
+    "title": "Eliminar Información 50 y 20 horas",
+    "group_id": "77",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "Ana María Cipagauta Acosta",
+    "time_estimate": 0,
+    "time_spent_in_logs": 25200
+  },
+  "109169": {
+    "id": "109169",
+    "title": "FICO - Imprimir y publicar matriz de compatibilidad",
+    "group_id": "147",
+    "parent_id": "88213",
+    "parent_title": "FICO - RIESGO QUÍMICO 2026",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 2400
+  },
+  "109173": {
+    "id": "109173",
+    "title": "Planeación táctica - Revisión Antigravity",
+    "group_id": "255",
+    "parent_id": "101779",
+    "parent_title": "PLANEACIÓN TÁCTICA - CREACIÓN DE APLICATIVOS",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 7200
+  },
+  "109175": {
+    "id": "109175",
+    "title": "SENALTUR - Investigación Siniestro 20260909 MV402",
+    "group_id": "213",
+    "parent_id": "99303",
+    "parent_title": "SENALTUR - Paso 13 INVESTIGACIÓN SINIESTROS",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 4800
+  },
+  "109305": {
+    "id": "109305",
+    "title": "Dispein  - Validar disponibilidad del aliado para la aplicación / Modalidad Virtual",
+    "group_id": "217",
+    "parent_id": "109303",
+    "parent_title": "DISPEIN - APLICACIÓN DE BATERIA DE RIESGO PSICOSOCIAL - MODALIDAD VIRTUAL",
+    "creator_name": "Jenny Gomez Sepulveda",
+    "time_estimate": 0,
+    "time_spent_in_logs": 3000
+  },
+  "109309": {
+    "id": "109309",
+    "title": "Dispein - Tabulación de datos / Modalidad Virtual",
+    "group_id": "0",
+    "parent_id": "109303",
+    "parent_title": "DISPEIN - APLICACIÓN DE BATERIA DE RIESGO PSICOSOCIAL - MODALIDAD VIRTUAL",
+    "creator_name": "Jenny Gomez Sepulveda",
+    "time_estimate": 18000,
+    "time_spent_in_logs": 12000
+  },
+  "109419": {
+    "id": "109419",
+    "title": "COLTUREX - Acompañamiento comité",
+    "group_id": "63",
+    "parent_id": "100715",
+    "parent_title": "Colturex - Reunión Copasst Septiembre 2026",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 7200
+  },
+  "109421": {
+    "id": "109421",
+    "title": "COLTUREX - Reunión con líder de proceso Comercial",
+    "group_id": "63",
+    "parent_id": "100805",
+    "parent_title": "COLTUREX - HACER GESTIÓN COMERCIAL 2026",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 6000
+  },
+  "109579": {
+    "id": "109579",
+    "title": "Reunión automatizado de matriculación",
+    "group_id": "77",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "Ana María Cipagauta Acosta",
+    "time_estimate": 0,
+    "time_spent_in_logs": 15300
+  },
+  "109585": {
+    "id": "109585",
+    "title": "Acceso a analiticas de wordpress",
+    "group_id": "77",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "Gloria Gómez Bohorquez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 600
+  },
+  "109647": {
+    "id": "109647",
+    "title": "Orden de Servicio - Emily Bermudez - Macrosearch - auditoria ISO 9001:2015",
+    "group_id": "99",
+    "parent_id": "109645",
+    "parent_title": "Macrosearch: Auditoria Interna Inteligente ISO 9001:2015",
+    "creator_name": "Jenny Gomez Sepulveda",
+    "time_estimate": 0,
+    "time_spent_in_logs": 64200
+  },
+  "109649": {
+    "id": "109649",
+    "title": "Comercial: Onerpm - Mantenimiento del SG-SST",
+    "group_id": "33",
+    "parent_id": "90655",
+    "parent_title": "G COMERCIAL : HACER - PRESENTACIÓN PROPUESTAS (año 2026)",
+    "creator_name": "Jenny Gomez Sepulveda",
+    "time_estimate": 0,
+    "time_spent_in_logs": 9000
+  },
+  "109697": {
+    "id": "109697",
+    "title": "COLTUREX - Reunión con líder de proceso de Mantenimiento",
+    "group_id": "63",
+    "parent_id": "100821",
+    "parent_title": "COLTUREX - HACER GESTIÓN MANTENIMIENTO 2026",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 6000
+  },
+  "109719": {
+    "id": "109719",
+    "title": "Atcal - Desplazamiento Unilago (Octubre 2026)",
+    "group_id": "43",
+    "parent_id": "95237",
+    "parent_title": "ATCAL - DESPLAZAMIENTO UNILAGO (Año 2026)",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 36000
+  },
+  "109843": {
+    "id": "109843",
+    "title": "G mercadeo grabar Short  resolución 3612 de 2026 CCL",
+    "group_id": "55",
+    "parent_id": "109841",
+    "parent_title": "G mercadeo Short resolución 3612 de 2026 CCL",
+    "creator_name": "Gloria Gómez Bohorquez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 2700
+  },
+  "110001": {
+    "id": "110001",
+    "title": "Colturex - Simulacro 2026",
+    "group_id": "63",
+    "parent_id": "110799",
+    "parent_title": "COLTUREX - EJECUCIÓN Y EVALUACIÓN DE SIMULACROS 2026",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 1800
+  },
+  "110005": {
+    "id": "110005",
+    "title": "Desplazamiento 20261015",
+    "group_id": "25",
+    "parent_id": "109983",
+    "parent_title": "Capillas- Revisión Proceso G Estratégica",
+    "creator_name": "Jenny Gomez Sepulveda",
+    "time_estimate": 0,
+    "time_spent_in_logs": 7200
+  },
+  "110227": {
+    "id": "110227",
+    "title": "Crear Usuario Bitrix y asignar cuenta correo corporativo : Sofia Grijalba",
+    "group_id": "61",
+    "parent_id": "109793",
+    "parent_title": "LEGALIZAR CONTRATO PRESTACIÓN SERVICIOS: SOFIA GRIJALBA (OPERACIONES)",
+    "creator_name": "Mónica Gómez Bohorquez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 900
+  },
+  "110325": {
+    "id": "110325",
+    "title": "Capillas - Visita sede Quinta camacho",
+    "group_id": "25",
+    "parent_id": "102865",
+    "parent_title": "CAPILLAS - VISITAS SEDES NORTE",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 4500
+  },
+  "110347": {
+    "id": "110347",
+    "title": "Comercial: Johana Castellanos - ATLANTICO - Diplomado trinorma / Campus 360",
+    "group_id": "33",
+    "parent_id": "90655",
+    "parent_title": "G COMERCIAL : HACER - PRESENTACIÓN PROPUESTAS (año 2026)",
+    "creator_name": "Jenny Gomez Sepulveda",
+    "time_estimate": 0,
+    "time_spent_in_logs": 25200
+  },
+  "110511": {
+    "id": "110511",
+    "title": "COLCARGO - 27AM2026",
+    "group_id": "67",
+    "parent_id": "110509",
+    "parent_title": "COLCARGO - OPORTUNIDADES DE MEJORA",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 1800
+  },
+  "110517": {
+    "id": "110517",
+    "title": "COLCARGO - 30AM2026",
+    "group_id": "67",
+    "parent_id": "110509",
+    "parent_title": "COLCARGO - OPORTUNIDADES DE MEJORA",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 1800
+  },
+  "110817": {
+    "id": "110817",
+    "title": "Atcal - Registrar y reportar ante e Idiger",
+    "group_id": "243",
+    "parent_id": "109553",
+    "parent_title": "ATCAL - PARTICIPACIÓN SIMULACRO 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 4200
+  },
+  "110899": {
+    "id": "110899",
+    "title": "Inmolmec - Inscripción y reporte para generar certificado simulacro 2026",
+    "group_id": "247",
+    "parent_id": "110895",
+    "parent_title": "INMOLMEC - EJECUCIÓN Y EVALUACIÓN DE SIMULACROS 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 4200
+  },
+  "110911": {
+    "id": "110911",
+    "title": "Planeación Táctica - Subir Plan de trabajo 718",
+    "group_id": "255",
+    "parent_id": "104083",
+    "parent_title": "PLANEACIÓN TÁCTICA - SUBIR PLANES DE TRABAJO EN BITRIX PROYECTOS 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 3600
+  },
+  "92575": {
+    "id": "92575",
+    "title": "SENALTUR - COMITÉ DE SEGURIDAD VIAL 2026",
+    "group_id": "213",
+    "parent_id": "92569",
+    "parent_title": "SENALTUR - COMITÉS ORGANIZACIONALES 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 23400
+  },
+  "92849": {
+    "id": "92849",
+    "title": "Depuración contactos bitrix 2026.",
+    "group_id": "77",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "Ana María Cipagauta Acosta",
+    "time_estimate": 396000,
+    "time_spent_in_logs": 429000
+  },
+  "93935": {
+    "id": "93935",
+    "title": "Colcargo - Entrega de informe corte Octubre 2026",
+    "group_id": "43",
+    "parent_id": "93915",
+    "parent_title": "COLCARGO - INFORMES DE GESTIÓN MENSUAL 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 7200,
+    "time_spent_in_logs": 7200
+  },
+  "96167": {
+    "id": "96167",
+    "title": "Unilago - Reunión Vigía SST (Julio)",
+    "group_id": "85",
+    "parent_id": "96153",
+    "parent_title": "UNILAGO - REUNIONES VIGÍA SST 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 3600,
+    "time_spent_in_logs": 900
+  },
+  "96265": {
+    "id": "96265",
+    "title": "Unilago - Informe trimestral (Septiembre 2026)",
+    "group_id": "85",
+    "parent_id": "96259",
+    "parent_title": "UNILAGO - RENDICIÓN DE CUENTAS COMITÉ DE CONVIVENCIA LABORAL 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 1800
+  },
+  "98411": {
+    "id": "98411",
+    "title": "FLIA MIC (CGI) - Reuniones Mensuales",
+    "group_id": "145",
+    "parent_id": "98407",
+    "parent_title": "FLIA MIC (CGI) - CCL",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 10200
+  },
+  "100107": {
+    "id": "100107",
+    "title": "Comercial: Acermetalicas - Planeación estrategica  - plan sucesión",
+    "group_id": "33",
+    "parent_id": "90655",
+    "parent_title": "G COMERCIAL : HACER - PRESENTACIÓN PROPUESTAS (año 2026)",
+    "creator_name": "Jenny Gomez Sepulveda",
+    "time_estimate": 0,
+    "time_spent_in_logs": 14400
+  },
+  "103327": {
+    "id": "103327",
+    "title": "SENALTUR - Paso 16 Inspección de vehículos y equipos",
+    "group_id": "213",
+    "parent_id": "92635",
+    "parent_title": "SENALTUR - VERIFICAR GESTIÓN OPERATIVA 2026",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 10800
+  },
+  "104643": {
+    "id": "104643",
+    "title": "Fico - Crear dashboard",
+    "group_id": "147",
+    "parent_id": "92951",
+    "parent_title": "FICO- PLANEAR GESTIÓN ESTRATÉGICA 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 27000
+  },
+  "105163": {
+    "id": "105163",
+    "title": "Capillas - Actualización Listado maestro de documentos Octubre 2026",
+    "group_id": "25",
+    "parent_id": "97419",
+    "parent_title": "CAPILLAS - ACTUALIZACIÓN LISTADO MAESTRO DE DOCUMENTOS/REGISTROS/DOC EXTERNOS 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 7200,
+    "time_spent_in_logs": 10800
+  },
+  "105689": {
+    "id": "105689",
+    "title": "Comercial: Montacargas ATM",
+    "group_id": "33",
+    "parent_id": "90655",
+    "parent_title": "G COMERCIAL : HACER - PRESENTACIÓN PROPUESTAS (año 2026)",
+    "creator_name": "Jenny Gomez Sepulveda",
+    "time_estimate": 0,
+    "time_spent_in_logs": 6600
+  },
+  "107007": {
+    "id": "107007",
+    "title": "Capillas - Reunión Operativa Octubre 2026",
+    "group_id": "25",
+    "parent_id": "92063",
+    "parent_title": "CAPILLAS - REUNIÓN GESTIÓN OPERATIVA 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 1351632
+  },
+  "107085": {
+    "id": "107085",
+    "title": "Capillas- Actividades Semanales Octubre 2026",
+    "group_id": "25",
+    "parent_id": "102597",
+    "parent_title": "CAPILLAS - ENVIO DE CORREOS SEMANALES",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 10800,
+    "time_spent_in_logs": 7200
+  },
+  "107953": {
+    "id": "107953",
+    "title": "Disipen: Capacitación Brigadistas x un día - Aliado Kurakata",
+    "group_id": "217",
+    "parent_id": "90103",
+    "parent_title": "DISPEIN - PLAN DE FORMACIÓN 2026",
+    "creator_name": "Jenny Gomez Sepulveda",
+    "time_estimate": 0,
+    "time_spent_in_logs": 1800
+  },
+  "108051": {
+    "id": "108051",
+    "title": "G mercadeo Grabación y apoyo de grabación short  Circular 079 Simulacro distrital 2026",
+    "group_id": "55",
+    "parent_id": "108049",
+    "parent_title": "G MERCADEO  SHORT CIRCULAR 079 SIMULACRO DISTRITAL 2026",
+    "creator_name": "Gloria Gómez Bohorquez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 25800
+  },
+  "108307": {
+    "id": "108307",
+    "title": "Seguros Aurora- Revisar link de cursos adicionales",
+    "group_id": "77",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "Lorena Gomez Bohorquez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 16200
+  },
+  "108533": {
+    "id": "108533",
+    "title": "Apoyo grabación Crear guiones y grabar short SST para primíparos (13/10/2026)",
+    "group_id": "55",
+    "parent_id": "108529",
+    "parent_title": "SST PARA PRIMIPAROS - (13/10/2026)",
+    "creator_name": "Gloria Gómez Bohorquez",
+    "time_estimate": 3600,
+    "time_spent_in_logs": 2700
+  },
+  "108541": {
+    "id": "108541",
+    "title": "Apoyo grabación Crear guiones y grabar short SST para primíparos (20/10/2026)",
+    "group_id": "55",
+    "parent_id": "108537",
+    "parent_title": "SST PARA PRIMIPAROS - (20/10/2026)",
+    "creator_name": "Gloria Gómez Bohorquez",
+    "time_estimate": 3600,
+    "time_spent_in_logs": 3600
+  },
+  "108669": {
+    "id": "108669",
+    "title": "Formación Antigravity: Dominando la IA en la Fábrica de Conocimiento",
+    "group_id": "81",
+    "parent_id": "108661",
+    "parent_title": "CURSO ANTIGRAVITY: DOMINANDO LA IA EN LA FABRICA DE CONOCIMIENTO",
+    "creator_name": "Mónica Gómez Bohorquez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 5400
+  },
+  "108739": {
+    "id": "108739",
+    "title": "Seguimiento Radicado Facturas",
+    "group_id": "89",
+    "parent_id": "90837",
+    "parent_title": "HACER GFINANCIERA - TESORERIA RECAUDO DE CARTERA (año 2026)",
+    "creator_name": "Mónica Gómez Bohorquez",
+    "time_estimate": 7200,
+    "time_spent_in_logs": 1800
+  },
+  "108869": {
+    "id": "108869",
+    "title": "Verificar Tiempos Documentados en BITRIX (Septiembre 01-30 del 2026)",
+    "group_id": "81",
+    "parent_id": "89967",
+    "parent_title": "VERIFICAR TIEMPOS DOCUMENTADOS BITRIX (PERIODO SEPTIEMBRE 01-30 DEL 2026)",
+    "creator_name": "Mónica Gómez Bohorquez",
+    "time_estimate": 3600,
+    "time_spent_in_logs": 900
+  },
+  "108879": {
+    "id": "108879",
+    "title": "Verificar Tiempos Documentados en BITRIX (Septiembre 01-30 del 2026)",
+    "group_id": "81",
+    "parent_id": "89967",
+    "parent_title": "VERIFICAR TIEMPOS DOCUMENTADOS BITRIX (PERIODO SEPTIEMBRE 01-30 DEL 2026)",
+    "creator_name": "Mónica Gómez Bohorquez",
+    "time_estimate": 3600,
+    "time_spent_in_logs": 300
+  },
+  "108895": {
+    "id": "108895",
+    "title": "COLCARGO - NO CONFORMIDADES BASC",
+    "group_id": "67",
+    "parent_id": "92785",
+    "parent_title": "COLCARGO - ACTUAR GESTIÓN INTEGRAL 2026",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 5400
+  },
+  "108953": {
+    "id": "108953",
+    "title": "FICO - Acompañamiento revisión inventario Sede  Castilla",
+    "group_id": "147",
+    "parent_id": "93033",
+    "parent_title": "FICO- HACER GESTIÓN DE ALMACENAMIENTO E INVENTARIOS 2026",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 10800
+  },
+  "108991": {
+    "id": "108991",
+    "title": "COLCARGO - 33AC2026",
+    "group_id": "67",
+    "parent_id": "108895",
+    "parent_title": "COLCARGO - NO CONFORMIDADES BASC",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 6600
+  },
+  "108999": {
+    "id": "108999",
+    "title": "Revisión cursos",
+    "group_id": "51",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "Luis Alejandro Rueda Pardo",
+    "time_estimate": 0,
+    "time_spent_in_logs": 45000
+  },
+  "109037": {
+    "id": "109037",
+    "title": "SENALTUR - Investigación Siniestro 20260917 MV403",
+    "group_id": "213",
+    "parent_id": "99303",
+    "parent_title": "SENALTUR - Paso 13 INVESTIGACIÓN SINIESTROS",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 4800
+  },
+  "109057": {
+    "id": "109057",
+    "title": "AUDITORIA:   BRAND & SOLUTIONS SAS  / 14 DE OCTUBRE 2026/ EXITO/ Campo",
+    "group_id": "53",
+    "parent_id": "109053",
+    "parent_title": "AUDITORIA:   BRAND & SOLUTIONS SAS  / 14 DE OCTUBRE 2026/ MP NA EXITO / Informe",
+    "creator_name": "Lorena Gomez Bohorquez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 30600
+  },
+  "109141": {
+    "id": "109141",
+    "title": "Aurora: Reunión con Gerencia",
+    "group_id": "245",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "Jenny Gomez Sepulveda",
+    "time_estimate": 0,
+    "time_spent_in_logs": 54900
+  },
+  "109143": {
+    "id": "109143",
+    "title": "Atcal - Reunión socialización App MRL",
+    "group_id": "337",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 49500
+  },
+  "109171": {
+    "id": "109171",
+    "title": "Batería psicosocial  IDEAR SI",
+    "group_id": "99",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "Ana María Cipagauta Acosta",
+    "time_estimate": 0,
+    "time_spent_in_logs": 14400
+  },
+  "109233": {
+    "id": "109233",
+    "title": "C12 - Reunión explicación APP Auditoria documenta",
+    "group_id": "355",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 1800
+  },
+  "109261": {
+    "id": "109261",
+    "title": "1. Colturex - Reporte a las diferentes entidades del AT Humberto Pedraza",
+    "group_id": "63",
+    "parent_id": "109251",
+    "parent_title": "COLTUREX - AT HUMBERTO PEDRAZA (AUX MANTENIMMIENTO)",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 900
+  },
+  "109417": {
+    "id": "109417",
+    "title": "COLTUREX - Realizar acompañamiento comité",
+    "group_id": "63",
+    "parent_id": "100737",
+    "parent_title": "Colturex - Reunión Comité de convivencia laboral Septiembre 2026",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 7200
+  },
+  "109651": {
+    "id": "109651",
+    "title": "Actualizar  listado de Cursos Gratuitos en página de ATCAL SAS",
+    "group_id": "77",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "Gloria Gómez Bohorquez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 900
+  },
+  "109713": {
+    "id": "109713",
+    "title": "Capillas - Amor y Amistad",
+    "group_id": "25",
+    "parent_id": "104519",
+    "parent_title": "CAPILLAS- ACTIVIDADES DE BIENESTAR",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 18000
+  },
+  "109803": {
+    "id": "109803",
+    "title": "Comercial: Diseño SG-SST Camila Novoa Dental Group SAS",
+    "group_id": "33",
+    "parent_id": "90655",
+    "parent_title": "G COMERCIAL : HACER - PRESENTACIÓN PROPUESTAS (año 2026)",
+    "creator_name": "Jenny Gomez Sepulveda",
+    "time_estimate": 0,
+    "time_spent_in_logs": 3600
+  },
+  "109823": {
+    "id": "109823",
+    "title": "FICO - Actualizar conformación",
+    "group_id": "147",
+    "parent_id": "88231",
+    "parent_title": "FICO - BRIGADA DE EMERGENCIAS 2026",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 1800
+  },
+  "110091": {
+    "id": "110091",
+    "title": "Unilago - Seguimiento plan de trabajo Octubre 2026",
+    "group_id": "85",
+    "parent_id": "100537",
+    "parent_title": "UNILAGO - SEGUIMIENTO PLAN DE TRABAJO 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 7200
+  },
+  "110107": {
+    "id": "110107",
+    "title": "FLIA MIC (CGI) - AT Juan Sebastián Leal",
+    "group_id": "145",
+    "parent_id": "101031",
+    "parent_title": "FLIA MIC - AT-IT-EL",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 10800
+  },
+  "110121": {
+    "id": "110121",
+    "title": "FICO - Retirar a personal de los cursos virtuales",
+    "group_id": "147",
+    "parent_id": "86257",
+    "parent_title": "FICO - CURSOS VIRTUALES 2026",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 900
+  },
+  "110203": {
+    "id": "110203",
+    "title": "Lince Comercial - Ejecución y evaluación Simulacro Cali (Sede Yumbo)",
+    "group_id": "351",
+    "parent_id": "110197",
+    "parent_title": "LINCE - EJECUCIÓN Y EVALUACIÓN DE SIMULACROS 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 1800
+  },
+  "110307": {
+    "id": "110307",
+    "title": "Capillas - Visita sede orquídeas",
+    "group_id": "25",
+    "parent_id": "102865",
+    "parent_title": "CAPILLAS - VISITAS SEDES NORTE",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 8100
+  },
+  "110359": {
+    "id": "110359",
+    "title": "C14 - Membresía Diana Catalina Castañeda - Reunión apertura",
+    "group_id": "33",
+    "parent_id": "110351",
+    "parent_title": "C14 - MEMBRESIA DIANA CATALINA CASTAÑEDA",
+    "creator_name": "Jenny Gomez Sepulveda",
+    "time_estimate": 0,
+    "time_spent_in_logs": 10800
+  },
+  "110375": {
+    "id": "110375",
+    "title": "Capillas - Inspección sede Santa Monica",
+    "group_id": "25",
+    "parent_id": "102867",
+    "parent_title": "CAPILLAS - VISITAS SEDES SUR",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 7200
+  },
+  "110483": {
+    "id": "110483",
+    "title": "G Comercial: Actualización información servidor (Backup) - Año 2026",
+    "group_id": "33",
+    "parent_id": "95005",
+    "parent_title": "G COMERCIAL: HACER - ACTUALIZACIÓN INFORMACIÓN SERVIDOR (BACKUP) 2026",
+    "creator_name": "Jenny Gomez Sepulveda",
+    "time_estimate": 0,
+    "time_spent_in_logs": 1200
+  },
+  "110515": {
+    "id": "110515",
+    "title": "COLCARGO - 29AM2026",
+    "group_id": "67",
+    "parent_id": "110509",
+    "parent_title": "COLCARGO - OPORTUNIDADES DE MEJORA",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 1800
+  },
+  "110775": {
+    "id": "110775",
+    "title": "Trading - Inscripción y reporte para generar certificado simulacro 2026",
+    "group_id": "257",
+    "parent_id": "110773",
+    "parent_title": "TRADING - EJECUCIÓN Y EVALUACIÓN DE SIMULACROS 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 4200
+  },
+  "110809": {
+    "id": "110809",
+    "title": "Fico - Inscripción y reporte para generar certificado simulacro 2026",
+    "group_id": "147",
+    "parent_id": "110807",
+    "parent_title": "FICO - EJECUCIÓN Y EVALUACIÓN DE SIMULACROS 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 10200
+  },
+  "110907": {
+    "id": "110907",
+    "title": "Jomayosa - Ejecución simulacro",
+    "group_id": "79",
+    "parent_id": "110903",
+    "parent_title": "JOMAYOSA - EJECUCIÓN Y EVALUACIÓN DE SIMULACROS 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 1800
+  },
+  "82203": {
+    "id": "82203",
+    "title": "ATCAL - REUNIONES COMITÉ DE LIDERES",
+    "group_id": "133",
+    "parent_id": "71177",
+    "parent_title": "REUNIONES COMITÉ DIRECTIVO (AÑO 2025)",
+    "creator_name": "Yovanna Ochoa Laverde",
+    "time_estimate": 0,
+    "time_spent_in_logs": 261840
+  },
+  "93667": {
+    "id": "93667",
+    "title": "Senaltur - Reunión Copasst Septiembre 2026",
+    "group_id": "213",
+    "parent_id": "92577",
+    "parent_title": "SENALTUR - REUNIONES COPASST 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 3600,
+    "time_spent_in_logs": 3600
+  },
+  "96173": {
+    "id": "96173",
+    "title": "Unilago - Reunión Vigía SST (Octubre)",
+    "group_id": "85",
+    "parent_id": "96153",
+    "parent_title": "UNILAGO - REUNIONES VIGÍA SST 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 3600,
+    "time_spent_in_logs": 3600
+  },
+  "96197": {
+    "id": "96197",
+    "title": "Unilago - Reunión CCL (Octubre)",
+    "group_id": "85",
+    "parent_id": "96181",
+    "parent_title": "UNILAGO - REUNIONES COMITÉ DE CONVIVENCIA LABORAL 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 3600,
+    "time_spent_in_logs": 3600
+  },
+  "101733": {
+    "id": "101733",
+    "title": "Colturex - Actividades de bienestar",
+    "group_id": "63",
+    "parent_id": "101723",
+    "parent_title": "Colturex - Compromisos reunión Mayo (CCL)",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 1200
+  },
+  "107423": {
+    "id": "107423",
+    "title": "Elaborar Facturas de Venta, Notas Crédito, Devoluciones",
+    "group_id": "89",
+    "parent_id": "90711",
+    "parent_title": "HACER GFINANCIERA - CONTABILIZAR Y/O CAUSAR INGRESOS (año 2026)",
+    "creator_name": "Mónica Gómez Bohorquez",
+    "time_estimate": 57600,
+    "time_spent_in_logs": 49200
+  },
+  "107687": {
+    "id": "107687",
+    "title": "DIVERSEY- Creación de usuarios en plataforma LS (Septiembre)",
+    "group_id": "53",
+    "parent_id": "93283",
+    "parent_title": "DIVERSEY: PROGRAMACIÓN AUDITORIAS 2026",
+    "creator_name": "Mónica Gómez Bohorquez",
+    "time_estimate": 18000,
+    "time_spent_in_logs": 20100
+  },
+  "108689": {
+    "id": "108689",
+    "title": "Capillas - Revisión sub proceso de Protocolo Girardot",
+    "group_id": "25",
+    "parent_id": "108685",
+    "parent_title": "CAPILLAS - REVISIÓN DESTINO FINAL - CREMACIÓN",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 15000
+  },
+  "108747": {
+    "id": "108747",
+    "title": "Informes de obligaciones para gestión pago Nómina",
+    "group_id": "89",
+    "parent_id": "90855",
+    "parent_title": "VERIFICAR GFINANCIERA - INFORMES CONTABLES Y TESORERIA (año 2026)",
+    "creator_name": "Otilia Garcia Ariza",
+    "time_estimate": 5400,
+    "time_spent_in_logs": 7200
+  },
+  "108761": {
+    "id": "108761",
+    "title": "Informe Obligaciones - Revisar y Actualizar",
+    "group_id": "89",
+    "parent_id": "90855",
+    "parent_title": "VERIFICAR GFINANCIERA - INFORMES CONTABLES Y TESORERIA (año 2026)",
+    "creator_name": "Mónica Gómez Bohorquez",
+    "time_estimate": 28800,
+    "time_spent_in_logs": 17400
+  },
+  "109425": {
+    "id": "109425",
+    "title": "SENALTUR - Envío correo pausas activas",
+    "group_id": "213",
+    "parent_id": "92571",
+    "parent_title": "SENALTUR - COMITÉ COPASST 2026",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 2400
+  },
+  "109557": {
+    "id": "109557",
+    "title": "Atcal - Participación simulacro 2026 (Otilia García)",
+    "group_id": "243",
+    "parent_id": "109553",
+    "parent_title": "ATCAL - PARTICIPACIÓN SIMULACRO 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 1800
+  },
+  "109653": {
+    "id": "109653",
+    "title": "Desplazamiento 20261014",
+    "group_id": "85",
+    "parent_id": "109331",
+    "parent_title": "Unilago - Capacitación Uso y manejo de extintores",
+    "creator_name": "Jenny Gomez Sepulveda",
+    "time_estimate": 0,
+    "time_spent_in_logs": 7200
+  },
+  "110119": {
+    "id": "110119",
+    "title": "Organización",
+    "group_id": "383",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "Ana María Cipagauta Acosta",
+    "time_estimate": 0,
+    "time_spent_in_logs": 10800
+  },
+  "110129": {
+    "id": "110129",
+    "title": "SENALTUR - Inscripción personal nuevo",
+    "group_id": "213",
+    "parent_id": "104343",
+    "parent_title": "SENALTUR - INDUCCIÓN Y REINDUCCIÓN 2026",
+    "creator_name": "Emily Johanna Bermudez Gonzalez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 900
+  },
+  "110205": {
+    "id": "110205",
+    "title": "Lince Comercial - Ejecución y evaluación Simulacro Cali (Sede Pasarela)",
+    "group_id": "351",
+    "parent_id": "110197",
+    "parent_title": "LINCE - EJECUCIÓN Y EVALUACIÓN DE SIMULACROS 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 1800
+  },
+  "110233": {
+    "id": "110233",
+    "title": "Proceso Infraestructura: Inducción Sofia Grijalba (Prestador Servicios)",
+    "group_id": "61",
+    "parent_id": "109989",
+    "parent_title": "INDUCCIÓN PROCESOS: Sofia Grijalba (PRESTADOR DE SERVICIOS OPERACIONES ATCAL SAS.",
+    "creator_name": "Mónica Gómez Bohorquez",
+    "time_estimate": 0,
+    "time_spent_in_logs": 7200
+  },
+  "110801": {
+    "id": "110801",
+    "title": "Colturex - Inscripción y reporte para generar certificado simulacro 2026",
+    "group_id": "63",
+    "parent_id": "110799",
+    "parent_title": "COLTUREX - EJECUCIÓN Y EVALUACIÓN DE SIMULACROS 2026",
+    "creator_name": "Laura Parra Parra",
+    "time_estimate": 0,
+    "time_spent_in_logs": 4200
+  },
+  "109655": {
+    "id": "109655",
+    "title": "Tarea #109655 (Eliminada)",
+    "group_id": "0",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "Desconocido",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "63499": {
+    "id": "63499",
+    "title": "SENALTUR - VERIFICAR COORDINACIÓN Y PRESTACIÓN DEL SERVICIO 2025",
+    "group_id": "213",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "81023": {
+    "id": "81023",
+    "title": "COLTUREX - GESTIÓN DEL CAMBIO RESOLUCIÓN 2328 DE 2025 (SARLAF)",
+    "group_id": "63",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "88299": {
+    "id": "88299",
+    "title": "FICO - PASO 20. INDICADORES Y REPORTES DE AUTOGESTIÓN PESV 2026",
+    "group_id": "147",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "89853": {
+    "id": "89853",
+    "title": "NÓMINA - DESPRENDIBLES DE NÓMINA (año 2026)",
+    "group_id": "81",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "90675": {
+    "id": "90675",
+    "title": "SEGUIMIENTO FIRMA CONTRATOS (año 2026)",
+    "group_id": "33",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "90711": {
+    "id": "90711",
+    "title": "HACER GFINANCIERA - CONTABILIZAR Y/O CAUSAR INGRESOS (año 2026)",
+    "group_id": "89",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "90875": {
+    "id": "90875",
+    "title": "PLANEAR GFINANCIERA - CONTABILIDAD Y TESORERIA",
+    "group_id": "89",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "90877": {
+    "id": "90877",
+    "title": "HACER GFINANCIERA - TAREAS ADMINISTRATIVAS Y ARCHIVO (año 2026)",
+    "group_id": "89",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "91829": {
+    "id": "91829",
+    "title": "G COMERCIAL: HACER - GESTIÓN DE CORREO ELECTRÓNICO - DIRECTOR COMERCIAL AÑO 2026",
+    "group_id": "33",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "92063": {
+    "id": "92063",
+    "title": "CAPILLAS - REUNIÓN GESTIÓN OPERATIVA 2026",
+    "group_id": "25",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "92607": {
+    "id": "92607",
+    "title": "SENALTUR - VERIFICAR GESTIÓN HSEQ 2026",
+    "group_id": "213",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "92635": {
+    "id": "92635",
+    "title": "SENALTUR - VERIFICAR GESTIÓN OPERATIVA 2026",
+    "group_id": "213",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "92659": {
+    "id": "92659",
+    "title": "SENALTUR - PLAN DE EMERGENCIAS 2026",
+    "group_id": "213",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "92945": {
+    "id": "92945",
+    "title": "FLIA MIC (GEPM/GEMLSA/CGI) - DIRECTRICES ORGANIZACIONALES 2026",
+    "group_id": "145",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "93033": {
+    "id": "93033",
+    "title": "FICO- HACER GESTIÓN DE ALMACENAMIENTO E INVENTARIOS 2026",
+    "group_id": "147",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "93153": {
+    "id": "93153",
+    "title": "COLCARGO - Actualización registro de ausentismo 2026",
+    "group_id": "67",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "94509": {
+    "id": "94509",
+    "title": "FICO - ASESORIA GESTIÓN HUMANA 2026",
+    "group_id": "147",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "94693": {
+    "id": "94693",
+    "title": "COLCARGO- COMUNICACIONES 2026",
+    "group_id": "67",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "95275": {
+    "id": "95275",
+    "title": "DISPEIN - PLANEAR GESTIÓN ESTRATÉGICA 2026",
+    "group_id": "217",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "95323": {
+    "id": "95323",
+    "title": "DISPEIN - PLAN DE EMERGENCIAS 2026",
+    "group_id": "217",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "95327": {
+    "id": "95327",
+    "title": "DISPEIN - REUNIONES DE BRIGADA DE EMERGENCIA 2026",
+    "group_id": "217",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "95555": {
+    "id": "95555",
+    "title": "VERIFICAR ALIANZAS - COMISIONES ALIADOS(año 2026)",
+    "group_id": "61",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "96105": {
+    "id": "96105",
+    "title": "UNILAGO - PLANEAR GESTIÓN ESTRATÉGICA 2026",
+    "group_id": "85",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "96119": {
+    "id": "96119",
+    "title": "UNILAGO - AUTOEVALUACIÓN RESOLUCIÓN 0312 DE 2019 (Año 2025)",
+    "group_id": "85",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "97847": {
+    "id": "97847",
+    "title": "SENALTUR - GC OPORTUNIDAD - SGI INTELIGENTE",
+    "group_id": "213",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "98407": {
+    "id": "98407",
+    "title": "FLIA MIC (CGI) - CCL",
+    "group_id": "145",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "99345": {
+    "id": "99345",
+    "title": "G MERCADEO: VERIFICAR INFORME REDES SOCIALES",
+    "group_id": "55",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "100537": {
+    "id": "100537",
+    "title": "UNILAGO - SEGUIMIENTO PLAN DE TRABAJO 2026",
+    "group_id": "85",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "100617": {
+    "id": "100617",
+    "title": "COLTUREX - COMITE DE SEGURIDAD VIAL 2026 (PESV)",
+    "group_id": "63",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "100737": {
+    "id": "100737",
+    "title": "Colturex - Reunión Comité de convivencia laboral Septiembre 2026",
+    "group_id": "63",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "100805": {
+    "id": "100805",
+    "title": "COLTUREX - HACER GESTIÓN COMERCIAL 2026",
+    "group_id": "63",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "101723": {
+    "id": "101723",
+    "title": "Colturex - Compromisos reunión Mayo (CCL)",
+    "group_id": "63",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "103409": {
+    "id": "103409",
+    "title": "AMERIVET - (SST) INSPECCIONES LOCATIVAS PRIMER SEMESTRE 2026",
+    "group_id": "273",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "103559": {
+    "id": "103559",
+    "title": "G MERCADEO HACER VIDEO QUIEN QUIERE SER IMPLEMENTADOR",
+    "group_id": "55",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "104519": {
+    "id": "104519",
+    "title": "CAPILLAS- ACTIVIDADES DE BIENESTAR",
+    "group_id": "25",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "104755": {
+    "id": "104755",
+    "title": "CAPILLAS - PLANIFICACIÓN DE ACTIVIDADES 2026",
+    "group_id": "25",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "105071": {
+    "id": "105071",
+    "title": "DISPEIN - CURSO FACTORES DE RIESGO QUIMICO (SGA)",
+    "group_id": "217",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "106067": {
+    "id": "106067",
+    "title": "SENALTUR - INSPECCIONES SEGUNDO SEMESTRE 2026",
+    "group_id": "213",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "106795": {
+    "id": "106795",
+    "title": "G MERCADEO VIDEO DASHBOARD",
+    "group_id": "55",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "106969": {
+    "id": "106969",
+    "title": "CAPILLAS - AJUSTE INDICADORES AUDITORIA DE SERVICIOS",
+    "group_id": "25",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "107709": {
+    "id": "107709",
+    "title": "PLANEACIÓN TÁCTICA - ORGANIZAR TAREAS DE BITRIX PROYECTOS 2026",
+    "group_id": "255",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "108521": {
+    "id": "108521",
+    "title": "SST PARA PRIMIPAROS - (06/10/2026)",
+    "group_id": "55",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "108609": {
+    "id": "108609",
+    "title": "INMOLMEC - PLANEAR GESTIÓN OPERACIONES 2026",
+    "group_id": "247",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "109053": {
+    "id": "109053",
+    "title": "AUDITORIA:   BRAND & SOLUTIONS SAS  / 14 DE OCTUBRE 2026/ MP NA EXITO / Informe",
+    "group_id": "53",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "109251": {
+    "id": "109251",
+    "title": "COLTUREX - AT HUMBERTO PEDRAZA (AUX MANTENIMMIENTO)",
+    "group_id": "63",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "109403": {
+    "id": "109403",
+    "title": "CAPILLAS - PLANIFICACIÓN OTORGAMIENTO ISO 14001 2026",
+    "group_id": "25",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "109793": {
+    "id": "109793",
+    "title": "LEGALIZAR CONTRATO PRESTACIÓN SERVICIOS: SOFIA GRIJALBA (OPERACIONES)",
+    "group_id": "61",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "110799": {
+    "id": "110799",
+    "title": "COLTUREX - EJECUCIÓN Y EVALUACIÓN DE SIMULACROS 2026",
+    "group_id": "63",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "110807": {
+    "id": "110807",
+    "title": "FICO - EJECUCIÓN Y EVALUACIÓN DE SIMULACROS 2026",
+    "group_id": "147",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "110903": {
+    "id": "110903",
+    "title": "JOMAYOSA - EJECUCIÓN Y EVALUACIÓN DE SIMULACROS 2026",
+    "group_id": "79",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "89771": {
+    "id": "89771",
+    "title": "NÓMINA - RODAMIENTO (año 2026)",
+    "group_id": "81",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "90713": {
+    "id": "90713",
+    "title": "HACER GFINANCIERA - CONTABILIZAR Y/O CAUSAR NOMINAS (año 2026)",
+    "group_id": "89",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "90851": {
+    "id": "90851",
+    "title": "VERIFICAR GFINANCIERA - CONCILIACIÓN CONTABLE (año 2026)",
+    "group_id": "89",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "90855": {
+    "id": "90855",
+    "title": "VERIFICAR GFINANCIERA - INFORMES CONTABLES Y TESORERIA (año 2026)",
+    "group_id": "89",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "91809": {
+    "id": "91809",
+    "title": "G COMERCIAL: HACER - ATENCION AL CLIENTE DIRECTOR COMERCIAL AÑO 2026",
+    "group_id": "33",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "92129": {
+    "id": "92129",
+    "title": "CAPILLAS - DESPLAZAMIENTO ENTRE SEDES 2026",
+    "group_id": "25",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "92155": {
+    "id": "92155",
+    "title": "CAPILLAS - AJUSTES DOCUMENTALES (G Mejora)",
+    "group_id": "25",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "92569": {
+    "id": "92569",
+    "title": "SENALTUR - COMITÉS ORGANIZACIONALES 2026",
+    "group_id": "213",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "92577": {
+    "id": "92577",
+    "title": "SENALTUR - REUNIONES COPASST 2026",
+    "group_id": "213",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "92581": {
+    "id": "92581",
+    "title": "SENALTUR - REUNIONES CCL 2026",
+    "group_id": "213",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "92597": {
+    "id": "92597",
+    "title": "SENALTUR - PROGRAMA RIESGO AUDITIVO 2026",
+    "group_id": "213",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "92713": {
+    "id": "92713",
+    "title": "BUSINESS - RENDICIÓN DE CUENTAS CCL 2026",
+    "group_id": "69",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "92785": {
+    "id": "92785",
+    "title": "COLCARGO - ACTUAR GESTIÓN INTEGRAL 2026",
+    "group_id": "67",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "92871": {
+    "id": "92871",
+    "title": "FLIA MIC (GEPM/GEMLSA/CGI) - HACER GESTION  GESTION DE INNOVACION Y SGI 2026",
+    "group_id": "145",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "92977": {
+    "id": "92977",
+    "title": "FICO- ACTUAR GESTIÓN MANTENIMIENTO 2026",
+    "group_id": "147",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "93283": {
+    "id": "93283",
+    "title": "DIVERSEY: PROGRAMACIÓN AUDITORIAS 2026",
+    "group_id": "53",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "95005": {
+    "id": "95005",
+    "title": "G COMERCIAL: HACER - ACTUALIZACIÓN INFORMACIÓN SERVIDOR (BACKUP) 2026",
+    "group_id": "33",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "95033": {
+    "id": "95033",
+    "title": "G COMERCIAL: HACER - VISITA COMERCIAL AÑO 2026",
+    "group_id": "33",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "95291": {
+    "id": "95291",
+    "title": "DISPEIN - PLANEAR GESTIÓN INTEGRAL 2026",
+    "group_id": "217",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "95315": {
+    "id": "95315",
+    "title": "DISPEIN - REUNIONES DEL CCL 2026",
+    "group_id": "217",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "96153": {
+    "id": "96153",
+    "title": "UNILAGO - REUNIONES VIGÍA SST 2026",
+    "group_id": "85",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "96181": {
+    "id": "96181",
+    "title": "UNILAGO - REUNIONES COMITÉ DE CONVIVENCIA LABORAL 2026",
+    "group_id": "85",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "96259": {
+    "id": "96259",
+    "title": "UNILAGO - RENDICIÓN DE CUENTAS COMITÉ DE CONVIVENCIA LABORAL 2026",
+    "group_id": "85",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "96327": {
+    "id": "96327",
+    "title": "UNILAGO - SEGUIMIENTO PAGOS DE SEGURIDAD SOCIAL 2026",
+    "group_id": "85",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "96771": {
+    "id": "96771",
+    "title": "UNILAGO - VERIFICAR GESTIÓN INTEGRAL 2026",
+    "group_id": "85",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "99303": {
+    "id": "99303",
+    "title": "SENALTUR - Paso 13 INVESTIGACIÓN SINIESTROS",
+    "group_id": "213",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "100821": {
+    "id": "100821",
+    "title": "COLTUREX - HACER GESTIÓN MANTENIMIENTO 2026",
+    "group_id": "63",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "102243": {
+    "id": "102243",
+    "title": "G MERCADEO HACER , APOYO TÉCNICO RESPUESTA USUARIOS TIKTOK, INSTRAGRAM Y FACEBOOK",
+    "group_id": "55",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "102787": {
+    "id": "102787",
+    "title": "VERIFICAR GHUMANA - AUDITORIAS DOCUMENTALES GESTION BITRIX",
+    "group_id": "81",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "102867": {
+    "id": "102867",
+    "title": "CAPILLAS - VISITAS SEDES SUR",
+    "group_id": "25",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "103487": {
+    "id": "103487",
+    "title": "LINCE - PLANEAR GESTIÓN INFRAESTRUCTURA 2026",
+    "group_id": "351",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "104251": {
+    "id": "104251",
+    "title": "G MERCADEO HACER VIDEO MEMES PARA TIK TOK",
+    "group_id": "55",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "104343": {
+    "id": "104343",
+    "title": "SENALTUR - INDUCCIÓN Y REINDUCCIÓN 2026",
+    "group_id": "213",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "104795": {
+    "id": "104795",
+    "title": "COLCARGO - SIMULACROS",
+    "group_id": "67",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "106937": {
+    "id": "106937",
+    "title": "CAPILLAS - REUNIONES GERENCIA ADMINISTRATIVA-G ESTRATÉGICA",
+    "group_id": "25",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "107917": {
+    "id": "107917",
+    "title": "ATCAL - PLANIFICACIÓN ACTIVIDADES PERSONAL OPERACIONES (Octubre 2026)",
+    "group_id": "43",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "108515": {
+    "id": "108515",
+    "title": "COLTUREX - INVESTIGACIÓN AT JAIME RINCON",
+    "group_id": "63",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "108537": {
+    "id": "108537",
+    "title": "SST PARA PRIMIPAROS - (20/10/2026)",
+    "group_id": "55",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "108587": {
+    "id": "108587",
+    "title": "INMOLMEC - HACER GESTIÓN HUMANA 2026",
+    "group_id": "247",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "108661": {
+    "id": "108661",
+    "title": "CURSO ANTIGRAVITY: DOMINANDO LA IA EN LA FABRICA DE CONOCIMIENTO",
+    "group_id": "81",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "108891": {
+    "id": "108891",
+    "title": "FICO - INSPECCIONES",
+    "group_id": "147",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "109279": {
+    "id": "109279",
+    "title": "G mercadeo short Semana de la seguridad vial",
+    "group_id": "55",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "109285": {
+    "id": "109285",
+    "title": "G mercadeo Short como identificar oferentes Curso 50 y 20 horas",
+    "group_id": "55",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "109645": {
+    "id": "109645",
+    "title": "Macrosearch: Auditoria Interna Inteligente ISO 9001:2015",
+    "group_id": "99",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "110157": {
+    "id": "110157",
+    "title": "DISPEIN - GESTIÓN COMERCIAL 2026",
+    "group_id": "217",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "110197": {
+    "id": "110197",
+    "title": "LINCE - EJECUCIÓN Y EVALUACIÓN DE SIMULACROS 2026",
+    "group_id": "351",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "110217": {
+    "id": "110217",
+    "title": "LINCE - MATRIZ IPER 2026",
+    "group_id": "351",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "110313": {
+    "id": "110313",
+    "title": "AMERIVET - PLANIFICACIÓN, EJECUCIÓN Y EVALUACIÓN SIMULACRO 2026",
+    "group_id": "273",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "110393": {
+    "id": "110393",
+    "title": "C13 - PROCEDIMIENTOS RECALL",
+    "group_id": "357",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "110895": {
+    "id": "110895",
+    "title": "INMOLMEC - EJECUCIÓN Y EVALUACIÓN DE SIMULACROS 2026",
+    "group_id": "247",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "31659": {
+    "id": "31659",
+    "title": "COLCARGO: BASC V6 - Plan de trabajo 2023",
+    "group_id": "67",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "71177": {
+    "id": "71177",
+    "title": "REUNIONES COMITÉ DIRECTIVO (AÑO 2025)",
+    "group_id": "133",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "86257": {
+    "id": "86257",
+    "title": "FICO - CURSOS VIRTUALES 2026",
+    "group_id": "147",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "88213": {
+    "id": "88213",
+    "title": "FICO - RIESGO QUÍMICO 2026",
+    "group_id": "147",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "88221": {
+    "id": "88221",
+    "title": "FICO - EVALUACIÓN DE PROVEEDORES 2026",
+    "group_id": "147",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "88231": {
+    "id": "88231",
+    "title": "FICO - BRIGADA DE EMERGENCIAS 2026",
+    "group_id": "147",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "89734": {
+    "id": "89734",
+    "title": "PLANEAR GFINANCIERA - PROYECCIONES Y PRESUPUESTOS (AÑO 2026)",
+    "group_id": "89",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "90165": {
+    "id": "90165",
+    "title": "DISPEIN - MEDICION DE INDICADORES 2026",
+    "group_id": "217",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "90655": {
+    "id": "90655",
+    "title": "G COMERCIAL : HACER - PRESENTACIÓN PROPUESTAS (año 2026)",
+    "group_id": "33",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "90739": {
+    "id": "90739",
+    "title": "HACER GFINANCIERA - CONTABILIZAR Y/O CAUSAR GASTOS (año 2026)",
+    "group_id": "89",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "90815": {
+    "id": "90815",
+    "title": "HACER GFINANCIERA - TESORERIA PAGO A PROVEEDORES (año 2026)",
+    "group_id": "89",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "92117": {
+    "id": "92117",
+    "title": "CAPILLAS - PLANEAR GESTIÓN TECNOLOGÍA Y SOPORTE (Enero 2026 - Dic 2026)",
+    "group_id": "25",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "92359": {
+    "id": "92359",
+    "title": "ZAGALABS - VERIFICAR GESTIÓN INTEGRAL 2026",
+    "group_id": "93",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "92571": {
+    "id": "92571",
+    "title": "SENALTUR - COMITÉ COPASST 2026",
+    "group_id": "213",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "93027": {
+    "id": "93027",
+    "title": "FICO- ACTUAR GESTIÓN DE COMPRAS 2026",
+    "group_id": "147",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "93173": {
+    "id": "93173",
+    "title": "DISPEIN - DESPLAZAMIENTOS (Año 2026)",
+    "group_id": "217",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "93477": {
+    "id": "93477",
+    "title": "COLTUREX - PLAN DE TRABAJO 2026",
+    "group_id": "63",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "93545": {
+    "id": "93545",
+    "title": "PLANEACIÓN MANEJO DE REDES",
+    "group_id": "55",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "93953": {
+    "id": "93953",
+    "title": "DISPEIN - INFORMES DE GESTIÓN MENSUAL 2026",
+    "group_id": "43",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "94295": {
+    "id": "94295",
+    "title": "PLANEACIÓN TÁCTICA - PLANEAR 2026",
+    "group_id": "255",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "95237": {
+    "id": "95237",
+    "title": "ATCAL - DESPLAZAMIENTO UNILAGO (Año 2026)",
+    "group_id": "43",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "96635": {
+    "id": "96635",
+    "title": "CAPILLAS - DICTAR INDUCCIÓN/REINDUCCIÓN 2026",
+    "group_id": "25",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "97419": {
+    "id": "97419",
+    "title": "CAPILLAS - ACTUALIZACIÓN LISTADO MAESTRO DE DOCUMENTOS/REGISTROS/DOC EXTERNOS 2026",
+    "group_id": "25",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "97433": {
+    "id": "97433",
+    "title": "UNILAGO - PLAN DE FORMACIÓN 2026",
+    "group_id": "85",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "98401": {
+    "id": "98401",
+    "title": "FLIA MIC (CGI) - COPASST",
+    "group_id": "145",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "99617": {
+    "id": "99617",
+    "title": "VERIFICAR GHUMANA - CONTROL CALENDARIO SEMANAL BITRIX 2026",
+    "group_id": "81",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "99635": {
+    "id": "99635",
+    "title": "CAPILLAS DE LA FE - MATRIZ DE RIESGOS 2026",
+    "group_id": "25",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "100715": {
+    "id": "100715",
+    "title": "Colturex - Reunión Copasst Septiembre 2026",
+    "group_id": "63",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "100723": {
+    "id": "100723",
+    "title": "COLTUREX - REUNIONES MENSUALES COMITÉ DE CONVIVENCIA LABORAL 2026",
+    "group_id": "63",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "101455": {
+    "id": "101455",
+    "title": "FAMILIA MIC - DESPLAZAMIENTOS (Año 2026)",
+    "group_id": "43",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "101481": {
+    "id": "101481",
+    "title": "FICO - INFORMES DE GESTIÓN MENSUAL 2026",
+    "group_id": "43",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "101817": {
+    "id": "101817",
+    "title": "INMOLMEC - HACER GESTIÓN ESTRATÉGICA 2026",
+    "group_id": "247",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "102597": {
+    "id": "102597",
+    "title": "CAPILLAS - ENVIO DE CORREOS SEMANALES",
+    "group_id": "25",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "103249": {
+    "id": "103249",
+    "title": "SENALTUR - INDICADORES 2026",
+    "group_id": "213",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "106209": {
+    "id": "106209",
+    "title": "LINCE COMERCIAL - INFORMES DE GESTIÓN MENSUAL 2026",
+    "group_id": "43",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "106377": {
+    "id": "106377",
+    "title": "FICO - CAPACITACIÓN MOTIVACIONAL",
+    "group_id": "147",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "107855": {
+    "id": "107855",
+    "title": "INCAPACIDADES SEPTIEMBRE/2026",
+    "group_id": "81",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "108049": {
+    "id": "108049",
+    "title": "G MERCADEO  SHORT CIRCULAR 079 SIMULACRO DISTRITAL 2026",
+    "group_id": "55",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "108589": {
+    "id": "108589",
+    "title": "INMOLMEC - PLAN DE FORMACIÓN 2026",
+    "group_id": "247",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "109291": {
+    "id": "109291",
+    "title": "G mercadeo short Cómo puede la Ia ayudarte en los sistemas de gestión",
+    "group_id": "55",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "109303": {
+    "id": "109303",
+    "title": "DISPEIN - APLICACIÓN DE BATERIA DE RIESGO PSICOSOCIAL - MODALIDAD VIRTUAL",
+    "group_id": "0",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "109391": {
+    "id": "109391",
+    "title": "ENTREVISTAS",
+    "group_id": "81",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "109475": {
+    "id": "109475",
+    "title": "COLTUREX - AUDITORÍA EXTERNA",
+    "group_id": "63",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "109829": {
+    "id": "109829",
+    "title": "G mercadeo Short SL 852 de 2026",
+    "group_id": "55",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "109835": {
+    "id": "109835",
+    "title": "G mercadeo Short circular 0110 de 2026",
+    "group_id": "55",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "109841": {
+    "id": "109841",
+    "title": "G mercadeo Short resolución 3612 de 2026 CCL",
+    "group_id": "55",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "110087": {
+    "id": "110087",
+    "title": "INMOLMEC - COMITÉ DE CONVIVENCIAL LABORAL 2026",
+    "group_id": "247",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "110351": {
+    "id": "110351",
+    "title": "C14 - MEMBRESIA DIANA CATALINA CASTAÑEDA",
+    "group_id": "33",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "110509": {
+    "id": "110509",
+    "title": "COLCARGO - OPORTUNIDADES DE MEJORA",
+    "group_id": "67",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "110791": {
+    "id": "110791",
+    "title": "BUSINESS - EJECUCIÓN Y EVALUACIÓN DE SIMULACROS 2026",
+    "group_id": "69",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "88287": {
+    "id": "88287",
+    "title": "Fico - Paso 8. Programas de gestión de riesgos críticos y factores de desempeño",
+    "group_id": "147",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "89967": {
+    "id": "89967",
+    "title": "VERIFICAR TIEMPOS DOCUMENTADOS BITRIX (PERIODO SEPTIEMBRE 01-30 DEL 2026)",
+    "group_id": "81",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "90037": {
+    "id": "90037",
+    "title": "DISPEIN - ASIGNACIÓN DE RECURSOS AÑO 2026",
+    "group_id": "217",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "90103": {
+    "id": "90103",
+    "title": "DISPEIN - PLAN DE FORMACIÓN 2026",
+    "group_id": "217",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "90153": {
+    "id": "90153",
+    "title": "DISPEIN - RENDICION DE CUENTAS COMITÉ DE CONVIVENCIA LABORAL 2026",
+    "group_id": "217",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "90427": {
+    "id": "90427",
+    "title": "DISPEIN - PAUSAS ACTIVAS 2026",
+    "group_id": "217",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "90651": {
+    "id": "90651",
+    "title": "G COMERCIAL: PLANEAR - DEFINICIÓN POLÍTICAS COMERCIALES (año 2026)",
+    "group_id": "33",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "90837": {
+    "id": "90837",
+    "title": "HACER GFINANCIERA - TESORERIA RECAUDO DE CARTERA (año 2026)",
+    "group_id": "89",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "92005": {
+    "id": "92005",
+    "title": "CAPILLAS - PLANEAR GESTIÓN MEJORA (Enero 2026 - Dic 2026)",
+    "group_id": "25",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "92029": {
+    "id": "92029",
+    "title": "CAPILLAS - PLANEAR GESTIÓN DE REGISTRO Y CONTROL (Enero 2026 - Dic 2026)",
+    "group_id": "25",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "92537": {
+    "id": "92537",
+    "title": "COLTUREX - CARGUE SISI PESV 2026",
+    "group_id": "63",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "92539": {
+    "id": "92539",
+    "title": "COLTUREX - HACER GESTIÓN HUMANA 2026",
+    "group_id": "63",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "92633": {
+    "id": "92633",
+    "title": "SENALTUR - HACER GESTIÓN OPERATIVA 2026",
+    "group_id": "213",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "92783": {
+    "id": "92783",
+    "title": "COLCARGO - VERIFICAR GESTIÓN INTEGRAL 2026",
+    "group_id": "67",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "92861": {
+    "id": "92861",
+    "title": "FLIA MIC (GEPM/GEMLSA/CGI) - HACER GESTION DIRECCION ESTRATEGICA 2026",
+    "group_id": "145",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "92951": {
+    "id": "92951",
+    "title": "FICO- PLANEAR GESTIÓN ESTRATÉGICA 2026",
+    "group_id": "147",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "92987": {
+    "id": "92987",
+    "title": "FICO- ACTUAR GESTIÓN INTEGRAL 2026",
+    "group_id": "147",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "93055": {
+    "id": "93055",
+    "title": "FICO - COMITÉS ORGANIZACIONALES 2025",
+    "group_id": "147",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "93889": {
+    "id": "93889",
+    "title": "CAPILLAS - INFORMES DE GESTIÓN MENSUAL 2026",
+    "group_id": "25",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "93915": {
+    "id": "93915",
+    "title": "COLCARGO - INFORMES DE GESTIÓN MENSUAL 2026",
+    "group_id": "43",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "94079": {
+    "id": "94079",
+    "title": "DIVERSEY: REUNIONES SEGUIMIENTO",
+    "group_id": "53",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "94975": {
+    "id": "94975",
+    "title": "G COMERCIAL: PLANEAR - PLANIFICACION DE TRABAJO - DIRECTOR COMERCIAL  2026",
+    "group_id": "33",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "95311": {
+    "id": "95311",
+    "title": "DISPEIN - REUNIONES DEL VIGÍA SST 2026",
+    "group_id": "217",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "95893": {
+    "id": "95893",
+    "title": "NÓMINA - LIQUIDAR COMISIONES ATCAL",
+    "group_id": "81",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "97481": {
+    "id": "97481",
+    "title": "G Comercial: Servicio MRL",
+    "group_id": "33",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "98273": {
+    "id": "98273",
+    "title": "COLTUREX - HACER GESTIÓN OPERATIVA Y DE SERVICIO 2026",
+    "group_id": "63",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "98995": {
+    "id": "98995",
+    "title": "FICO - DESPLAZAMIENTOS (Año 2026)",
+    "group_id": "43",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "101031": {
+    "id": "101031",
+    "title": "FLIA MIC - AT-IT-EL",
+    "group_id": "145",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "101275": {
+    "id": "101275",
+    "title": "PLANEACIÓN TÁCTICA - REUNIONES DE PLANEACION AÑO 2026",
+    "group_id": "255",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "101779": {
+    "id": "101779",
+    "title": "PLANEACIÓN TÁCTICA - CREACIÓN DE APLICATIVOS",
+    "group_id": "255",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "102355": {
+    "id": "102355",
+    "title": "ATCAL - DESPLAZAMIENTO INMOLMEC (Año 2026)",
+    "group_id": "43",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "102865": {
+    "id": "102865",
+    "title": "CAPILLAS - VISITAS SEDES NORTE",
+    "group_id": "25",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "102967": {
+    "id": "102967",
+    "title": "FICO - COMUNICADOS 2026",
+    "group_id": "147",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "103497": {
+    "id": "103497",
+    "title": "LINCE - PLANEAR GERENCIA 2026",
+    "group_id": "351",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "103881": {
+    "id": "103881",
+    "title": "YESICA CUERVO - EMPRESA PESV",
+    "group_id": "99",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "104083": {
+    "id": "104083",
+    "title": "PLANEACIÓN TÁCTICA - SUBIR PLANES DE TRABAJO EN BITRIX PROYECTOS 2026",
+    "group_id": "255",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "106055": {
+    "id": "106055",
+    "title": "BUSINESS - INSPECCIONES SEGUNDO SEMESTRE 2026",
+    "group_id": "69",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "106561": {
+    "id": "106561",
+    "title": "FICO - CAPACITACIONES PRESENCIALES",
+    "group_id": "147",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "107635": {
+    "id": "107635",
+    "title": "CAPILLAS - REVISIÓN DEL PROCESO GESTIÓN OPERATIVA 2026",
+    "group_id": "25",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "107695": {
+    "id": "107695",
+    "title": "Inmolmec - Aplicación de batería de riesgo psicosocial / Modalidad Presencial",
+    "group_id": "247",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "108529": {
+    "id": "108529",
+    "title": "SST PARA PRIMIPAROS - (13/10/2026)",
+    "group_id": "55",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "108685": {
+    "id": "108685",
+    "title": "CAPILLAS - REVISIÓN DESTINO FINAL - CREMACIÓN",
+    "group_id": "25",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "109153": {
+    "id": "109153",
+    "title": "HACER G CONOCIMIENTO RUTAS DE APRENDIZAJE",
+    "group_id": "51",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "109429": {
+    "id": "109429",
+    "title": "CITAS MEDICAS - OCTUBRE/2026",
+    "group_id": "81",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "109433": {
+    "id": "109433",
+    "title": "G CONOCIMIENTO PLANEAR - ACTUALIZACIÓN CURSOS DE FORMACIÓN",
+    "group_id": "51",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "109553": {
+    "id": "109553",
+    "title": "ATCAL - PARTICIPACIÓN SIMULACRO 2026",
+    "group_id": "243",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "109705": {
+    "id": "109705",
+    "title": "DIVERSEY: INSCRIPCIÓN A CURSOS AUDITORES 2026",
+    "group_id": "53",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "109989": {
+    "id": "109989",
+    "title": "INDUCCIÓN PROCESOS: Sofia Grijalba (PRESTADOR DE SERVICIOS OPERACIONES ATCAL SAS.",
+    "group_id": "61",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "110059": {
+    "id": "110059",
+    "title": "VACACIONES APROBADAS (OCTUBRE/2026)",
+    "group_id": "81",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "110773": {
+    "id": "110773",
+    "title": "TRADING - EJECUCIÓN Y EVALUACIÓN DE SIMULACROS 2026",
+    "group_id": "257",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "",
+    "time_estimate": 0,
+    "time_spent_in_logs": 0
+  },
+  "110999": {
+    "id": "110999",
+    "title": "APP Proyectos y Tareas ATCAL",
+    "group_id": "77",
+    "parent_id": "",
+    "parent_title": "",
+    "creator_name": "Luis Alejandro Rueda Pardo",
+    "time_estimate": 0,
+    "time_spent_in_logs": 122820
+  }
+}
