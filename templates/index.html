@@ -127,32 +127,77 @@
                         </div>
                     </div>
 
-                    <!-- CONSULTA INDEPENDIENTE POR ID DE TAREA -->
-                    <div class="col-md-2">
+                    <!-- SELECTOR DE PROYECTO / GRUPO DE TRABAJO (NUEVO) -->
+                    <div class="col-md-3">
                         <label class="form-label small fw-semibold text-secondary mb-1">
-                            <i class="fa-solid fa-hashtag me-1 text-primary"></i> ID Tarea <small class="text-primary fw-normal">(Independiente)</small>
+                            <i class="fa-solid fa-briefcase me-1 text-primary"></i> Proyecto / Grupo
                         </label>
-                        <div class="input-group input-group-md">
-                            <input type="text" id="taskIdFilter" class="form-control form-control-md shadow-none" placeholder="Ej: 108307">
-                            <button class="btn btn-outline-primary btn-sm px-2" type="button" id="btnSearchTaskId" title="Buscar todos los tiempos de esta tarea en Bitrix">
-                                <i class="fa-solid fa-magnifying-glass"></i>
+                        <div class="dropdown" id="projectDropdown">
+                            <button class="btn btn-white bg-white border form-select text-start d-flex justify-content-between align-items-center shadow-none border-primary-subtle" type="button" id="projectDropdownBtn" data-bs-toggle="dropdown" data-bs-auto-close="outside">
+                                <span id="projectDropdownBtnText" class="text-truncate">
+                                    <i class="fa-solid fa-folder-tree me-1 text-primary"></i> Todos los Proyectos
+                                </span>
                             </button>
-                            <button class="btn btn-outline-secondary btn-sm px-2" type="button" id="btnClearTaskId" title="Limpiar ID" style="display: none;">
-                                <i class="fa-solid fa-xmark"></i>
-                            </button>
+                            <div class="dropdown-menu p-3 shadow-lg border-0" style="min-width: 340px; z-index: 1050;">
+                                <!-- Buscador rápido de proyectos -->
+                                <div class="input-group input-group-sm mb-2">
+                                    <span class="input-group-text bg-light border-end-0"><i class="fa-solid fa-magnifying-glass text-muted"></i></span>
+                                    <input type="text" id="projectSearchInput" class="form-control bg-light border-start-0 shadow-none" placeholder="Buscar proyecto (ej: Colturex)...">
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mb-2 pb-2 border-bottom">
+                                    <button type="button" class="btn btn-link btn-sm p-0 text-decoration-none text-danger fw-semibold" onclick="selectProject('', 'Todos los Proyectos')">
+                                        <i class="fa-solid fa-rotate-left me-1"></i>Ver todos los proyectos
+                                    </button>
+                                </div>
+                                <div id="projectListContainer" style="max-height: 240px; overflow-y: auto;">
+                                    <div class="text-center py-3 text-muted small">Cargando proyectos...</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Botones de Acción -->
-                    <div class="col-md-3 d-flex gap-2">
+                    <div class="col-md-2 d-flex gap-2">
                         <button type="button" id="btnConsultar" class="btn btn-primary btn-md px-3 fw-semibold flex-grow-1 shadow-sm">
                             <span id="btnSpinner" class="spinner-border spinner-border-sm me-2 d-none" role="status"></span>
                             <i id="btnIcon" class="fa-solid fa-cloud-arrow-down me-2"></i>
-                            <span id="btnText">Consultar Tiempos</span>
+                            <span id="btnText">Consultar</span>
                         </button>
                         <button type="button" id="btnExportar" class="btn btn-outline-success btn-md px-3 fw-semibold shadow-sm" disabled title="Exportar a Excel para Nómina">
                             <i class="fa-solid fa-file-excel me-1"></i> Exportar
                         </button>
+                    </div>
+
+                    <!-- BARRA COMPLEMENTARIA: BUSCADOR DE TAREA POR ID Y PILL DE PROYECTO -->
+                    <div class="col-12 mt-2 pt-2 border-top">
+                        <div class="d-flex flex-wrap align-items-center justify-content-between gap-2">
+                            <!-- Búsqueda rápida por ID de Tarea -->
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="small fw-semibold text-secondary">
+                                    <i class="fa-solid fa-hashtag text-primary me-1"></i>Buscar tarea específica por ID:
+                                </span>
+                                <div class="input-group input-group-sm" style="max-width: 270px;">
+                                    <input type="text" id="taskIdFilter" class="form-control form-control-sm shadow-none" placeholder="Ej: 108307">
+                                    <button class="btn btn-outline-primary btn-sm px-2" type="button" id="btnSearchTaskId" title="Buscar tarea">
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </button>
+                                    <button class="btn btn-outline-secondary btn-sm px-2" type="button" id="btnClearTaskId" title="Limpiar ID" style="display: none;">
+                                        <i class="fa-solid fa-xmark"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Estado del Proyecto Seleccionado (Pill interactivo) -->
+                            <div id="selectedProjectPill" style="display: none;">
+                                <span class="badge bg-primary-subtle text-primary border border-primary-subtle py-1 px-2 d-inline-flex align-items-center">
+                                    <i class="fa-solid fa-briefcase me-1"></i>
+                                    <span id="selectedProjectPillName">Proyecto</span>
+                                    <button type="button" class="btn btn-link p-0 ms-2 text-primary text-decoration-none" style="font-size: 0.8rem; line-height: 1;" onclick="selectProject('', 'Todos los Proyectos')" title="Quitar filtro de proyecto">
+                                        <i class="fa-solid fa-xmark"></i>
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- CUADRO VISUAL DE TRABAJADORES SELECCIONADOS (TAGS / BADGES INTERACTIVOS) -->

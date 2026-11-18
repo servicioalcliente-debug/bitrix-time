@@ -1,11 +1,16 @@
 // Estado de la aplicación
 let appState = {
     users: [],                  // Todos los usuarios obtenidos de Bitrix24
+    projects: [],               // Todos los proyectos obtenidos de Bitrix24
     records: [],                // Registros individuales de tiempo
     taskUserSummary: [],        // Resumen rectificado por Persona y por Tarea
     usersSummary: [],           // Resumen global por persona
     kpis: {},                   // KPIs consolidados
     selectedUserIds: [],        // Lista de IDs seleccionados para Nómina (vacío = Todos)
+    selectedProjectId: "",      // ID del proyecto seleccionado (vacío = Todos)
+    selectedProjectName: "",    // Nombre del proyecto seleccionado
+    taskSearchActive: false,    // Indica si la vista actual es búsqueda directa por ID de tarea
+    activeTaskId: null,
     charts: {
         usersBar: null,
         projectsDoughnut: null
@@ -26,6 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initDatePresets();
     setupEventListeners();
     fetchUsers();
+    fetchProjects();
 });
 
 // Configurar presets de fechas
@@ -158,6 +164,23 @@ function setupEventListeners() {
         updateDropdownLabel();
         filterAllTables();
     });
+
+    // Buscador en vivo de proyectos dentro del desplegable
+    const projectSearchInput = document.getElementById("projectSearchInput");
+    if (projectSearchInput) {
+        projectSearchInput.addEventListener("keydown", (e) => e.stopPropagation());
+        projectSearchInput.addEventListener("input", (e) => {
+            const q = removeAccents(e.target.value);
+            document.querySelectorAll(".project-item").forEach(item => {
+                const nameNorm = removeAccents(item.dataset.projectName || "");
+                if (!q || nameNorm.includes(q)) {
+                    item.classList.remove("d-none");
+                } else {
+                    item.classList.add("d-none");
+                }
+            });
+        });
+    }
 
     // Búsqueda en vivo en las tablas
     document.getElementById("searchTable").addEventListener("input", filterAllTables);
@@ -426,6 +449,81 @@ function updateDropdownLabel() {
 }
 
 // -------------------------------------------------------------
+// GESTIÓN DE PROYECTOS / GRUPOS DE TRABAJO (COLTUREX, etc.)
+// -------------------------------------------------------------
+async function fetchProjects() {
+    const container = document.getElementById("projectListContainer");
+    if (!container) return;
+
+    try {
+        const res = await fetch("/api/projects");
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const data = await res.json();
+        if (data.success && data.projects) {
+            appState.projects = data.projects;
+            renderProjectList(data.projects);
+        }
+    } catch (err) {
+        console.warn("Aviso al obtener proyectos:", err);
+    }
+}
+
+function renderProjectList(projectsList) {
+    const container = document.getElementById("projectListContainer");
+    if (!container) return;
+    if (!projectsList || projectsList.length === 0) {
+        container.innerHTML = `<div class="text-center py-3 text-muted small">No se encontraron proyectos.</div>`;
+        return;
+    }
+
+    let html = '';
+    projectsList.forEach(p => {
+        const isSelected = String(appState.selectedProjectId) === String(p.id);
+        const activeClass = isSelected ? 'bg-primary-subtle border-start border-3 border-primary fw-bold' : '';
+        const checkIcon = isSelected ? '<i class="fa-solid fa-circle-check text-primary ms-auto ps-1"></i>' : '';
+
+        html += `
+            <div class="project-item d-flex align-items-center py-2 px-2 rounded mb-1 hover-bg ${activeClass}" 
+                 data-project-id="${p.id}" data-project-name="${p.name}"
+                 style="cursor: pointer; transition: background-color 0.15s ease;"
+                 onclick="selectProject('${p.id}', '${p.name.replace(/'/g, "\\'")}')">
+                <i class="fa-solid fa-briefcase text-primary opacity-75 me-2" style="font-size: 0.85rem;"></i>
+                <span class="flex-grow-1 text-truncate text-dark" style="font-size: 0.83rem;">${p.name}</span>
+                ${checkIcon}
+            </div>
+        `;
+    });
+    container.innerHTML = html;
+}
+
+window.selectProject = function(projectId, projectName) {
+    appState.selectedProjectId = projectId ? String(projectId).trim() : "";
+    appState.selectedProjectName = projectId ? projectName : "";
+
+    const btnText = document.getElementById("projectDropdownBtnText");
+    const pill = document.getElementById("selectedProjectPill");
+    const pillName = document.getElementById("selectedProjectPillName");
+
+    if (appState.selectedProjectId) {
+        if (btnText) btnText.innerHTML = `<i class="fa-solid fa-briefcase me-1 text-success"></i> <strong class="text-dark">${projectName}</strong>`;
+        if (pill && pillName) {
+            pillName.textContent = projectName;
+            pill.style.display = "inline-flex";
+        }
+    } else {
+        if (btnText) btnText.innerHTML = `<i class="fa-solid fa-folder-tree me-1 text-primary"></i> Todos los Proyectos`;
+        if (pill) pill.style.display = "none";
+    }
+
+    renderProjectList(appState.projects);
+
+    // Si ya hay datos cargados en pantalla, filtrar inmediatamente las tablas y KPIs
+    if (appState.records && appState.records.length > 0) {
+        filterAllTables();
+    }
+};
+
+// -------------------------------------------------------------
 // CONSULTA INDEPENDIENTE DE TAREA POR SU ID (SIN LÍMITES DE FECHA NI COLABORADOR)
 // -------------------------------------------------------------
 async function searchTaskById(rawId) {
@@ -601,6 +699,7 @@ async function fetchTimeRecords() {
                 date_to: dateTo,
                 criterion: criterion,
                 user_ids: appState.selectedUserIds.length > 0 ? appState.selectedUserIds : null,
+                project_id: appState.selectedProjectId || null,
                 task_id: taskIdVal || null
             })
         });
@@ -622,6 +721,12 @@ async function fetchTimeRecords() {
             if (data.known_users && data.known_users.length > 0) {
                 appState.users = data.known_users;
                 renderUserCheckboxes(data.known_users);
+            }
+
+            // Actualizar lista de proyectos si descubrió nuevos
+            if (data.known_groups && data.known_groups.length > 0) {
+                appState.projects = data.known_groups;
+                renderProjectList(data.known_groups);
             }
 
             // Actualizar KPIs
@@ -654,8 +759,45 @@ async function fetchTimeRecords() {
 
 // Filtrar y Renderizar ambas tablas
 function filterAllTables() {
+    updateKpisForActiveFilter();
     filterSummaryTable();
     filterDetailTable();
+}
+
+// Actualizar contadores KPI según filtros activos (ej: si se seleccionó COLTUREX)
+function updateKpisForActiveFilter() {
+    if (!appState.records || appState.records.length === 0) return;
+
+    if (appState.selectedProjectId) {
+        const projRecords = appState.records.filter(r => {
+            const gid = String(r.GROUP_ID || "");
+            const gname = String(r.GROUP_NAME || "").toLowerCase();
+            return gid === String(appState.selectedProjectId) || gname === appState.selectedProjectName.toLowerCase();
+        });
+
+        let totMins = 0;
+        const activeUsers = new Set();
+        const activeTasks = new Set();
+        projRecords.forEach(r => {
+            totMins += (r.MINUTES || Math.round((r.SECONDS || 0) / 60));
+            if (r.USER_ID) activeUsers.add(String(r.USER_ID));
+            if (r.TASK_ID) activeTasks.add(String(r.TASK_ID));
+        });
+
+        const h = Math.floor(totMins / 60);
+        const m = totMins % 60;
+        document.getElementById("kpiTotalHoras").textContent = `${String(h).padStart(2, '0')}h ${String(m).padStart(2, '0')}m`;
+        document.getElementById("kpiHorasDecimal").textContent = `${(totMins / 60).toFixed(2)} hrs decimales`;
+        document.getElementById("kpiTrabajadores").textContent = activeUsers.size;
+        document.getElementById("kpiTareas").textContent = activeTasks.size;
+        document.getElementById("kpiRegistros").textContent = projRecords.length;
+    } else if (appState.kpis && appState.kpis.total_hours_formatted) {
+        document.getElementById("kpiTotalHoras").textContent = appState.kpis.total_hours_formatted;
+        document.getElementById("kpiHorasDecimal").textContent = `${appState.kpis.total_hours_decimal} hrs decimales`;
+        document.getElementById("kpiTrabajadores").textContent = appState.kpis.active_workers_count;
+        document.getElementById("kpiTareas").textContent = appState.kpis.tasks_count;
+        document.getElementById("kpiRegistros").textContent = appState.kpis.total_records;
+    }
 }
 
 // 1. Tabla de Resumen por Persona y Tarea
@@ -676,6 +818,15 @@ function filterSummaryTable() {
     if (!appState.taskSearchActive && appState.selectedUserIds && appState.selectedUserIds.length > 0) {
         const selSet = new Set(appState.selectedUserIds.map(id => String(id).trim()));
         filtered = filtered.filter(item => selSet.has(String(item.user_id).trim()));
+    }
+
+    // Filtro por Proyecto / Grupo de Trabajo (ej: COLTUREX)
+    if (appState.selectedProjectId) {
+        filtered = filtered.filter(item => {
+            const gid = String(item.group_id || item.project_id || "");
+            const gname = String(item.group_name || "").toLowerCase();
+            return gid === String(appState.selectedProjectId) || gname === appState.selectedProjectName.toLowerCase();
+        });
     }
 
     // Filtro específico por ID de tarea indicado en el panel superior
@@ -768,6 +919,15 @@ function filterDetailTable() {
     if (!appState.taskSearchActive && appState.selectedUserIds && appState.selectedUserIds.length > 0) {
         const selSet = new Set(appState.selectedUserIds.map(id => String(id).trim()));
         filtered = filtered.filter(r => selSet.has(String(r.USER_ID).trim()));
+    }
+
+    // Filtro por Proyecto / Grupo de Trabajo (ej: COLTUREX)
+    if (appState.selectedProjectId) {
+        filtered = filtered.filter(r => {
+            const gid = String(r.GROUP_ID || "");
+            const gname = String(r.GROUP_NAME || "").toLowerCase();
+            return gid === String(appState.selectedProjectId) || gname === appState.selectedProjectName.toLowerCase();
+        });
     }
 
     // Filtro específico por ID de tarea indicado en el panel superior
@@ -965,6 +1125,18 @@ async function exportToExcel() {
         recordsToExport = recordsToExport.filter(r => appState.selectedUserIds.includes(r.USER_ID));
         taskSummaryToExport = taskSummaryToExport.filter(tu => appState.selectedUserIds.includes(tu.user_id));
         usersSummaryToExport = usersSummaryToExport.filter(u => appState.selectedUserIds.includes(u.user_id));
+    }
+
+    // Filtro por proyecto en exportación
+    if (appState.selectedProjectId) {
+        recordsToExport = recordsToExport.filter(r => 
+            String(r.GROUP_ID) === String(appState.selectedProjectId) ||
+            (r.GROUP_NAME && r.GROUP_NAME.toLowerCase() === appState.selectedProjectName.toLowerCase())
+        );
+        taskSummaryToExport = taskSummaryToExport.filter(tu => 
+            String(tu.group_id || tu.project_id) === String(appState.selectedProjectId) ||
+            (tu.group_name && tu.group_name.toLowerCase() === appState.selectedProjectName.toLowerCase())
+        );
     }
 
     const taskIdVal = document.getElementById("taskIdFilter")?.value?.replace(/^#/, "").trim().toLowerCase();
