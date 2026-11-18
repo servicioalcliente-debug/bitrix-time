@@ -127,14 +127,17 @@
                         </div>
                     </div>
 
-                    <!-- FILTRO POR ID DE TAREA (NUEVO) -->
+                    <!-- CONSULTA INDEPENDIENTE POR ID DE TAREA -->
                     <div class="col-md-2">
                         <label class="form-label small fw-semibold text-secondary mb-1">
-                            <i class="fa-solid fa-hashtag me-1 text-primary"></i> ID Tarea <small class="text-muted">(Opcional)</small>
+                            <i class="fa-solid fa-hashtag me-1 text-primary"></i> ID Tarea <small class="text-primary fw-normal">(Independiente)</small>
                         </label>
                         <div class="input-group input-group-md">
-                            <input type="text" id="taskIdFilter" class="form-control form-control-md shadow-none" placeholder="Ej: 108323">
-                            <button class="btn btn-outline-secondary btn-sm" type="button" id="btnClearTaskId" title="Limpiar ID" style="display: none;">
+                            <input type="text" id="taskIdFilter" class="form-control form-control-md shadow-none" placeholder="Ej: 108307">
+                            <button class="btn btn-outline-primary btn-sm px-2" type="button" id="btnSearchTaskId" title="Buscar todos los tiempos de esta tarea en Bitrix">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                            <button class="btn btn-outline-secondary btn-sm px-2" type="button" id="btnClearTaskId" title="Limpiar ID" style="display: none;">
                                 <i class="fa-solid fa-xmark"></i>
                             </button>
                         </div>
@@ -245,6 +248,26 @@
         <!-- CONTENIDO PRINCIPAL: TABLAS PRIMERO, GRÁFICAS AL FINAL -->
         <div class="row g-4">
             <div class="col-12">
+
+                <!-- BANNER DE CONSULTA INDEPENDIENTE DE TAREA -->
+                <div id="taskSearchBanner" class="alert alert-info border-primary-subtle shadow-sm d-flex flex-wrap align-items-center justify-content-between p-3 mb-4 rounded-3" style="display: none;">
+                    <div class="d-flex align-items-center gap-2">
+                        <span class="badge bg-primary fs-6 px-3 py-2">
+                            <i class="fa-solid fa-hashtag me-1"></i><span id="bannerTaskId">---</span>
+                        </span>
+                        <div>
+                            <div class="fw-bold text-dark fs-6" id="bannerTaskTitle">Cargando tarea...</div>
+                            <small class="text-muted" id="bannerTaskSub">Tiempos registrados en la historia de la tarea (Independiente de fechas)</small>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center gap-2 mt-2 mt-md-0">
+                        <span class="badge bg-white text-dark border px-3 py-2 fw-semibold fs-6" id="bannerTaskHours">00h 00m</span>
+                        <span class="badge bg-white text-secondary border px-2 py-2" id="bannerTaskCount">0 registros</span>
+                        <button type="button" class="btn btn-sm btn-outline-secondary ms-2" onclick="clearTaskSearch()">
+                            <i class="fa-solid fa-rotate-left me-1"></i> Volver a Nómina
+                        </button>
+                    </div>
+                </div>
 
                 <!-- 1. TABLA CON PESTAÑAS: RESUMEN POR PERSONA/TAREA Y DETALLE CRONOLÓGICO -->
                 <div class="card shadow-sm border-0 mb-4">

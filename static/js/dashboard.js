@@ -162,38 +162,36 @@ function setupEventListeners() {
     // Búsqueda en vivo en las tablas
     document.getElementById("searchTable").addEventListener("input", filterAllTables);
 
-    // FILTRO DIRECTO POR ID DE TAREA (NUEVO)
+    // CONSULTA INDEPENDIENTE POR ID DE TAREA
     const taskIdFilterInput = document.getElementById("taskIdFilter");
+    const btnSearchTaskId = document.getElementById("btnSearchTaskId");
     const btnClearTaskId = document.getElementById("btnClearTaskId");
 
+    if (btnSearchTaskId) {
+        btnSearchTaskId.addEventListener("click", () => {
+            const val = taskIdFilterInput ? taskIdFilterInput.value : "";
+            searchTaskById(val);
+        });
+    }
+
     if (taskIdFilterInput) {
+        taskIdFilterInput.addEventListener("keydown", (e) => {
+            if (e.key === "Enter") {
+                e.preventDefault();
+                searchTaskById(e.target.value);
+            }
+        });
+
         taskIdFilterInput.addEventListener("input", (e) => {
             const val = e.target.value.trim();
             if (btnClearTaskId) {
                 btnClearTaskId.style.display = val ? "inline-block" : "none";
             }
-            // Si ya hay datos cargados, filtrar inmediatamente en las tablas
-            if (appState.records && appState.records.length > 0) {
-                filterAllTables();
-            }
-        });
-
-        taskIdFilterInput.addEventListener("keydown", (e) => {
-            if (e.key === "Enter") {
-                e.preventDefault();
-                fetchTimeRecords();
-            }
         });
     }
 
     if (btnClearTaskId) {
-        btnClearTaskId.addEventListener("click", () => {
-            if (taskIdFilterInput) {
-                taskIdFilterInput.value = "";
-                btnClearTaskId.style.display = "none";
-                filterAllTables();
-            }
-        });
+        btnClearTaskId.addEventListener("click", clearTaskSearch);
     }
 }
 
@@ -427,8 +425,150 @@ function updateDropdownLabel() {
     renderSelectedUsersBadges();
 }
 
+// -------------------------------------------------------------
+// CONSULTA INDEPENDIENTE DE TAREA POR SU ID (SIN LÍMITES DE FECHA NI COLABORADOR)
+// -------------------------------------------------------------
+async function searchTaskById(rawId) {
+    const cleanId = String(rawId || "").replace(/^#/, "").trim();
+    if (!cleanId) {
+        alert("Por favor ingresa un ID de tarea válido (ej: 108307).");
+        document.getElementById("taskIdFilter")?.focus();
+        return;
+    }
+
+    const btnSearch = document.getElementById("btnSearchTaskId");
+    const btnClear = document.getElementById("btnClearTaskId");
+    const banner = document.getElementById("taskSearchBanner");
+    const exportBtn = document.getElementById("btnExportar");
+
+    const originalBtnContent = btnSearch ? btnSearch.innerHTML : "";
+    if (btnSearch) {
+        btnSearch.disabled = true;
+        btnSearch.innerHTML = `<span class="spinner-border spinner-border-sm text-primary" role="status"></span>`;
+    }
+
+    try {
+        const response = await fetch("/api/times", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                task_id: cleanId
+            })
+        });
+
+        let data;
+        try {
+            data = await response.json();
+        } catch (jsonErr) {
+            throw new Error(`Error ${response.status}: El servidor no devolvió una respuesta válida.`);
+        }
+
+        if (response.ok && data.success) {
+            if (!data.records || data.records.length === 0) {
+                alert(`No se encontraron registros de tiempos cargados para la tarea #${cleanId} en Bitrix24.\nVerifica si la tarea tiene tiempos cargados en su seguimiento.`);
+                return;
+            }
+
+            appState.taskSearchActive = true;
+            appState.activeTaskId = cleanId;
+            appState.records = data.records;
+            appState.taskUserSummary = data.task_user_summary || [];
+            appState.usersSummary = data.users_summary || [];
+            appState.kpis = data.kpis;
+
+            // Actualizar KPIs de la tarea
+            document.getElementById("kpiTotalHoras").textContent = data.kpis.total_hours_formatted;
+            document.getElementById("kpiHorasDecimal").textContent = `${data.kpis.total_hours_decimal} hrs decimales`;
+            document.getElementById("kpiTrabajadores").textContent = data.kpis.active_workers_count;
+            document.getElementById("kpiTareas").textContent = "1";
+            document.getElementById("kpiRegistros").textContent = data.kpis.total_records;
+
+            // Renderizar gráficos
+            renderCharts(data.users_summary, data.records);
+
+            // Renderizar tablas
+            filterAllTables();
+
+            if (exportBtn) exportBtn.disabled = false;
+            if (btnClear) btnClear.style.display = "inline-block";
+
+            // Mostrar el Banner Informativo con datos de la tarea
+            if (banner) {
+                const taskTitle = data.records[0]?.TASK_TITLE || data.task_user_summary[0]?.task_title || `Tarea #${cleanId}`;
+                document.getElementById("bannerTaskId").textContent = cleanId;
+                document.getElementById("bannerTaskTitle").textContent = taskTitle;
+                document.getElementById("bannerTaskHours").textContent = data.kpis.total_hours_formatted || "00h 00m";
+                document.getElementById("bannerTaskCount").textContent = `${data.records.length} registro(s) de tiempo`;
+                banner.style.display = "flex";
+            }
+
+            // Cambiar automáticamente a la pestaña de "Detalle de Registros (Línea por Línea)"
+            const detailTabBtn = document.getElementById("tab-detail-btn");
+            if (detailTabBtn) {
+                const tab = new bootstrap.Tab(detailTabBtn);
+                tab.show();
+            }
+
+            // Actualizar texto de estado
+            const statusText = document.getElementById("filterStatusText");
+            if (statusText) {
+                statusText.innerHTML = `Mostrando historial completo de tiempos para la Tarea <strong class="text-primary">#${cleanId}</strong> (${data.records.length} registros)`;
+            }
+
+        } else {
+            alert("Aviso de Bitrix24: " + (data.error || "No se pudo consultar la tarea."));
+        }
+    } catch (err) {
+        console.error("Error en searchTaskById:", err);
+        alert(err.message || "Error al consultar la tarea por ID.");
+    } finally {
+        if (btnSearch) {
+            btnSearch.disabled = false;
+            btnSearch.innerHTML = originalBtnContent;
+        }
+    }
+}
+
+// Limpiar la consulta independiente de tarea y volver al modo nómina normal
+window.clearTaskSearch = function() {
+    const input = document.getElementById("taskIdFilter");
+    if (input) input.value = "";
+
+    const btnClear = document.getElementById("btnClearTaskId");
+    if (btnClear) btnClear.style.display = "none";
+
+    const banner = document.getElementById("taskSearchBanner");
+    if (banner) banner.style.display = "none";
+
+    appState.taskSearchActive = false;
+    appState.activeTaskId = null;
+
+    // Cambiar a la pestaña de resumen
+    const summaryTabBtn = document.getElementById("tab-summary-btn");
+    if (summaryTabBtn) {
+        const tab = new bootstrap.Tab(summaryTabBtn);
+        tab.show();
+    }
+
+    // Volver a consultar los datos de nómina normales
+    fetchTimeRecords();
+};
+
 // Consultar y descargar TODOS los tiempos
 async function fetchTimeRecords() {
+    // Si hay un ID escrito en la casilla de ID Tarea, priorizar la búsqueda independiente de esa tarea
+    const taskIdVal = document.getElementById("taskIdFilter")?.value?.trim() || "";
+    if (taskIdVal) {
+        searchTaskById(taskIdVal);
+        return;
+    }
+
+    // Ocultar banner de tarea si estaba activo
+    const banner = document.getElementById("taskSearchBanner");
+    if (banner) banner.style.display = "none";
+    appState.taskSearchActive = false;
+    appState.activeTaskId = null;
+
     const dateFrom = document.getElementById("dateFrom").value;
     const dateTo = document.getElementById("dateTo").value;
 
@@ -532,8 +672,8 @@ function filterSummaryTable() {
 
     let filtered = appState.taskUserSummary || [];
 
-    // Filtro por selección múltiple de colaboradores (comparación segura como texto)
-    if (appState.selectedUserIds && appState.selectedUserIds.length > 0) {
+    // Filtro por selección múltiple de colaboradores (solo en modo nómina general)
+    if (!appState.taskSearchActive && appState.selectedUserIds && appState.selectedUserIds.length > 0) {
         const selSet = new Set(appState.selectedUserIds.map(id => String(id).trim()));
         filtered = filtered.filter(item => selSet.has(String(item.user_id).trim()));
     }
@@ -624,8 +764,8 @@ function filterDetailTable() {
 
     let filtered = appState.records || [];
 
-    // Filtro por selección múltiple de colaboradores (comparación segura como texto)
-    if (appState.selectedUserIds && appState.selectedUserIds.length > 0) {
+    // Filtro por selección múltiple de colaboradores (solo en modo nómina general)
+    if (!appState.taskSearchActive && appState.selectedUserIds && appState.selectedUserIds.length > 0) {
         const selSet = new Set(appState.selectedUserIds.map(id => String(id).trim()));
         filtered = filtered.filter(r => selSet.has(String(r.USER_ID).trim()));
     }
